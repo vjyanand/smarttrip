@@ -1,10 +1,10 @@
-#import "EverNoteHelper.h"
+#import "ExpenseHelper.h"
 #import <ENSDK/ENSDK.h>
 
-@implementation EverNoteHelper
+@implementation ExpenseHelper
 
 + (id)sharedEverNoteHelper {
-    static EverNoteHelper *EverNoteHelper = nil;
+    static ExpenseHelper *EverNoteHelper = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         EverNoteHelper = [[self alloc] init];

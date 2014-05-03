@@ -4,7 +4,7 @@
 
 typedef void (^ENCompletionHandler)(NSError * error);
 
-@interface EverNoteHelper : NSObject
+@interface ExpenseHelper : NSObject
 
 + (id)sharedEverNoteHelper;
 

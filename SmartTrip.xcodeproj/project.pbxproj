@@ -30,7 +30,7 @@
 		42F832EC1915893300F172D5 /* ENSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832EA1915893300F172D5 /* ENSDK.framework */; };
 		42F832ED1915893300F172D5 /* ENSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 42F832EB1915893300F172D5 /* ENSDKResources.bundle */; };
 		42F832EF1915895F00F172D5 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832EE1915895F00F172D5 /* libxml2.dylib */; };
-		42F832F3191597EB00F172D5 /* EverNoteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F832F2191597EB00F172D5 /* EverNoteHelper.m */; };
+		42F832F3191597EB00F172D5 /* ExpenseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F832F2191597EB00F172D5 /* ExpenseHelper.m */; };
 		42F832F6191599CF00F172D5 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F832F5191599CF00F172D5 /* Expense.m */; };
 		5E98DF5F1915855D00B65A9D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98DF5E1915855D00B65A9D /* FacebookSDK.framework */; };
 		5E98DF621915856800B65A9D /* InitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DF611915856800B65A9D /* InitView.m */; };
@@ -79,8 +79,8 @@
 		42F832EA1915893300F172D5 /* ENSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ENSDK.framework; sourceTree = "<group>"; };
 		42F832EB1915893300F172D5 /* ENSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ENSDKResources.bundle; sourceTree = "<group>"; };
 		42F832EE1915895F00F172D5 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		42F832F1191597EB00F172D5 /* EverNoteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EverNoteHelper.h; sourceTree = "<group>"; };
-		42F832F2191597EB00F172D5 /* EverNoteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EverNoteHelper.m; sourceTree = "<group>"; };
+		42F832F1191597EB00F172D5 /* ExpenseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseHelper.h; sourceTree = "<group>"; };
+		42F832F2191597EB00F172D5 /* ExpenseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseHelper.m; sourceTree = "<group>"; };
 		42F832F4191599CF00F172D5 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
 		42F832F5191599CF00F172D5 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
 		5E98DF5E1915855D00B65A9D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -233,8 +233,8 @@
 		42F832F0191597C400F172D5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				42F832F1191597EB00F172D5 /* EverNoteHelper.h */,
-				42F832F2191597EB00F172D5 /* EverNoteHelper.m */,
+				42F832F1191597EB00F172D5 /* ExpenseHelper.h */,
+				42F832F2191597EB00F172D5 /* ExpenseHelper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 				1677A15E19158F4100DF460F /* CategoryBudget.m in Sources */,
 				1677A15B19158EF100DF460F /* TripBudget.m in Sources */,
 				42F832C21915845600F172D5 /* main.m in Sources */,
-				42F832F3191597EB00F172D5 /* EverNoteHelper.m in Sources */,
+				42F832F3191597EB00F172D5 /* ExpenseHelper.m in Sources */,
 				42F832F6191599CF00F172D5 /* Expense.m in Sources */,
 				1677A15819158DC200DF460F /* TripDetails.m in Sources */,
 			);
