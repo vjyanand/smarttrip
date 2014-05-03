@@ -17,5 +17,6 @@
 @property (nonatomic, strong) NSNumber *tripLength;
 @property (nonatomic, strong) TripBudget *budget;
 @property (nonatomic, strong) NSArray *tripFriends;
+@property (nonatomic, strong) NSString *UUID;
 
 @end
