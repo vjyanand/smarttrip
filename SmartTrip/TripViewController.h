@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TripDetails.h"
 
 @interface TripViewController : UIViewController
 
-@property (nonatomic, strong) TripDetails;
+@property (nonatomic, strong) TripDetails *tripDetails;
+
 
 @end

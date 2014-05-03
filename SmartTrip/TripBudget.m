@@ -9,7 +9,31 @@
 #import "TripBudget.h"
 #import "CategoryBudget.h"
 
+
+@interface TripBudget()
+
+@end
+
 @implementation TripBudget
+
+- (id)init
+{
+    self = [super init];
+    
+    if (!self) {
+        return nil;
+    }
+    
+    
+    
+    return self;
+}
+
++ (NSNumber *)getRemainingBudget
+{
+    NSNumber *number = [[NSNumber alloc] initWithInt:1];
+    return number;
+}
 
 @end
 
