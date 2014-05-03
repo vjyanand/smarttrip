@@ -3,7 +3,6 @@
 
 @implementation EverNoteHelper
 
-
 + (id)sharedEverNoteHelper {
     static EverNoteHelper *EverNoteHelper = nil;
     static dispatch_once_t onceToken;
@@ -18,6 +17,10 @@
        
     }
     return self;
+}
+
+- (void)addNote:(Expense *)expense forTrip:(NSString *)tripUUID completion:(ENCompletionHandler)completion {
+    
 }
 
 - (void)dealloc {
