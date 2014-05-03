@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import <ENSDK/ENSDK.h>
+
 @implementation AppDelegate
 
 
@@ -16,6 +18,11 @@
 {
     // Override point for customization after application launch.
     [FBLoginView class];
+    
+    [ENSession setSharedSessionConsumerKey:@"vjyanand-7336"
+                            consumerSecret:@"e27123c96e5e3f98"
+                              optionalHost:ENSessionHostSandbox];
+    
     ViewController *vc = [[ViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = navigationController;
