@@ -19,6 +19,10 @@
     return self;
 }
 
+- (void)createTrip:(TripDetails *)detail completion:(ENCompletionHandler)completion {
+    
+}
+
 - (void)addNote:(Expense *)expense forTrip:(NSString *)tripUUID completion:(ENCompletionHandler)completion {
     
 }
