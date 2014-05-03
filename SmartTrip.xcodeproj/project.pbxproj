@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1677A14F19158C8B00DF460F /* smartrip_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1677A14D19158C8B00DF460F /* smartrip_03.png */; };
 		1677A15019158C8B00DF460F /* smarttrip-large_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 1677A14E19158C8B00DF460F /* smarttrip-large_10.png */; };
-		1677A15419158D6C00DF460F /* TripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15319158D6C00DF460F /* TripViewController.m */; };
 		1677A15819158DC200DF460F /* TripDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15719158DC200DF460F /* TripDetails.m */; };
 		1677A15B19158EF100DF460F /* TripBudget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15A19158EF100DF460F /* TripBudget.m */; };
 		1677A15E19158F4100DF460F /* CategoryBudget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15D19158F4100DF460F /* CategoryBudget.m */; };
@@ -37,6 +36,8 @@
 		42F833031915A28C00F172D5 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F832FD1915A28C00F172D5 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		42F833041915A28C00F172D5 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F832FF1915A28C00F172D5 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		42F833051915A28C00F172D5 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F833001915A28C00F172D5 /* GTMOAuth2ViewTouch.xib */; };
+		42F833101915AC1E00F172D5 /* CreateTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */; };
+		42F833131915AC3000F172D5 /* MyTripsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F833121915AC3000F172D5 /* MyTripsViewController.m */; };
 		5E98DF5F1915855D00B65A9D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98DF5E1915855D00B65A9D /* FacebookSDK.framework */; };
 		5E98DF621915856800B65A9D /* InitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DF611915856800B65A9D /* InitView.m */; };
 /* End PBXBuildFile section */
@@ -54,8 +55,6 @@
 /* Begin PBXFileReference section */
 		1677A14D19158C8B00DF460F /* smartrip_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smartrip_03.png; sourceTree = "<group>"; };
 		1677A14E19158C8B00DF460F /* smarttrip-large_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smarttrip-large_10.png"; sourceTree = "<group>"; };
-		1677A15219158D6C00DF460F /* TripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripViewController.h; sourceTree = "<group>"; };
-		1677A15319158D6C00DF460F /* TripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripViewController.m; sourceTree = "<group>"; };
 		1677A15619158DC200DF460F /* TripDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripDetails.h; sourceTree = "<group>"; };
 		1677A15719158DC200DF460F /* TripDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripDetails.m; sourceTree = "<group>"; };
 		1677A15919158EF100DF460F /* TripBudget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripBudget.h; sourceTree = "<group>"; };
@@ -97,6 +96,10 @@
 		42F832FE1915A28C00F172D5 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
 		42F832FF1915A28C00F172D5 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
 		42F833001915A28C00F172D5 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
+		42F8330E1915AC1E00F172D5 /* CreateTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTripViewController.h; sourceTree = "<group>"; };
+		42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTripViewController.m; sourceTree = "<group>"; };
+		42F833111915AC3000F172D5 /* MyTripsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTripsViewController.h; sourceTree = "<group>"; };
+		42F833121915AC3000F172D5 /* MyTripsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTripsViewController.m; sourceTree = "<group>"; };
 		5E98DF5E1915855D00B65A9D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		5E98DF601915856800B65A9D /* InitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitView.h; sourceTree = "<group>"; };
 		5E98DF611915856800B65A9D /* InitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitView.m; sourceTree = "<group>"; };
@@ -141,8 +144,10 @@
 		1677A15119158D3500DF460F /* TripViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1677A15219158D6C00DF460F /* TripViewController.h */,
-				1677A15319158D6C00DF460F /* TripViewController.m */,
+				42F833111915AC3000F172D5 /* MyTripsViewController.h */,
+				42F833121915AC3000F172D5 /* MyTripsViewController.m */,
+				42F8330E1915AC1E00F172D5 /* CreateTripViewController.h */,
+				42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */,
 			);
 			name = TripViewController;
 			sourceTree = "<group>";
@@ -383,13 +388,14 @@
 				5E98DF621915856800B65A9D /* InitView.m in Sources */,
 				42F832CC1915845600F172D5 /* ViewController.m in Sources */,
 				42F833031915A28C00F172D5 /* GTMOAuth2SignIn.m in Sources */,
-				1677A15419158D6C00DF460F /* TripViewController.m in Sources */,
+				42F833131915AC3000F172D5 /* MyTripsViewController.m in Sources */,
 				42F833021915A28C00F172D5 /* GTMOAuth2Authentication.m in Sources */,
 				42F832C61915845600F172D5 /* AppDelegate.m in Sources */,
 				1677A15E19158F4100DF460F /* CategoryBudget.m in Sources */,
 				1677A15B19158EF100DF460F /* TripBudget.m in Sources */,
 				42F833041915A28C00F172D5 /* GTMHTTPFetcher.m in Sources */,
 				42F832C21915845600F172D5 /* main.m in Sources */,
+				42F833101915AC1E00F172D5 /* CreateTripViewController.m in Sources */,
 				42F833011915A28C00F172D5 /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				42F832F3191597EB00F172D5 /* ExpenseHelper.m in Sources */,
 				42F832F6191599CF00F172D5 /* Expense.m in Sources */,
