@@ -24,15 +24,17 @@
         return nil;
     }
     
-    
-    
     return self;
 }
 
-+ (NSNumber *)getRemainingBudget
+- (double)getRemainingBudget
 {
-    NSNumber *number = [[NSNumber alloc] initWithInt:1];
-    return number;
+    if (self.totalBudget && self.amountSpent) {
+        double difference = [self.totalBudget doubleValue] - [self.amountSpent doubleValue];
+        return difference;
+    } else {
+        return 0.0;
+    }
 }
 
 @end

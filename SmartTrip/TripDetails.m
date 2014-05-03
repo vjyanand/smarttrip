@@ -10,4 +10,23 @@
 
 @implementation TripDetails
 
+- (id)init
+{
+    self = [super init];
+    
+    if (self) {
+        //do shit
+        
+    }
+    
+    return self;
+}
+
+
+- (NSString *)getTotalBudgetString
+{
+    NSString *budgetString = [NSString stringWithFormat:@"$ %i", [self.budget.totalBudget integerValue]];
+    return budgetString;
+}
+
 @end

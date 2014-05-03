@@ -12,6 +12,9 @@
 @interface TripViewController : UIViewController
 
 @property (nonatomic, strong) TripDetails *tripDetails;
+@property (nonatomic, strong) UIScrollView *scrollView;
+
+- (id)initWithTripDetails:(TripDetails *)details;
 
 
 @end

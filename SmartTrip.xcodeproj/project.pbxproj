@@ -13,6 +13,8 @@
 		1677A15819158DC200DF460F /* TripDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15719158DC200DF460F /* TripDetails.m */; };
 		1677A15B19158EF100DF460F /* TripBudget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15A19158EF100DF460F /* TripBudget.m */; };
 		1677A15E19158F4100DF460F /* CategoryBudget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15D19158F4100DF460F /* CategoryBudget.m */; };
+		1677A1601915AD0C00DF460F /* newyork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1677A15F1915AD0C00DF460F /* newyork.jpg */; };
+		1677A1621915AE3F00DF460F /* newyork2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1677A1611915AE3F00DF460F /* newyork2.jpg */; };
 		42F832B61915845600F172D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B51915845600F172D5 /* Foundation.framework */; };
 		42F832B81915845600F172D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B71915845600F172D5 /* CoreGraphics.framework */; };
 		42F832BA1915845600F172D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B91915845600F172D5 /* UIKit.framework */; };
@@ -55,6 +57,8 @@
 		1677A15A19158EF100DF460F /* TripBudget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripBudget.m; sourceTree = "<group>"; };
 		1677A15C19158F4100DF460F /* CategoryBudget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryBudget.h; sourceTree = "<group>"; };
 		1677A15D19158F4100DF460F /* CategoryBudget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryBudget.m; sourceTree = "<group>"; };
+		1677A15F1915AD0C00DF460F /* newyork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newyork.jpg; sourceTree = "<group>"; };
+		1677A1611915AE3F00DF460F /* newyork2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newyork2.jpg; sourceTree = "<group>"; };
 		42F832B21915845600F172D5 /* SmartTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F832B51915845600F172D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42F832B71915845600F172D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,6 +116,8 @@
 		1677A14C19158C7000DF460F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1677A1611915AE3F00DF460F /* newyork2.jpg */,
+				1677A15F1915AD0C00DF460F /* newyork.jpg */,
 				1677A14D19158C8B00DF460F /* smartrip_03.png */,
 				1677A14E19158C8B00DF460F /* smarttrip-large_10.png */,
 			);
@@ -306,9 +312,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1677A1601915AD0C00DF460F /* newyork.jpg in Resources */,
 				42F832CE1915845600F172D5 /* Images.xcassets in Resources */,
 				42F832ED1915893300F172D5 /* ENSDKResources.bundle in Resources */,
 				1677A14F19158C8B00DF460F /* smartrip_03.png in Resources */,
+				1677A1621915AE3F00DF460F /* newyork2.jpg in Resources */,
 				42F832C01915845600F172D5 /* InfoPlist.strings in Resources */,
 				42F832C91915845600F172D5 /* Main.storyboard in Resources */,
 				1677A15019158C8B00DF460F /* smarttrip-large_10.png in Resources */,
