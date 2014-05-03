@@ -9,7 +9,11 @@
 #import "ViewController.h"
 #import "InitView.h"
 #import <FacebookSDK/FacebookSDK.h>
+<<<<<<< HEAD
 #import "TripViewController.h"
+=======
+#import <ENSDK/ENSDK.h>
+>>>>>>> FETCH_HEAD
 
 @interface ViewController ()
 
@@ -25,6 +29,15 @@
     CGFloat screenHeight = screenRect.size.height;
     InitView *init = [[InitView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     self.view = init;
+    
+    [[ENSession sharedSession] authenticateWithViewController:self completion:^(NSError *authenticateError) {
+        if (!authenticateError) {
+            NSLog(@"ALL cool");
+        } else if (authenticateError.code != ENErrorCodeCancelled) {
+          //  [self showSimpleAlertWithMessage:@"Could not authenticate."];
+        }
+    }];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 
     UIButton *buttonToTrip = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 50, self.view.frame.size.height/2, 100, 50)];
