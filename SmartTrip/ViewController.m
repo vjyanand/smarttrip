@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "InitView.h"
+#import <FacebookSDK/FacebookSDK.h>
 @interface ViewController ()
 
 @end
@@ -21,7 +22,7 @@
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
     InitView *init = [[InitView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
-    [self.view addSubview:init];
+    self.view = init;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
