@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1677A14F19158C8B00DF460F /* smartrip_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1677A14D19158C8B00DF460F /* smartrip_03.png */; };
 		1677A15019158C8B00DF460F /* smarttrip-large_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 1677A14E19158C8B00DF460F /* smarttrip-large_10.png */; };
+		1677A15419158D6C00DF460F /* TripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15319158D6C00DF460F /* TripViewController.m */; };
+		1677A15819158DC200DF460F /* TripDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15719158DC200DF460F /* TripDetails.m */; };
+		1677A15B19158EF100DF460F /* TripBudget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15A19158EF100DF460F /* TripBudget.m */; };
+		1677A15E19158F4100DF460F /* CategoryBudget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15D19158F4100DF460F /* CategoryBudget.m */; };
 		42F832B61915845600F172D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B51915845600F172D5 /* Foundation.framework */; };
 		42F832B81915845600F172D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B71915845600F172D5 /* CoreGraphics.framework */; };
 		42F832BA1915845600F172D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B91915845600F172D5 /* UIKit.framework */; };
@@ -43,6 +47,14 @@
 /* Begin PBXFileReference section */
 		1677A14D19158C8B00DF460F /* smartrip_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smartrip_03.png; sourceTree = "<group>"; };
 		1677A14E19158C8B00DF460F /* smarttrip-large_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smarttrip-large_10.png"; sourceTree = "<group>"; };
+		1677A15219158D6C00DF460F /* TripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripViewController.h; sourceTree = "<group>"; };
+		1677A15319158D6C00DF460F /* TripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripViewController.m; sourceTree = "<group>"; };
+		1677A15619158DC200DF460F /* TripDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripDetails.h; sourceTree = "<group>"; };
+		1677A15719158DC200DF460F /* TripDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripDetails.m; sourceTree = "<group>"; };
+		1677A15919158EF100DF460F /* TripBudget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripBudget.h; sourceTree = "<group>"; };
+		1677A15A19158EF100DF460F /* TripBudget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripBudget.m; sourceTree = "<group>"; };
+		1677A15C19158F4100DF460F /* CategoryBudget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryBudget.h; sourceTree = "<group>"; };
+		1677A15D19158F4100DF460F /* CategoryBudget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryBudget.m; sourceTree = "<group>"; };
 		42F832B21915845600F172D5 /* SmartTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F832B51915845600F172D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42F832B71915845600F172D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,6 +118,28 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		1677A15119158D3500DF460F /* TripViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1677A15219158D6C00DF460F /* TripViewController.h */,
+				1677A15319158D6C00DF460F /* TripViewController.m */,
+			);
+			name = TripViewController;
+			sourceTree = "<group>";
+		};
+		1677A15519158D9A00DF460F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1677A15619158DC200DF460F /* TripDetails.h */,
+				1677A15719158DC200DF460F /* TripDetails.m */,
+				1677A15919158EF100DF460F /* TripBudget.h */,
+				1677A15A19158EF100DF460F /* TripBudget.m */,
+				1677A15C19158F4100DF460F /* CategoryBudget.h */,
+				1677A15D19158F4100DF460F /* CategoryBudget.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		42F832A91915845600F172D5 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +181,8 @@
 				42F832C71915845600F172D5 /* Main.storyboard */,
 				42F832CA1915845600F172D5 /* ViewController.h */,
 				42F832CB1915845600F172D5 /* ViewController.m */,
+				1677A15519158D9A00DF460F /* Models */,
+				1677A15119158D3500DF460F /* TripViewController */,
 				5E98DF631915857400B65A9D /* Init View */,
 				1677A14C19158C7000DF460F /* Images */,
 				42F832CD1915845600F172D5 /* Images.xcassets */,
@@ -296,8 +332,12 @@
 			files = (
 				5E98DF621915856800B65A9D /* InitView.m in Sources */,
 				42F832CC1915845600F172D5 /* ViewController.m in Sources */,
+				1677A15419158D6C00DF460F /* TripViewController.m in Sources */,
 				42F832C61915845600F172D5 /* AppDelegate.m in Sources */,
+				1677A15E19158F4100DF460F /* CategoryBudget.m in Sources */,
+				1677A15B19158EF100DF460F /* TripBudget.m in Sources */,
 				42F832C21915845600F172D5 /* main.m in Sources */,
+				1677A15819158DC200DF460F /* TripDetails.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
