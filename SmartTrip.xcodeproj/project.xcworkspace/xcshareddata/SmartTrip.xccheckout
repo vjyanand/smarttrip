@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5168C915-CF12-4631-8530-DA103AE3DCAD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SmartTrip</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C8F87F6C-E716-4626-92FF-5FED6C128823</key>
+		<string>https://github.com/vjyanand/smarttrip.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SmartTrip.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C8F87F6C-E716-4626-92FF-5FED6C128823</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/vjyanand/smarttrip.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C8F87F6C-E716-4626-92FF-5FED6C128823</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C8F87F6C-E716-4626-92FF-5FED6C128823</string>
+			<key>IDESourceControlWCCName</key>
+			<string>smarttrip</string>
+		</dict>
+	</array>
+</dict>
+</plist>
