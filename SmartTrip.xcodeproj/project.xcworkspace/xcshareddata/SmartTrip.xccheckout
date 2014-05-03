@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>92B2B162-5CDB-48C7-A663-75DA60569611</string>
+	<string>38B72340-7B34-4011-959D-8583B72937C4</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SmartTrip</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -19,8 +19,6 @@
 	<dict>
 		<key>C8F87F6C-E716-4626-92FF-5FED6C128823</key>
 		<string>../..</string>
-		<key>EF9AFEA7-4A45-4FA3-B443-DCF08C4EB562</key>
-		<string>../../../SmartTrip</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/vjyanand/smarttrip.git</string>
@@ -37,14 +35,6 @@
 			<string>C8F87F6C-E716-4626-92FF-5FED6C128823</string>
 			<key>IDESourceControlWCCName</key>
 			<string>smarttrip</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>EF9AFEA7-4A45-4FA3-B443-DCF08C4EB562</string>
-			<key>IDESourceControlWCCName</key>
-			<string>SmartTrip</string>
 		</dict>
 	</array>
 </dict>

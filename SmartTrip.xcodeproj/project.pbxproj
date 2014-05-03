@@ -37,7 +37,6 @@
 		42F833041915A28C00F172D5 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F832FF1915A28C00F172D5 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		42F833051915A28C00F172D5 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F833001915A28C00F172D5 /* GTMOAuth2ViewTouch.xib */; };
 		42F833101915AC1E00F172D5 /* CreateTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */; };
-		42F833131915AC3000F172D5 /* MyTripsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F833121915AC3000F172D5 /* MyTripsViewController.m */; };
 		5E98DF5F1915855D00B65A9D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98DF5E1915855D00B65A9D /* FacebookSDK.framework */; };
 		5E98DF621915856800B65A9D /* InitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DF611915856800B65A9D /* InitView.m */; };
 /* End PBXBuildFile section */
@@ -98,8 +97,6 @@
 		42F833001915A28C00F172D5 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 		42F8330E1915AC1E00F172D5 /* CreateTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTripViewController.h; sourceTree = "<group>"; };
 		42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTripViewController.m; sourceTree = "<group>"; };
-		42F833111915AC3000F172D5 /* MyTripsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTripsViewController.h; sourceTree = "<group>"; };
-		42F833121915AC3000F172D5 /* MyTripsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTripsViewController.m; sourceTree = "<group>"; };
 		5E98DF5E1915855D00B65A9D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		5E98DF601915856800B65A9D /* InitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitView.h; sourceTree = "<group>"; };
 		5E98DF611915856800B65A9D /* InitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitView.m; sourceTree = "<group>"; };
@@ -144,8 +141,6 @@
 		1677A15119158D3500DF460F /* TripViewController */ = {
 			isa = PBXGroup;
 			children = (
-				42F833111915AC3000F172D5 /* MyTripsViewController.h */,
-				42F833121915AC3000F172D5 /* MyTripsViewController.m */,
 				42F8330E1915AC1E00F172D5 /* CreateTripViewController.h */,
 				42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */,
 			);
@@ -388,7 +383,6 @@
 				5E98DF621915856800B65A9D /* InitView.m in Sources */,
 				42F832CC1915845600F172D5 /* ViewController.m in Sources */,
 				42F833031915A28C00F172D5 /* GTMOAuth2SignIn.m in Sources */,
-				42F833131915AC3000F172D5 /* MyTripsViewController.m in Sources */,
 				42F833021915A28C00F172D5 /* GTMOAuth2Authentication.m in Sources */,
 				42F832C61915845600F172D5 /* AppDelegate.m in Sources */,
 				1677A15E19158F4100DF460F /* CategoryBudget.m in Sources */,
