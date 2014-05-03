@@ -21,6 +21,9 @@
 		42F832D71915845600F172D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B91915845600F172D5 /* UIKit.framework */; };
 		42F832DF1915845600F172D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42F832DD1915845600F172D5 /* InfoPlist.strings */; };
 		42F832E11915845600F172D5 /* SmartTripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F832E01915845600F172D5 /* SmartTripTests.m */; };
+		42F832EC1915893300F172D5 /* ENSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832EA1915893300F172D5 /* ENSDK.framework */; };
+		42F832ED1915893300F172D5 /* ENSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 42F832EB1915893300F172D5 /* ENSDKResources.bundle */; };
+		42F832EF1915895F00F172D5 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832EE1915895F00F172D5 /* libxml2.dylib */; };
 		5E98DF5F1915855D00B65A9D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98DF5E1915855D00B65A9D /* FacebookSDK.framework */; };
 		5E98DF621915856800B65A9D /* InitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DF611915856800B65A9D /* InitView.m */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,9 @@
 		42F832DC1915845600F172D5 /* SmartTripTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmartTripTests-Info.plist"; sourceTree = "<group>"; };
 		42F832DE1915845600F172D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42F832E01915845600F172D5 /* SmartTripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartTripTests.m; sourceTree = "<group>"; };
+		42F832EA1915893300F172D5 /* ENSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ENSDK.framework; sourceTree = "<group>"; };
+		42F832EB1915893300F172D5 /* ENSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ENSDKResources.bundle; sourceTree = "<group>"; };
+		42F832EE1915895F00F172D5 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5E98DF5E1915855D00B65A9D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		5E98DF601915856800B65A9D /* InitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitView.h; sourceTree = "<group>"; };
 		5E98DF611915856800B65A9D /* InitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitView.m; sourceTree = "<group>"; };
@@ -65,8 +71,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F832EF1915895F00F172D5 /* libxml2.dylib in Frameworks */,
 				42F832B81915845600F172D5 /* CoreGraphics.framework in Frameworks */,
 				5E98DF5F1915855D00B65A9D /* FacebookSDK.framework in Frameworks */,
+				42F832EC1915893300F172D5 /* ENSDK.framework in Frameworks */,
 				42F832BA1915845600F172D5 /* UIKit.framework in Frameworks */,
 				42F832B61915845600F172D5 /* Foundation.framework in Frameworks */,
 			);
@@ -88,6 +96,8 @@
 		42F832A91915845600F172D5 = {
 			isa = PBXGroup;
 			children = (
+				42F832EA1915893300F172D5 /* ENSDK.framework */,
+				42F832EB1915893300F172D5 /* ENSDKResources.bundle */,
 				42F832BB1915845600F172D5 /* SmartTrip */,
 				42F832DA1915845600F172D5 /* SmartTripTests */,
 				42F832B41915845600F172D5 /* Frameworks */,
@@ -107,6 +117,7 @@
 		42F832B41915845600F172D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42F832EE1915895F00F172D5 /* libxml2.dylib */,
 				42F832B51915845600F172D5 /* Foundation.framework */,
 				42F832B71915845600F172D5 /* CoreGraphics.framework */,
 				42F832B91915845600F172D5 /* UIKit.framework */,
@@ -246,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42F832CE1915845600F172D5 /* Images.xcassets in Resources */,
+				42F832ED1915893300F172D5 /* ENSDKResources.bundle in Resources */,
 				42F832C01915845600F172D5 /* InfoPlist.strings in Resources */,
 				42F832C91915845600F172D5 /* Main.storyboard in Resources */,
 			);
@@ -397,6 +409,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SmartTrip",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SmartTrip/SmartTrip-Prefix.pch";
@@ -414,6 +427,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SmartTrip",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SmartTrip/SmartTrip-Prefix.pch";
