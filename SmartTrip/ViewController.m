@@ -11,6 +11,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "TripViewController.h"
 #import <ENSDK/ENSDK.h>
+#import "ExpenseHelper.h"
 
 @interface ViewController ()
 
@@ -42,6 +43,7 @@
     [buttonToTrip setTitle:@"Go To Trip" forState:UIControlStateNormal];
     [buttonToTrip addTarget:self action:@selector(goToTrip:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttonToTrip];
+    [[ExpenseHelper sharedEverNoteHelper] cre]
 }
 
 - (void)didReceiveMemoryWarning
