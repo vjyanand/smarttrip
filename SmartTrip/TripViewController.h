@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "TripDetails.h"
+#import "ExpenseViewController.h"
 
-@interface TripViewController : UIViewController
+@interface TripViewController : UIViewController <ExpenseViewControllerDelegate>
 
 @property (nonatomic, strong) TripDetails *tripDetails;
 @property (nonatomic, strong) UIScrollView *scrollView;

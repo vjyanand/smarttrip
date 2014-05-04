@@ -8,11 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "TripDetails.h"
+#import "Expense.h"
+
+@protocol ExpenseViewControllerDelegate <NSObject>
+
+@required
+- (void)didFinishAddingExpense:(Expense *)expense;
+@end
 
 @interface ExpenseViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) UIPickerView *picker;
 @property (nonatomic, strong) TripDetails *tripDetails;
+@property (nonatomic, retain) id <ExpenseViewControllerDelegate> delegate;
+
 
 - (id)initWithTripDetails:(TripDetails *)details;
 

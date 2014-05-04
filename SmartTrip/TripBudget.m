@@ -44,15 +44,37 @@
     return self;
 }
 
-- (double)getRemainingBudget
+- (int)getRemainingBudget
 {
-        double difference = [self.totalBudget doubleValue] - [self.amountSpent doubleValue];
+        double difference = [self.totalBudget intValue] - [self.amountSpent intValue];
         return difference;
 }
 
 - (NSString *)getRemaningBudgetString
 {
     return [NSString stringWithFormat:@"$ %i", (int)[self getRemainingBudget]];
+}
+
+- (void)addExpense:(Expense *)expense
+{
+    if (!self.expenseList) {
+        self.expenseList = [[NSMutableArray alloc] init];
+    }
+    
+    [self.expenseList addObject:expense];
+    [self updateAmountSpent];
+}
+
+- (void)updateAmountSpent
+{
+    int amountSpent = 0;
+    
+    for (Expense *expense in self.expenseList) {
+        int expenseAmount = [expense.amount intValue];
+        amountSpent += expenseAmount;
+    }
+    
+    self.amountSpent = [NSNumber numberWithInt:amountSpent];
 }
 
 @end

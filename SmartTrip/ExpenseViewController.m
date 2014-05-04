@@ -31,6 +31,7 @@
         }
         
         self.view.backgroundColor = [UIColor whiteColor];
+        self.expense = [[Expense alloc] init];
 
     }
     return self;
@@ -126,7 +127,11 @@
 
 - (void)done:(id)sender
 {
-    [self createExpense];
+    if (self.expense.amount && self.expense.category) {
+        [self createExpense];
+    }else{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (void)selectCat:(id)sender
@@ -206,9 +211,11 @@
     self.expense.receipt = nil;
     self.expense.friends = self.tripDetails.tripFriends;
     ExpenseHelper *helper = [ExpenseHelper sharedEverNoteHelper];
+    __weak typeof(self) weakSelf = self;
     [helper addExpense:self.expense fortrip:self.tripDetails completion:^(NSError *error){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Expense Added" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Expense Added!" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+        [weakSelf.delegate didFinishAddingExpense:weakSelf.expense];
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
 }
@@ -217,6 +224,10 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)dealloc
+{
 }
 
 

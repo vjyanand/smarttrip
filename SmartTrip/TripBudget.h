@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Expense.h"
 
 @interface TripBudget : NSObject
 @property (nonatomic, strong) NSNumber *totalBudget;
@@ -17,7 +18,9 @@
 @property (nonatomic, strong) NSMutableArray *spendingCategories;
 //FB friends on the budget
 @property (nonatomic, strong) NSArray *budgetContributors;
+@property (nonatomic, strong) NSMutableArray *expenseList;
 
--(NSString *)getRemaningBudgetString;
+- (NSString *)getRemaningBudgetString;
+- (void)addExpense:(Expense *)expense;
 
 @end

@@ -13,11 +13,12 @@
 
 NSInteger const kbarHeight = 20;
 
-@interface TripViewController ()
+@interface TripViewController () 
 
 @property (nonatomic, strong) UIView *tripView;
 @property (nonatomic, strong) UIView *tripProgressView;
 @property (nonatomic, strong) UIView *userProgressView;
+@property (nonatomic, strong) UILabel *budget;
 
 @end
 
@@ -60,7 +61,7 @@ NSInteger const kbarHeight = 20;
     [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width*3, self.view.frame.size.height)];
     [self.scrollView setPagingEnabled:YES];
     [self.scrollView setScrollEnabled:YES];
-    [self.scrollView setBounces:YES];
+    [self.scrollView setBounces:NO];
     [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width, kbarHeight)];
     [self.scrollView setShowsHorizontalScrollIndicator:NO];
     
@@ -102,18 +103,18 @@ NSInteger const kbarHeight = 20;
     
     [self.tripView addSubview:remainingBudget];
     
-    UILabel *budget = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tripView.frame.size.width, 60)];
-    budget.center = self.view.center;
-    budget.text = [self.tripDetails.budget getRemaningBudgetString];;
-    budget.font = [UIFont fontWithName:@"ArialRoundedMTBold" size:30.0];
-    budget.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
-    budget.textColor = [UIColor blackColor];
-    budget.textAlignment = NSTextAlignmentCenter;
+    self.budget = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.tripView.frame.size.width, 60)];
+    self.budget.center = self.view.center;
+    self.budget.text = [self.tripDetails.budget getRemaningBudgetString];;
+    self.budget.font = [UIFont fontWithName:@"ArialRoundedMTBold" size:30.0];
+    self.budget.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
+    self.budget.textColor = [UIColor blackColor];
+    self.budget.textAlignment = NSTextAlignmentCenter;
     
-    [self.tripView addSubview:budget];
+    [self.tripView addSubview:self.budget];
     int viewWidth = (int)self.tripDetails.tripFriends.count*80;
     
-    UIView *imageViewContainer = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - viewWidth/2, budget.frame.origin.y + 100, viewWidth, 100)];
+    UIView *imageViewContainer = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - viewWidth/2, self.budget.frame.origin.y + 100, viewWidth, 100)];
     
     for (int i = 0; i < self.friendInfo.count; i++) {
         FriendData *friendData = self.friendInfo[i];
@@ -185,11 +186,19 @@ NSInteger const kbarHeight = 20;
 - (void)addExpense:(id)sender
 {
     ExpenseViewController *expenseVC = [[ExpenseViewController alloc] initWithTripDetails:self.tripDetails];
+    expenseVC.delegate = self;
 
     self.modalPresentationStyle = UIModalPresentationFullScreen;
     self.modalTransitionStyle = UIModalTransitionStylePartialCurl;
     
     [self presentViewController:expenseVC animated:YES completion:nil];
+}
+
+#pragma mark - ExpenseViewControllerDelegate Methods
+- (void)didFinishAddingExpense:(Expense *)expense
+{
+    [self.tripDetails.budget addExpense:expense];
+    self.budget.text = [self.tripDetails.budget getRemaningBudgetString];
 }
 
 @end
