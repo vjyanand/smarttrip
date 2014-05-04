@@ -43,7 +43,7 @@
     [buttonToTrip setTitle:@"Go To Trip" forState:UIControlStateNormal];
     [buttonToTrip addTarget:self action:@selector(goToTrip:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttonToTrip];
-    [[ExpenseHelper sharedEverNoteHelper] cre]
+   // [[ExpenseHelper sharedEverNoteHelper] cre]
 }
 
 - (void)didReceiveMemoryWarning
