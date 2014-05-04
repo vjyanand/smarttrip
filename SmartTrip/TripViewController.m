@@ -214,9 +214,10 @@ NSInteger const kbarHeight = 20;
 - (void)addExpense:(id)sender {
     ExpenseViewController *expenseVC = [[ExpenseViewController alloc] initWithTripDetails:self.tripDetails];
     expenseVC.delegate = self;
-    expenseVC.view.backgroundColor = [UIColor clearColor];
+    //expenseVC.view.backgroundColor = [UIColor clearColor];
     self.modalPresentationStyle = UIModalPresentationFullScreen;
     self.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    //self.modalPresentationStyle = UIModalPresentationCurrentContext;
     
     [self presentViewController:expenseVC animated:YES completion:nil];
 }

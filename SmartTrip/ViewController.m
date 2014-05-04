@@ -42,7 +42,7 @@
     [buttonToTrip addTarget:self action:@selector(goToTrip:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttonToTrip];
     
-    [self.navigationController pushViewController:[[MyTripViewController alloc] init] animated:NO];
+    //[self.navigationController pushViewController:[[MyTripViewController alloc] init] animated:NO];
     /*TripDetails *a = [[TripDetails alloc] init];
     a.destination = @"NY";
     a.tripStart = [NSDate date];
