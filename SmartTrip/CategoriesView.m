@@ -35,6 +35,8 @@
         self.title.text = title;
         self.title.backgroundColor = [UIColor clearColor];
         
+        self.title.font = [UIFont fontWithName:@"AvenirNext-UltraLight" size:18.0f];
+        
         CGRect slider_frame = frame;
         slider_frame.origin.y += 30;
         slider_frame.size.width -= 40;
@@ -45,6 +47,7 @@
         price_frame.origin.x = screenWidth-50;
         self.price = [[UILabel alloc] initWithFrame:price_frame];
         self.price.text = @"0";
+        self.price.font = [UIFont fontWithName:@"AvenirNext-UltraLight" size:18.0f];
     }
     return self;
     

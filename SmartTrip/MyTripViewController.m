@@ -33,9 +33,16 @@
     UIImageView *imageview = [[UIImageView alloc] initWithImage: image];
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:100.0/255.0 green:200.0/255.0 blue:221/255.0 alpha:1];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createTrip)];
-    self.navigationItem.hidesBackButton=YES;
     self.navigationItem.titleView = imageview;
+    [self.navigationItem setHidesBackButton:YES];
     
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    UIImageView *api = [[UIImageView alloc] initWithFrame:CGRectMake(0 , 20, screenWidth,screenHeight)];
+    api.image = [UIImage imageNamed:@"evernote_concur.png"];
+    [self.view addSubview:api];
     // Do any additional setup after loading the view.
 }
 -(void)createTrip{

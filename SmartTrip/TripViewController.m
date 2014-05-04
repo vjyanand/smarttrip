@@ -183,13 +183,6 @@ NSInteger const kbarHeight = 20;
     
     self.recieptView = [[UIView alloc] initWithFrame:CGRectMake(2 * self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
-    UIImageView *imageBackground1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"newyork3.jpg"]];
-    imageBackground1.frame = CGRectMake(0, 0, self.tripView.frame.size.width, self.tripView.frame.size.height);
-    imageBackground1.contentMode = UIViewContentModeScaleAspectFill;
-    imageBackground1.layer.masksToBounds = YES;
-    [self.recieptView addSubview:imageBackground1];
-    
-    
     UILabel *header1 = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 50, 200, 50)];
     header1.text = @"Expense Receipt";
     header1.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0];
@@ -220,38 +213,28 @@ NSInteger const kbarHeight = 20;
     
    // UILabel
     UILabel *attributedLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, self.view.frame.size.width - 20, self.view.frame.size.height-10)];
+    
+    NSString *html = [NSString stringWithFormat:
+    @"<html>"
+    "  <head>"
+    "    <style type='text/css'>"
+    "      body { font: 16pt 'Gill Sans'; color: #1a004b; }  #container{display:table}#row{display:table-row}#left,#middle,#right{display:table-cell}"
+    "      i { color: #822; }"
+    "    </style>"
+    "  </head>"
+    "  <body> <img src=\"http://graph.facebook.com/606910/picture?width=20&height=20\"> Alex $251<>Hospitality $105</div> <div>Hospitality $105</div></body>"
+    "</html>"];
+    
+    NSError *err = nil;
+    attributedLabel.attributedText =
+    [[NSAttributedString alloc]
+     initWithData: [html dataUsingEncoding:NSUTF8StringEncoding]
+     options: @{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }
+     documentAttributes: nil
+     error: &err];
+    
     [_recieptView addSubview:attributedLabel];
     
-    NSString *string1 = @"aaa";
-    NSString *string2 = @"aaa";
-    NSString *string3 = @"aaa";
-    NSString *string4 = @"aaa";
-    
-    NSDictionary *attribute1 = @{NSForegroundColorAttributeName: [UIColor blackColor],
-                                 NSBackgroundColorAttributeName: [UIColor clearColor],
-                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:22.0],
-                                 };
-    
-    NSDictionary *attribute2 = @{NSForegroundColorAttributeName: [UIColor blackColor],
-                                 NSBackgroundColorAttributeName: [UIColor clearColor],
-                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:10],
-                                 };
-    
-    NSDictionary *attribute3 = @{NSForegroundColorAttributeName: [UIColor blackColor],
-                                 NSBackgroundColorAttributeName: [UIColor clearColor],
-                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:14.0]
-                                 };
-    
-    NSMutableAttributedString *info = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ %@ %@ \n\n%@ \n     ", string1, string2 , string3, string4]];
-    
-    [info setAttributes:attribute1 range:NSMakeRange(0, ([string1 length]))];
-    [info setAttributes:attribute2 range:NSMakeRange(([string1 length]),([string2 length]+[string3 length]))];
-    [info setAttributes:attribute3 range:NSMakeRange(([string1 length] + [string2 length]+[string3 length]), [string4 length])];
-    
-    attributedLabel.attributedText = info;
-    attributedLabel.backgroundColor = [UIColor clearColor];
-  //  attributedLabel.editable = NO;
-    attributedLabel.textColor = [UIColor blackColor];
     
     _recieptView.backgroundColor = [UIColor grayColor];
     [self.scrollView addSubview:_recieptView];
