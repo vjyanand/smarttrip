@@ -51,13 +51,13 @@
     self.title = @"Budget";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UILabel *add = [[UILabel alloc] initWithFrame:CGRectMake(0, 60, screenWidth, 40)];
+    UILabel *add = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, screenWidth, 40)];
     add.text = @"Add Spending Categories";
     add.font = [UIFont fontWithName:@"AvenirNext-UltraLight" size:20.0f];
     add.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:add];
     
-    travel = [[CategoriesView alloc] initWithSpecials:CGRectMake(20, 100, screenWidth, 30) initWithTitle:@"Travel"];
+    travel = [[CategoriesView alloc] initWithSpecials:CGRectMake(20, 150, screenWidth, 30) initWithTitle:@"Travel"];
     [self.view addSubview:travel.title];
     [self.view addSubview:travel.slider];
     [self.view addSubview:travel.price];
@@ -68,7 +68,7 @@
     travel.slider.value = 0.0;
     
     
-    accom = [[CategoriesView alloc] initWithSpecials:CGRectMake(20, 180, screenWidth, 30) initWithTitle:@"Accomodation"];
+    accom = [[CategoriesView alloc] initWithSpecials:CGRectMake(20, 230, screenWidth, 30) initWithTitle:@"Accomodation"];
     [self.view addSubview:accom.title];
     [self.view addSubview:accom.slider];
     [accom.slider addTarget:self action:@selector(accomSlider:) forControlEvents:UIControlEventValueChanged];
@@ -78,7 +78,7 @@
     accom.slider.value = 0.0;
     [self.view addSubview:accom.price];
     
-    food = [[CategoriesView alloc] initWithSpecials:CGRectMake(20, 260, screenWidth, 30) initWithTitle:@"Food"];
+    food = [[CategoriesView alloc] initWithSpecials:CGRectMake(20, 310, screenWidth, 30) initWithTitle:@"Food"];
     [self.view addSubview:food.title];
     [self.view addSubview:food.slider];
     [food.slider addTarget:self action:@selector(foodSlider:) forControlEvents:UIControlEventValueChanged];
@@ -88,7 +88,7 @@
     food.slider.value = 0.0;
     [self.view addSubview:food.price];
     
-    night = [[CategoriesView alloc] initWithSpecials:CGRectMake(20, 340, screenWidth, 30) initWithTitle:@"Nightlife"];
+    night = [[CategoriesView alloc] initWithSpecials:CGRectMake(20, 390, screenWidth, 30) initWithTitle:@"Nightlife"];
     [self.view addSubview:night.title];
     [self.view addSubview:night.slider];
     [night.slider addTarget:self action:@selector(nightSlider:) forControlEvents:UIControlEventValueChanged];

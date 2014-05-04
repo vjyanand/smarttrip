@@ -30,20 +30,39 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     UIImage *image = [UIImage imageNamed: @"smarttrip-large_10.png"];
-    UIImageView *imageview = [[UIImageView alloc] initWithImage: image];
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:100.0/255.0 green:200.0/255.0 blue:221/255.0 alpha:1];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createTrip)];
-    self.navigationItem.titleView = imageview;
-    [self.navigationItem setHidesBackButton:YES];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
     
-    UIImageView *api = [[UIImageView alloc] initWithFrame:CGRectMake(0 , 20, screenWidth,screenHeight)];
-    api.image = [UIImage imageNamed:@"evernote_concur.png"];
-    [self.view addSubview:api];
+    UIImageView *imageview = [[UIImageView alloc] initWithImage: image];
+    imageview.frame = CGRectMake(70, 250, 200, 70);
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:100.0/255.0 green:200.0/255.0 blue:221/255.0 alpha:1];
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createTrip)];
+    //self.navigationItem.titleView = imageview;
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    [button addTarget:self
+               action:@selector(createTrip)
+     forControlEvents:UIControlEventTouchUpInside];
+    button.frame = CGRectMake(screenWidth-100, 30, 160.0, 40.0);
+    [self.view addSubview:button];
+    [self.navigationItem setHidesBackButton:YES];
+    [self.view addSubview:imageview];
+    
+    [self.navigationController.navigationBar setTranslucent:YES];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     // Do any additional setup after loading the view.
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
 }
 -(void)createTrip{
     CreateTripViewController *ctvc = [[CreateTripViewController alloc] init];

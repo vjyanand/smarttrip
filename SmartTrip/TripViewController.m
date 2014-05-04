@@ -57,6 +57,7 @@ NSInteger const kbarHeight = 20;
     if (self.tripDetails.tripFriends.count > 0) {
         [self getFBUserData];
     }
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
@@ -254,6 +255,16 @@ NSInteger const kbarHeight = 20;
     NSString *txtFileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
     [attributedLabel loadHTMLString:txtFileContents baseURL:nil];
     
+    for (int i = 0; i < self.friendInfo.count; i++) {
+        FriendData *friendData = self.friendInfo[i];
+        
+        //NSString *head = [NSString stringWithFormat:@"<thead><tr><th>%@</th><th >$%f</th></tr>", friendData.firstName, 20.34];
+        
+       
+
+        
+    }
+
     [_recieptView addSubview:attributedLabel];
     
     
