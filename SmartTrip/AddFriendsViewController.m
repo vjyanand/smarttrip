@@ -43,7 +43,7 @@
         self.friends.separatorColor = [UIColor clearColor];
         self.search = [[UISearchBar alloc] initWithFrame:CGRectMake(-13, 70, screenWidth+25, 28)];
         
-        self.facebook_ids = [[NSMutableArray alloc] initWithObjects:@"4", @"500065899",@"606910", @"551683250",@"1550970059", @"506148678",@"499855708",@"202012", @"100002268160293", @"1335306799", @"1587744377", @"100005055302522", nil];
+        self.facebook_ids = [[NSMutableArray alloc] initWithObjects:@"4",@"216311481960", @"113529011990795", @"500065899",@"606910", @"551683250",@"1550970059", @"22433917219",@"499855708",@"202012", @"100002268160293", @"506148678", @"1335306799", @"1587744377", @"100005055302522", @"256577984352748",  nil];
     }
     return self;
 }
@@ -67,7 +67,7 @@
     UIBarButtonItem *next = [[UIBarButtonItem alloc] initWithTitle:@"Skip" style:UIBarButtonItemStylePlain target:self action:@selector(clickNext)];
     
     self.navigationItem.rightBarButtonItem = next;
-
+    
     // Do any additional setup after loading the view.
 }
 -(void)clickNext{
@@ -132,12 +132,12 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
-
+    
     
 }
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    
     FriendsTableViewCell *cell = (FriendsTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
     if(cell.check_mark.hidden == NO) {
         cell.check_mark.hidden = YES;

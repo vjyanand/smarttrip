@@ -211,26 +211,13 @@ NSInteger const kbarHeight = 20;
     NSLog(@"%@", self.tripDetails);
     
    // UILabel
-    UILabel *attributedLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, self.view.frame.size.width - 20, self.view.frame.size.height-10)];
+    UIWebView *attributedLabel = [[UIWebView alloc] initWithFrame:CGRectMake(10, recepitDate.frame.origin.y + 70, self.view.frame.size.width - 20, self.view.frame.size.height-10-recepitDate.frame.origin.y)];
     
-    NSString *html = [NSString stringWithFormat:
-    @"<html>"
-    "  <head>"
-    "    <style type='text/css'>"
-    "      body { font: 16pt 'Gill Sans'; color: #1a004b; }  #container{display:table}#row{display:table-row}#left,#middle,#right{display:table-cell}"
-    "      i { color: #822; }"
-    "    </style>"
-    "  </head>"
-    "  <body> <img src=\"http://graph.facebook.com/606910/picture?width=20&height=20\"> Alex $251<>Hospitality $105</div> <div>Hospitality $105</div></body>"
-    "</html>"];
-    
-    NSError *err = nil;
-    attributedLabel.attributedText =
-    [[NSAttributedString alloc]
-     initWithData: [html dataUsingEncoding:NSUTF8StringEncoding]
-     options: @{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }
-     documentAttributes: nil
-     error: &err];
+    NSString *pathFile = [[NSBundle mainBundle] bundlePath];
+    NSString *path = [[NSString alloc] initWithString:[pathFile stringByAppendingPathComponent:@"html.h"]];
+    NSString *txtFileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    NSLog(txtFileContents);
+    [attributedLabel loadHTMLString:txtFileContents baseURL:nil];
     
     [_recieptView addSubview:attributedLabel];
     
