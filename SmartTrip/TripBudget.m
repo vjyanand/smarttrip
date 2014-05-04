@@ -36,6 +36,10 @@
         CategoryBudget *lastBudget = [[CategoryBudget alloc] init];
         lastBudget.categoryName = @"Shopping";
         [self.spendingCategories addObject:lastBudget];
+        
+//        if (!) {
+//            <#statements#>
+//        }
 
     }else{
         return nil;
