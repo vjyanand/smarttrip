@@ -9,10 +9,14 @@
 #import "ExpenseViewController.h"
 #import "TripDetails.h"
 #import "CategoryBudget.h"
+#import "ExpenseHelper.h"
+#import "Expense.h"
 
 @interface ExpenseViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (nonatomic, strong) UIButton *selectCat;
+@property (nonatomic, strong) UITextField *expenseAmount;
+@property (nonatomic, strong) Expense *expense;
 
 @end
 
@@ -44,7 +48,11 @@
     [self.picker reloadAllComponents];
     [self.picker setHidden:YES];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 50, 200, 50)];
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+    
+    [self.view addGestureRecognizer:gesture];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 40, 200, 50)];
     titleLabel.text = @"Add Expense";
     titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0];
     titleLabel.backgroundColor = [UIColor clearColor];
@@ -61,7 +69,7 @@
     [self.view addSubview:chooseCat];
     
     self.selectCat = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.selectCat.frame = CGRectMake(self.view.frame.size.width/2 - 100, chooseCat.frame.origin.y + 80, 200, 50);
+    self.selectCat.frame = CGRectMake(self.view.frame.size.width/2 - 100, chooseCat.frame.origin.y + 70, 200, 50);
     self.selectCat.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
     [self.selectCat setTitle:@"Select Category" forState:UIControlStateNormal];
     [self.selectCat setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -81,17 +89,22 @@
     
     [self.view addSubview:expenseAmountLabel];
 
+    UILabel *dollarLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 20, 50)];
+    dollarLabel.text = @"$";
+    dollarLabel.font = [UIFont fontWithName:@"ArialRoundedMTBold" size:25.0];
+
     
-    UITextField *expenseAmount = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, expenseAmountLabel.frame.origin.y + 70, 200, 50)];
-    expenseAmount.text = @"$0.00";
-    expenseAmount.font = [UIFont fontWithName:@"ArialRoundedMTBold" size:25.0];
-    expenseAmount.backgroundColor = [UIColor clearColor];
-    expenseAmount.textColor = [UIColor blackColor];
-    expenseAmount.textAlignment = NSTextAlignmentCenter;
-    [expenseAmount setKeyboardType:UIKeyboardTypeDecimalPad];
-    [expenseAmount setReturnKeyType:UIReturnKeyDone];
-    
-    [self.view addSubview:expenseAmount];
+    self.expenseAmount = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 50, expenseAmountLabel.frame.origin.y + 70, 100, 50)];
+    self.expenseAmount.delegate = self;
+    self.expenseAmount.text = @"0.00";
+    self.expenseAmount.font = [UIFont fontWithName:@"ArialRoundedMTBold" size:25.0];
+    self.expenseAmount.backgroundColor = [UIColor clearColor];
+    self.expenseAmount.textColor = [UIColor blackColor];
+    self.expenseAmount.textAlignment = NSTextAlignmentRight;
+    [self.expenseAmount setKeyboardType:UIKeyboardTypeDecimalPad];
+    self.expenseAmount.returnKeyType = UIReturnKeyDone;
+    [self.expenseAmount addSubview:dollarLabel];
+    [self.view addSubview:self.expenseAmount];
 
     
     UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -109,14 +122,21 @@
     [self.view addSubview:self.picker];
 }
 
+#pragma mark - Selectors
+
 - (void)done:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self createExpense];
 }
 
 - (void)selectCat:(id)sender
 {
     [self.picker setHidden:NO];
+}
+
+- (void)tap:(UITapGestureRecognizer *)gr
+{
+    [self.expenseAmount endEditing:YES];
 }
 
 
@@ -146,6 +166,8 @@
 {
     NSString *selection = [self.picker.delegate pickerView:self.picker titleForRow:row forComponent:component];
     [self.selectCat setTitle:selection forState:UIControlStateNormal];
+    [self.selectCat setBackgroundColor:[UIColor colorWithRed:144.0/255.0 green:206.0/255.0 blue:221.0/255.0 alpha:1]];
+    self.expense.category = selection;
     [self.picker setHidden:YES];
 }
 
@@ -154,11 +176,41 @@
     return 30.0;
 }
 
+#pragma mark- UITextField Delegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.expenseAmount.text = @"";
+    self.view.frame = CGRectMake(0, -100, self.view.frame.size.width, self.view.frame.size.height);
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.expense.amount = [NSNumber numberWithInteger:[textField.text integerValue]];
+    
+    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return NO;
+}
+
 #pragma mark- Expense Creation
 
 - (void)createExpense
 {
-    
+    self.expense.dateAndTime = [NSDate date];
+    self.expense.receipt = nil;
+    self.expense.friends = self.tripDetails.tripFriends;
+    ExpenseHelper *helper = [ExpenseHelper sharedEverNoteHelper];
+    [helper addExpense:self.expense fortrip:self.tripDetails completion:^(NSError *error){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Expense Added" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
 }
 
 
