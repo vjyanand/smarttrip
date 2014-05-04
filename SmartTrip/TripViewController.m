@@ -57,6 +57,7 @@ NSInteger const kbarHeight = 20;
     if (self.tripDetails.tripFriends.count > 0) {
         [self getFBUserData];
     }
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     

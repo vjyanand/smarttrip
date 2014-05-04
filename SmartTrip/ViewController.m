@@ -43,21 +43,7 @@
     [self.view addSubview:buttonToTrip];
     
     [self.navigationController pushViewController:[[MyTripViewController alloc] init] animated:NO];
-    /*TripDetails *a = [[TripDetails alloc] init];
-    a.destination = @"NY";
-    a.tripStart = [NSDate date];
-    a.tripLength = @10;
-    a.UUID = [[NSUUID UUID] UUIDString];
-    [[ExpenseHelper sharedEverNoteHelper] createTrip:a completion:^(NSError *error) {
-        [[ExpenseHelper sharedEverNoteHelper] getMyTrips:^(NSError *error, NSArray *trips) {
-            NSLog(@"%@", trips);
-        }];
-    }];
-    Expense *e = [[Expense alloc] init];
-    e.category = @"VIJAY";
-    e.dateAndTime = [NSDate date];
-    e.amount = @20.5;
-    e.desc = @"AAA";*/
+   
 }
 
 - (void)didReceiveMemoryWarning
