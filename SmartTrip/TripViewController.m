@@ -40,7 +40,6 @@ NSInteger const kbarHeight = 20;
             self.tripDetails.tripLength = [[NSNumber alloc] initWithInt:7];
             self.tripDetails.tripFriends = [[NSArray alloc] initWithObjects: @"10152415181973679", nil];
             self.tripDetails.budget = [[TripBudget alloc] init];
-            
             self.tripDetails.budget.totalBudget = [[NSNumber alloc] initWithInt:2000];
         }
         self.view.backgroundColor = [UIColor whiteColor];
@@ -168,21 +167,46 @@ NSInteger const kbarHeight = 20;
         [categoryView addSubview:progressView];
     }
     
-    
     [self.tripView addSubview:addExpense];
     [self.tripView addSubview:imageViewContainer];
     [self.scrollView addSubview:self.tripView];
     
     self.recieptView = [[UIView alloc] initWithFrame:CGRectMake(2 * self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
-    [self.recieptView addSubview:imageBackground];
+    UIImageView *imageBackground1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"newyork3.jpg"]];
+    imageBackground1.frame = CGRectMake(0, 0, self.tripView.frame.size.width, self.tripView.frame.size.height);
+    imageBackground1.contentMode = UIViewContentModeScaleAspectFill;
+    imageBackground1.layer.masksToBounds = YES;
+    [self.recieptView addSubview:imageBackground1];
     
     
+    UILabel *header1 = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 50, 200, 50)];
+    header1.text = @"Expense Receipt";
+    header1.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0];
+    header1.backgroundColor = [UIColor clearColor];
+    header1.textColor = [UIColor blackColor];
+    header1.textAlignment = NSTextAlignmentCenter;
     
-    [self.recieptView addSubview:header];
+    [self.recieptView addSubview:header1];
     
+    UILabel *destination1 = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 120, 200, 50)];
+    destination1.text = self.tripDetails.destination;
+    destination1.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:30.0];
+    destination1.backgroundColor = [UIColor clearColor];
+    destination1.textColor = [UIColor whiteColor];
+    destination1.textAlignment = NSTextAlignmentCenter;
+    [self.recieptView addSubview:destination1];
     
-    [self.recieptView addSubview:destination];
+    UILabel *recepitDate = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 160, 200, 50)];
+    recepitDate.text = @"April 29th, 2014";
+    recepitDate.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:30.0];
+    recepitDate.backgroundColor = [UIColor clearColor];
+    recepitDate.textColor = [UIColor grayColor];
+    recepitDate.adjustsFontSizeToFitWidth = YES;
+    destination1.textAlignment = NSTextAlignmentCenter;
+    [self.recieptView addSubview:recepitDate];
+    
+    NSLog(@"%@", self.tripDetails);
     
    // UILabel
     UILabel *attributedLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, self.view.frame.size.width - 20, self.view.frame.size.height-10)];
