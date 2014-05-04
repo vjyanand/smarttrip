@@ -99,6 +99,30 @@
 		426EE0E51916046D0017DC39 /* NSData+EvernoteSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE09A1916046D0017DC39 /* NSData+EvernoteSDK.m */; };
 		426EE0E61916046D0017DC39 /* NSDataBase64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE09C1916046D0017DC39 /* NSDataBase64Additions.m */; };
 		426EE0E71916046D0017DC39 /* NSDate+EDAMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE09E1916046D0017DC39 /* NSDate+EDAMAdditions.m */; };
+		426EE10619160F1B0017DC39 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE0EA19160F1B0017DC39 /* MKAnnotationView+WebCache.m */; };
+		426EE10719160F1B0017DC39 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE0EC19160F1B0017DC39 /* NSData+ImageContentType.m */; };
+		426EE10819160F1B0017DC39 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE0EE19160F1B0017DC39 /* SDImageCache.m */; };
+		426EE10919160F1B0017DC39 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE0F019160F1B0017DC39 /* SDWebImageCompat.m */; };
+		426EE10A19160F1B0017DC39 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE0F219160F1B0017DC39 /* SDWebImageDecoder.m */; };
+		426EE10B19160F1B0017DC39 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE0F419160F1B0017DC39 /* SDWebImageDownloader.m */; };
+		426EE10C19160F1B0017DC39 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE0F619160F1B0017DC39 /* SDWebImageDownloaderOperation.m */; };
+		426EE10D19160F1B0017DC39 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE0F819160F1B0017DC39 /* SDWebImageManager.m */; };
+		426EE10E19160F1B0017DC39 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE0FB19160F1B0017DC39 /* SDWebImagePrefetcher.m */; };
+		426EE10F19160F1B0017DC39 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE0FD19160F1B0017DC39 /* UIButton+WebCache.m */; };
+		426EE11019160F1B0017DC39 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE0FF19160F1B0017DC39 /* UIImage+GIF.m */; };
+		426EE11119160F1B0017DC39 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE10119160F1B0017DC39 /* UIImage+MultiFormat.m */; };
+		426EE11219160F1B0017DC39 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE10319160F1B0017DC39 /* UIImage+WebP.m */; };
+		426EE11319160F1B0017DC39 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE10519160F1B0017DC39 /* UIImageView+WebCache.m */; };
+		426EE12419160F950017DC39 /* AddFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE11619160F950017DC39 /* AddFriendsViewController.m */; };
+		426EE12519160F950017DC39 /* CategoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE11819160F950017DC39 /* CategoriesView.m */; };
+		426EE12619160F950017DC39 /* checkmark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426EE11919160F950017DC39 /* checkmark.jpg */; };
+		426EE12719160F950017DC39 /* CreateBudgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE11B19160F950017DC39 /* CreateBudgetViewController.m */; };
+		426EE12819160F950017DC39 /* FinishCreatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE11D19160F950017DC39 /* FinishCreatingViewController.m */; };
+		426EE12919160F950017DC39 /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE11F19160F950017DC39 /* FriendsTableViewCell.m */; };
+		426EE12A19160F950017DC39 /* MyTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE12119160F950017DC39 /* MyTripViewController.m */; };
+		426EE12B19160F950017DC39 /* newyork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426EE12219160F950017DC39 /* newyork.jpg */; };
+		426EE12C19160F950017DC39 /* newyork2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426EE12319160F950017DC39 /* newyork2.jpg */; };
+		426EE12F191610670017DC39 /* CreateTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE12D191610670017DC39 /* CreateTripViewController.m */; };
 		42F832B61915845600F172D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B51915845600F172D5 /* Foundation.framework */; };
 		42F832B81915845600F172D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B71915845600F172D5 /* CoreGraphics.framework */; };
 		42F832BA1915845600F172D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B91915845600F172D5 /* UIKit.framework */; };
@@ -116,7 +140,6 @@
 		42F832EF1915895F00F172D5 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832EE1915895F00F172D5 /* libxml2.dylib */; };
 		42F832F3191597EB00F172D5 /* ExpenseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F832F2191597EB00F172D5 /* ExpenseHelper.m */; };
 		42F832F6191599CF00F172D5 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F832F5191599CF00F172D5 /* Expense.m */; };
-		42F833101915AC1E00F172D5 /* CreateTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */; };
 		5E98DF5F1915855D00B65A9D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98DF5E1915855D00B65A9D /* FacebookSDK.framework */; };
 		5E98DF621915856800B65A9D /* InitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98DF611915856800B65A9D /* InitView.m */; };
 /* End PBXBuildFile section */
@@ -310,6 +333,52 @@
 		426EE09C1916046D0017DC39 /* NSDataBase64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataBase64Additions.m; sourceTree = "<group>"; };
 		426EE09D1916046D0017DC39 /* NSDate+EDAMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+EDAMAdditions.h"; sourceTree = "<group>"; };
 		426EE09E1916046D0017DC39 /* NSDate+EDAMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+EDAMAdditions.m"; sourceTree = "<group>"; };
+		426EE0E919160F1B0017DC39 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
+		426EE0EA19160F1B0017DC39 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
+		426EE0EB19160F1B0017DC39 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		426EE0EC19160F1B0017DC39 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		426EE0ED19160F1B0017DC39 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		426EE0EE19160F1B0017DC39 /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		426EE0EF19160F1B0017DC39 /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		426EE0F019160F1B0017DC39 /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
+		426EE0F119160F1B0017DC39 /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		426EE0F219160F1B0017DC39 /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		426EE0F319160F1B0017DC39 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		426EE0F419160F1B0017DC39 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		426EE0F519160F1B0017DC39 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		426EE0F619160F1B0017DC39 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		426EE0F719160F1B0017DC39 /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		426EE0F819160F1B0017DC39 /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		426EE0F919160F1B0017DC39 /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
+		426EE0FA19160F1B0017DC39 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		426EE0FB19160F1B0017DC39 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		426EE0FC19160F1B0017DC39 /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		426EE0FD19160F1B0017DC39 /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		426EE0FE19160F1B0017DC39 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		426EE0FF19160F1B0017DC39 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		426EE10019160F1B0017DC39 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		426EE10119160F1B0017DC39 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		426EE10219160F1B0017DC39 /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
+		426EE10319160F1B0017DC39 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
+		426EE10419160F1B0017DC39 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		426EE10519160F1B0017DC39 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		426EE11519160F950017DC39 /* AddFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendsViewController.h; sourceTree = "<group>"; };
+		426EE11619160F950017DC39 /* AddFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendsViewController.m; sourceTree = "<group>"; };
+		426EE11719160F950017DC39 /* CategoriesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesView.h; sourceTree = "<group>"; };
+		426EE11819160F950017DC39 /* CategoriesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesView.m; sourceTree = "<group>"; };
+		426EE11919160F950017DC39 /* checkmark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkmark.jpg; sourceTree = "<group>"; };
+		426EE11A19160F950017DC39 /* CreateBudgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBudgetViewController.h; sourceTree = "<group>"; };
+		426EE11B19160F950017DC39 /* CreateBudgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBudgetViewController.m; sourceTree = "<group>"; };
+		426EE11C19160F950017DC39 /* FinishCreatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishCreatingViewController.h; sourceTree = "<group>"; };
+		426EE11D19160F950017DC39 /* FinishCreatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishCreatingViewController.m; sourceTree = "<group>"; };
+		426EE11E19160F950017DC39 /* FriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewCell.h; sourceTree = "<group>"; };
+		426EE11F19160F950017DC39 /* FriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewCell.m; sourceTree = "<group>"; };
+		426EE12019160F950017DC39 /* MyTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTripViewController.h; sourceTree = "<group>"; };
+		426EE12119160F950017DC39 /* MyTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTripViewController.m; sourceTree = "<group>"; };
+		426EE12219160F950017DC39 /* newyork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newyork.jpg; sourceTree = "<group>"; };
+		426EE12319160F950017DC39 /* newyork2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newyork2.jpg; sourceTree = "<group>"; };
+		426EE12D191610670017DC39 /* CreateTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTripViewController.m; sourceTree = "<group>"; };
+		426EE12E191610670017DC39 /* CreateTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTripViewController.h; sourceTree = "<group>"; };
 		42F832B21915845600F172D5 /* SmartTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F832B51915845600F172D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42F832B71915845600F172D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -334,8 +403,6 @@
 		42F832F2191597EB00F172D5 /* ExpenseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseHelper.m; sourceTree = "<group>"; };
 		42F832F4191599CF00F172D5 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
 		42F832F5191599CF00F172D5 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
-		42F8330E1915AC1E00F172D5 /* CreateTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTripViewController.h; sourceTree = "<group>"; };
-		42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTripViewController.m; sourceTree = "<group>"; };
 		5E98DF5E1915855D00B65A9D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		5E98DF601915856800B65A9D /* InitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitView.h; sourceTree = "<group>"; };
 		5E98DF611915856800B65A9D /* InitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitView.m; sourceTree = "<group>"; };
@@ -384,8 +451,6 @@
 			children = (
 				426EDFA91915BA590017DC39 /* TripViewController.h */,
 				426EDFA71915B8F90017DC39 /* TripViewController.m */,
-				42F8330E1915AC1E00F172D5 /* CreateTripViewController.h */,
-				42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */,
 			);
 			name = TripViewController;
 			sourceTree = "<group>";
@@ -712,6 +777,66 @@
 			path = ENMLWriter;
 			sourceTree = "<group>";
 		};
+		426EE0E819160F1B0017DC39 /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				426EE0E919160F1B0017DC39 /* MKAnnotationView+WebCache.h */,
+				426EE0EA19160F1B0017DC39 /* MKAnnotationView+WebCache.m */,
+				426EE0EB19160F1B0017DC39 /* NSData+ImageContentType.h */,
+				426EE0EC19160F1B0017DC39 /* NSData+ImageContentType.m */,
+				426EE0ED19160F1B0017DC39 /* SDImageCache.h */,
+				426EE0EE19160F1B0017DC39 /* SDImageCache.m */,
+				426EE0EF19160F1B0017DC39 /* SDWebImageCompat.h */,
+				426EE0F019160F1B0017DC39 /* SDWebImageCompat.m */,
+				426EE0F119160F1B0017DC39 /* SDWebImageDecoder.h */,
+				426EE0F219160F1B0017DC39 /* SDWebImageDecoder.m */,
+				426EE0F319160F1B0017DC39 /* SDWebImageDownloader.h */,
+				426EE0F419160F1B0017DC39 /* SDWebImageDownloader.m */,
+				426EE0F519160F1B0017DC39 /* SDWebImageDownloaderOperation.h */,
+				426EE0F619160F1B0017DC39 /* SDWebImageDownloaderOperation.m */,
+				426EE0F719160F1B0017DC39 /* SDWebImageManager.h */,
+				426EE0F819160F1B0017DC39 /* SDWebImageManager.m */,
+				426EE0F919160F1B0017DC39 /* SDWebImageOperation.h */,
+				426EE0FA19160F1B0017DC39 /* SDWebImagePrefetcher.h */,
+				426EE0FB19160F1B0017DC39 /* SDWebImagePrefetcher.m */,
+				426EE0FC19160F1B0017DC39 /* UIButton+WebCache.h */,
+				426EE0FD19160F1B0017DC39 /* UIButton+WebCache.m */,
+				426EE0FE19160F1B0017DC39 /* UIImage+GIF.h */,
+				426EE0FF19160F1B0017DC39 /* UIImage+GIF.m */,
+				426EE10019160F1B0017DC39 /* UIImage+MultiFormat.h */,
+				426EE10119160F1B0017DC39 /* UIImage+MultiFormat.m */,
+				426EE10219160F1B0017DC39 /* UIImage+WebP.h */,
+				426EE10319160F1B0017DC39 /* UIImage+WebP.m */,
+				426EE10419160F1B0017DC39 /* UIImageView+WebCache.h */,
+				426EE10519160F1B0017DC39 /* UIImageView+WebCache.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		426EE11419160F320017DC39 /* CreateTripView */ = {
+			isa = PBXGroup;
+			children = (
+				426EE11519160F950017DC39 /* AddFriendsViewController.h */,
+				426EE11619160F950017DC39 /* AddFriendsViewController.m */,
+				426EE11719160F950017DC39 /* CategoriesView.h */,
+				426EE11819160F950017DC39 /* CategoriesView.m */,
+				426EE11919160F950017DC39 /* checkmark.jpg */,
+				426EE11A19160F950017DC39 /* CreateBudgetViewController.h */,
+				426EE12D191610670017DC39 /* CreateTripViewController.m */,
+				426EE12E191610670017DC39 /* CreateTripViewController.h */,
+				426EE11B19160F950017DC39 /* CreateBudgetViewController.m */,
+				426EE11C19160F950017DC39 /* FinishCreatingViewController.h */,
+				426EE11D19160F950017DC39 /* FinishCreatingViewController.m */,
+				426EE11E19160F950017DC39 /* FriendsTableViewCell.h */,
+				426EE11F19160F950017DC39 /* FriendsTableViewCell.m */,
+				426EE12019160F950017DC39 /* MyTripViewController.h */,
+				426EE12119160F950017DC39 /* MyTripViewController.m */,
+				426EE12219160F950017DC39 /* newyork.jpg */,
+				426EE12319160F950017DC39 /* newyork2.jpg */,
+			);
+			name = CreateTripView;
+			sourceTree = "<group>";
+		};
 		42F832A91915845600F172D5 = {
 			isa = PBXGroup;
 			children = (
@@ -748,6 +873,7 @@
 		42F832BB1915845600F172D5 /* SmartTrip */ = {
 			isa = PBXGroup;
 			children = (
+				426EE11419160F320017DC39 /* CreateTripView */,
 				42F832F0191597C400F172D5 /* Helpers */,
 				42F832C41915845600F172D5 /* AppDelegate.h */,
 				42F832C51915845600F172D5 /* AppDelegate.m */,
@@ -797,6 +923,7 @@
 		42F832F0191597C400F172D5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				426EE0E819160F1B0017DC39 /* SDWebImage */,
 				426EE0011916046D0017DC39 /* evernote-sdk-ios */,
 				426EDFAA1915CA7D0017DC39 /* ASIHTTPRequest */,
 				42F832F1191597EB00F172D5 /* ExpenseHelper.h */,
@@ -891,6 +1018,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				426EE0D01916046D0017DC39 /* index.php in Resources */,
+				426EE12619160F950017DC39 /* checkmark.jpg in Resources */,
 				42F832CE1915845600F172D5 /* Images.xcassets in Resources */,
 				426EE0D31916046D0017DC39 /* xhtml-lat1.ent in Resources */,
 				426EE0CE1916046D0017DC39 /* enml2.dtd in Resources */,
@@ -898,6 +1026,7 @@
 				426EE0CF1916046D0017DC39 /* evernote-export.dtd in Resources */,
 				426EE0A81916046D0017DC39 /* LICENSE.txt in Resources */,
 				426EE0AA1916046D0017DC39 /* LICENSE in Resources */,
+				426EE12B19160F950017DC39 /* newyork.jpg in Resources */,
 				426EE0AC1916046D0017DC39 /* LICENSE in Resources */,
 				426EE0CC1916046D0017DC39 /* .htaccess in Resources */,
 				426EE0AE1916046D0017DC39 /* LICENSE in Resources */,
@@ -908,6 +1037,7 @@
 				426EE0D51916046D0017DC39 /* xhtml-symbol.ent in Resources */,
 				42F832C91915845600F172D5 /* Main.storyboard in Resources */,
 				426EE0D41916046D0017DC39 /* xhtml-special.ent in Resources */,
+				426EE12C19160F950017DC39 /* newyork2.jpg in Resources */,
 				426EE0CD1916046D0017DC39 /* enml.dtd in Resources */,
 				426EE0D11916046D0017DC39 /* promotions.dtd in Resources */,
 				426EE0D61916046D0017DC39 /* xhtml1-strict.dtd in Resources */,
@@ -940,19 +1070,27 @@
 				426EDFBF1915CA9B0017DC39 /* ASIAuthenticationDialog.m in Sources */,
 				426EE0A61916046D0017DC39 /* KSXMLAttributes.m in Sources */,
 				42F832CC1915845600F172D5 /* ViewController.m in Sources */,
+				426EE10819160F1B0017DC39 /* SDImageCache.m in Sources */,
 				426EE0A71916046D0017DC39 /* KSXMLWriter.m in Sources */,
 				426EE0BD1916046D0017DC39 /* ENConstants.m in Sources */,
 				426EE0C61916046D0017DC39 /* ENLinkNotebookRequest.m in Sources */,
+				426EE12719160F950017DC39 /* CreateBudgetViewController.m in Sources */,
 				426EE0E21916046D0017DC39 /* ENXMLWriter.m in Sources */,
 				426EE0B41916046D0017DC39 /* THTTPClient.m in Sources */,
 				426EE0AD1916046D0017DC39 /* SSKeychain.m in Sources */,
 				426EE0AF1916046D0017DC39 /* TBinaryProtocol.m in Sources */,
 				426EE0AB1916046D0017DC39 /* NSString+URLEncoding.m in Sources */,
+				426EE10719160F1B0017DC39 /* NSData+ImageContentType.m in Sources */,
 				426EE0C01916046D0017DC39 /* EvernoteSDK.m in Sources */,
 				426EE0E51916046D0017DC39 /* NSData+EvernoteSDK.m in Sources */,
+				426EE12A19160F950017DC39 /* MyTripViewController.m in Sources */,
+				426EE12919160F950017DC39 /* FriendsTableViewCell.m in Sources */,
+				426EE12519160F950017DC39 /* CategoriesView.m in Sources */,
 				426EE0E31916046D0017DC39 /* NSRegularExpression+ENAGRegex.m in Sources */,
 				426EE0BF1916046D0017DC39 /* EvernoteNoteStore.m in Sources */,
 				426EE0E41916046D0017DC39 /* NSString+EDAMAdditions.m in Sources */,
+				426EE11219160F1B0017DC39 /* UIImage+WebP.m in Sources */,
+				426EE12819160F950017DC39 /* FinishCreatingViewController.m in Sources */,
 				426EDFC11915CA9B0017DC39 /* ASIDataDecompressor.m in Sources */,
 				426EE0B11916046D0017DC39 /* TProtocolUtil.m in Sources */,
 				42F832C61915845600F172D5 /* AppDelegate.m in Sources */,
@@ -961,15 +1099,22 @@
 				426EE0BC1916046D0017DC39 /* EDAMNoteStoreClient+Utilities.m in Sources */,
 				1677A15E19158F4100DF460F /* CategoryBudget.m in Sources */,
 				1677A15B19158EF100DF460F /* TripBudget.m in Sources */,
+				426EE11319160F1B0017DC39 /* UIImageView+WebCache.m in Sources */,
 				426EE0BA1916046D0017DC39 /* EDAMTypes.m in Sources */,
+				426EE12F191610670017DC39 /* CreateTripViewController.m in Sources */,
+				426EE11119160F1B0017DC39 /* UIImage+MultiFormat.m in Sources */,
+				426EE12419160F950017DC39 /* AddFriendsViewController.m in Sources */,
 				426EE0B61916046D0017DC39 /* TTransportException.m in Sources */,
 				426EE0CB1916046D0017DC39 /* ENSearchRequest.m in Sources */,
+				426EE10A19160F1B0017DC39 /* SDWebImageDecoder.m in Sources */,
 				426EDFC91915CB460017DC39 /* Reachability.m in Sources */,
 				426EE0B91916046D0017DC39 /* EDAMNoteStore.m in Sources */,
 				426EE0BB1916046D0017DC39 /* EDAMUserStore.m in Sources */,
 				426EE0BE1916046D0017DC39 /* EvernoteNoteStore+Extras.m in Sources */,
 				426EE0A51916046D0017DC39 /* KSWriter.m in Sources */,
 				426EE09F1916046D0017DC39 /* ENAFURLConnectionOperation.m in Sources */,
+				426EE10E19160F1B0017DC39 /* SDWebImagePrefetcher.m in Sources */,
+				426EE11019160F1B0017DC39 /* UIImage+GIF.m in Sources */,
 				426EE0A91916046D0017DC39 /* NSString+XMLAdditions.m in Sources */,
 				426EDFC61915CA9B0017DC39 /* ASINetworkQueue.m in Sources */,
 				426EE0D91916046D0017DC39 /* ENCredentials.m in Sources */,
@@ -977,7 +1122,6 @@
 				426EE0A01916046D0017DC39 /* ENGCOAuth.m in Sources */,
 				1677A1671915D33400DF460F /* FriendData.m in Sources */,
 				426EDFC41915CA9B0017DC39 /* ASIHTTPRequest.m in Sources */,
-				42F833101915AC1E00F172D5 /* CreateTripViewController.m in Sources */,
 				426EE0E71916046D0017DC39 /* NSDate+EDAMAdditions.m in Sources */,
 				426EE0A31916046D0017DC39 /* KSForwardingWriter.m in Sources */,
 				426EE0A21916046D0017DC39 /* NSData+ENBase64.m in Sources */,
@@ -986,22 +1130,28 @@
 				426EE0DD1916046D0017DC39 /* ENMLUtility.m in Sources */,
 				426EE0E61916046D0017DC39 /* NSDataBase64Additions.m in Sources */,
 				426EDFC01915CA9B0017DC39 /* ASIDataCompressor.m in Sources */,
+				426EE10D19160F1B0017DC39 /* SDWebImageManager.m in Sources */,
 				426EE0DB1916046D0017DC39 /* ENOAuthViewController.m in Sources */,
+				426EE10919160F1B0017DC39 /* SDWebImageCompat.m in Sources */,
 				426EE0C91916046D0017DC39 /* ENNoteViewRequest.m in Sources */,
 				426EDFC31915CA9B0017DC39 /* ASIFormDataRequest.m in Sources */,
 				42F832F3191597EB00F172D5 /* ExpenseHelper.m in Sources */,
 				426EE0C11916046D0017DC39 /* EvernoteSession.m in Sources */,
 				426EE0D81916046D0017DC39 /* ENAPI.m in Sources */,
 				426EE0DA1916046D0017DC39 /* ENCredentialStore.m in Sources */,
+				426EE10C19160F1B0017DC39 /* SDWebImageDownloaderOperation.m in Sources */,
 				426EE0B21916046D0017DC39 /* TApplicationException.m in Sources */,
 				426EDFC51915CA9B0017DC39 /* ASIInputStream.m in Sources */,
 				426EE0E01916046D0017DC39 /* ENMLWriter.m in Sources */,
 				426EDFA81915B8F90017DC39 /* TripViewController.m in Sources */,
 				426EE0B51916046D0017DC39 /* TMemoryBuffer.m in Sources */,
 				426EE0C31916046D0017DC39 /* EvernoteUserStore.m in Sources */,
+				426EE10619160F1B0017DC39 /* MKAnnotationView+WebCache.m in Sources */,
 				426EE0C81916046D0017DC39 /* ENNoteImportRequest.m in Sources */,
 				426EE0A41916046D0017DC39 /* KSHTMLWriter.m in Sources */,
+				426EE10B19160F1B0017DC39 /* SDWebImageDownloader.m in Sources */,
 				426EE0C51916046D0017DC39 /* ENAuthenticationRequest.m in Sources */,
+				426EE10F19160F1B0017DC39 /* UIButton+WebCache.m in Sources */,
 				426EE0C21916046D0017DC39 /* EvernoteUserStore+Extras.m in Sources */,
 				426EE0C71916046D0017DC39 /* ENNewNoteRequest.m in Sources */,
 				42F832F6191599CF00F172D5 /* Expense.m in Sources */,

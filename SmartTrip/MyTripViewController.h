@@ -1,5 +1,5 @@
 //
-//  CreateTripViewController.h
+//  MyTripViewController.h
 //  SmartTrip
 //
 //  Created by George on 2014-05-03.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateTripViewController : UIViewController <UITextFieldDelegate>
+@interface MyTripViewController : UIViewController
 
 @end

@@ -7,12 +7,16 @@
 //
 
 #import "CreateTripViewController.h"
+#import "CreateBudgetViewController.h"
+#import "AddFriendsViewController.h"
 
 @interface CreateTripViewController ()
 
 @end
 
-@implementation CreateTripViewController
+@implementation CreateTripViewController{
+    UILabel *longQuestion;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +45,7 @@
     
     UITextField *whereInput = [[UITextField alloc] initWithFrame:CGRectMake(30, 120, screenWidth-60, 30)];
     whereInput.placeholder = @"E.g. New York City";
+    whereInput.delegate = self;
     [self.view addSubview:whereInput];
     
     UILabel *whenQuestion = [[UILabel alloc] initWithFrame:CGRectMake(0, 160, screenWidth, 30)];
@@ -53,11 +58,48 @@
     leaving.datePickerMode = UIDatePickerModeDate;
     [self.view addSubview:leaving];
     
-    //UISlider *length = [[UISlider alloc] initWithFrame:CGRectMake]
     
-    // Do any additional setup after loading the view.
+    UISlider *length = [[UISlider alloc] initWithFrame:CGRectMake(20, 440, screenWidth-40, 30)];
+    [self.view addSubview:length];
+    
+    [length addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
+    length.minimumValue = 0.0;
+    length.maximumValue = 50.0;
+    length.continuous = YES;
+    length.value = 0.0;
+    
+    
+    longQuestion = [[UILabel alloc] initWithFrame:CGRectMake(0, 410, screenWidth, 30)];
+    
+    longQuestion.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:19.0f];
+    longQuestion.textAlignment = NSTextAlignmentCenter;
+    longQuestion.text = [NSString stringWithFormat:@" Length of stay %d days", (int)length.value];
+    [self.view addSubview:longQuestion];
+    
+    UIBarButtonItem *next = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(clickNext)];
+    
+    self.navigationItem.rightBarButtonItem = next;
 }
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+-(IBAction)sliderAction:(id)sender
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    UISlider *slider = (UISlider*)sender;
+    longQuestion.text = [NSString stringWithFormat:@" Length of stay %d days", (int)slider.value];
+}
+-(void)clickNext{
+    
+    
+    CreateBudgetViewController *bvc = [[CreateBudgetViewController alloc] init];
+   // AddFriendsViewController  *bvc = [[AddFriendsViewController alloc] init];
+    [self.navigationController pushViewController:bvc animated:YES];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

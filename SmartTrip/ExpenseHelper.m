@@ -57,6 +57,20 @@
     completion(error);
 }
 
+- (void)getExpenses:(TripDetails *)trip completion:(ENTripsCompletionHandler)completion {
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"https://www.concursolutions.com/api/expense/expensereport/v1.0/quickexpense"]];
+    [request addRequestHeader:@"Authorization" value:@"OAuth DAfaWYrNtoM77hBf+Zy4NaWksPw="];
+    [request addRequestHeader:@"Accept" value:@"application/json"];
+    [request startSynchronous];
+    NSError *error = [request error];
+    if (!error) {
+        NSData *responseData = [[NSMutableData alloc] initWithData:[request responseData]];
+        completion(error, [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error]);
+    }
+    completion(error, nil);
+
+}
+
 - (void)addTripToNote:(TripDetails *)trip completion:(ENCompletionHandler)completion {
     
     NSString *noteContent = [NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"

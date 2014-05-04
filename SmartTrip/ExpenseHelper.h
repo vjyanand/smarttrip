@@ -14,6 +14,8 @@ typedef void (^ENTripsCompletionHandler)(NSError * error, NSArray *trips);
 
 - (void)addExpense:(Expense *)expense fortrip:(TripDetails *)trip completion:(ENCompletionHandler)completion;
 
+- (void)getExpenses:(TripDetails *)trip completion:(ENCompletionHandler)completion;
+
 - (void)getMyTrips:(ENTripsCompletionHandler)completion;
 
 - (void)addTripToNote:(TripDetails *)trip completion:(ENCompletionHandler)completion;
