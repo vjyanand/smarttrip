@@ -44,7 +44,12 @@
     [request setPostBody: [NSMutableData dataWithData:[xml dataUsingEncoding:NSUTF8StringEncoding]]];
     [request startSynchronous];
     NSError *error = [request error];
-    completion(error);
+    if(error) {
+     completion(error);
+    }
+    [self addTripToNote:detail completion:^(NSError *error) {
+     completion(error);
+    }];
 }
 
 - (void)addExpense:(Expense *)expense fortrip:(TripDetails *)trip completion:(ENCompletionHandler)completion {
