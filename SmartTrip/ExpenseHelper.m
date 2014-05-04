@@ -39,6 +39,11 @@ NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/t
 - (void)createTrip:(TripDetails *)detail completion:(ENCompletionHandler)completion {
     NSString *xml = [NSString stringWithFormat:@"<?xml version=\"1.0\"?> <Itinerary xmlns=\"http://www.concursolutions.com/api/travel/trip/2010/06\"> <TripName>%@</TripName> <TravelRequestId>%@</TravelRequestId> <Bookings> <Booking> <RecordLocator>Air Locator</RecordLocator> <BookingSource>Sample Itin for Disrupt</BookingSource> <DateBookedLocal>2014-04-30T03:47:14</DateBookedLocal></Booking> </Bookings> </Itinerary>", detail.destination, detail.UUID];
     
+    NSError *writeError = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:detail options:NSJSONWritingPrettyPrinted error:&writeError];
+    NSString *result = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+
+    
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:ConcurEndPoint]];
     [request addRequestHeader:@"Content-Type" value:@"application/xml"];
     [request addRequestHeader:@"Authorization" value:@"OAuth DAfaWYrNtoM77hBf+Zy4NaWksPw="];
