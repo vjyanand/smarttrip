@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TripDetails.h"
 
-@interface ExpenseViewController : UIViewController
+@interface ExpenseViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) UIPickerView *picker;
 @property (nonatomic, strong) TripDetails *tripDetails;
