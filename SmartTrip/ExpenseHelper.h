@@ -5,6 +5,7 @@
 
 typedef void (^ENCompletionHandler)(NSError * error);
 typedef void (^ENTripsCompletionHandler)(NSError * error, NSArray *trips);
+typedef void (^ENExpenseCompletionHandler)(NSError * error, NSArray *expenses);
 
 @interface ExpenseHelper : NSObject
 
@@ -16,7 +17,7 @@ typedef void (^ENTripsCompletionHandler)(NSError * error, NSArray *trips);
 
 - (void)getMyTrips:(ENTripsCompletionHandler)completion;
 
--(void)getExpenses:(TripDetails *)trip completion:(ENTripsCompletionHandler)completion;
+-(void)getExpenses:(TripDetails *)trip completion:(ENExpenseCompletionHandler)completion;
 
 - (void)addTripToNote:(TripDetails *)trip completion:(ENCompletionHandler)completion;
 @end

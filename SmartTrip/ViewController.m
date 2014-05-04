@@ -57,10 +57,14 @@
     e.category = @"VIJAY";
     e.dateAndTime = [NSDate date];
     e.amount = @20.5;
-    e.desc = @"AAA";
-    [[ExpenseHelper sharedEverNoteHelper] addExpense:e fortrip:nil completion:^(NSError *error) {
+    e.desc = @"AAA";*/
+    
+    [[ExpenseHelper sharedEverNoteHelper] getExpenses:nil completion:^(NSError *error, NSArray *trips) {
         
-    }];*/
+
+        NSLog(@"%d", trips.count);
+        
+    }];
     
 }
 

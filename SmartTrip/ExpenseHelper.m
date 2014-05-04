@@ -57,7 +57,7 @@
     completion(error);
 }
 
-- (void)getExpenses:(TripDetails *)trip completion:(ENTripsCompletionHandler)completion {
+- (void)getExpenses:(TripDetails *)trip completion:(ENExpenseCompletionHandler)completion {
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"https://www.concursolutions.com/api/expense/expensereport/v1.0/quickexpense"]];
     [request addRequestHeader:@"Authorization" value:@"OAuth DAfaWYrNtoM77hBf+Zy4NaWksPw="];
     [request addRequestHeader:@"Accept" value:@"application/json"];
@@ -78,7 +78,6 @@
                              "Total Budget: $%d"
                              "</en-note>", [trip.budget.totalBudget intValue]];
     
-   // NSMutableArray* resources = [NSMutableArray arrayWithArray:@[resource]];
     EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:@"Test photo note" content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:nil];
     [[EvernoteNoteStore noteStore] createNote:newNote success:^(EDAMNote *note) {
         completion(nil);
