@@ -40,17 +40,24 @@ NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/t
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-ddTHH:mm:ss"];
     NSString *xml = [NSString stringWithFormat:@"<?xml version=\"1.0\"?> <Itinerary xmlns=\"http://www.concursolutions.com/api/travel/trip/2010/06\"> <TripName>%@</TripName> <TripStatus>0</TripStatus><StartDateLocal>%@</StartDateLocal> <EndDateLocal>%@</EndDateLocal> <Bookings> <Booking> <RecordLocator>%@</RecordLocator> <BookingSource>Sample Itin for Disrupt</BookingSource> <DateBookedLocal>2014-04-30T03:47:14</DateBookedLocal> </Booking> </Bookings> </Itinerary>", detail.destination, [dateFormatter stringFromDate:detail.tripStart], [dateFormatter stringFromDate:[detail.tripStart dateByAddingTimeInterval:60*60*24*[detail.tripLength intValue]]], detail.UUID];
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:ConcurEndPoint]];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:@"https://www.concursolutions.com/api/travel/trip/v1.1"]];
     [request addRequestHeader:@"Content-Type" value:@"application/xml"];
     [request addRequestHeader:@"Authorization" value:@"OAuth DAfaWYrNtoM77hBf+Zy4NaWksPw="];
     [request setPostBody: [NSMutableData dataWithData:[xml dataUsingEncoding:NSUTF8StringEncoding]]];
     [request startSynchronous];
     NSError *error = [request error];
     completion(error);
-    
-    
 }
 
+- (void)addExpense:(Expense *)expense fortrip:(TripDetails *)trip completion:(ENCompletionHandler)completion {
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:@"https://www.concursolutions.com/api/expense/expensereport/v1.0/quickexpense"]];
+    [request addRequestHeader:@"Content-Type" value:@"application/xml"];
+    [request addRequestHeader:@"Authorization" value:@"OAuth DAfaWYrNtoM77hBf+Zy4NaWksPw="];
+    [request setPostBody: [NSMutableData dataWithData:[[expense toXml] dataUsingEncoding:NSUTF8StringEncoding]]];
+    [request startSynchronous];
+    NSError *error = [request error];
+    completion(error);
+}
 
 - (void)addNote:(Expense *)expense forTrip:(NSString *)tripUUID completion:(ENCompletionHandler)completion {
     

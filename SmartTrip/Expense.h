@@ -7,5 +7,8 @@
 @property (nonatomic, strong) UIImage *receipt;
 @property (nonatomic, strong) NSNumber *amount;
 @property (nonatomic, strong) NSArray *friends;
+@property (nonatomic, strong) NSString *category;
+
+- (NSString*) toXml;
 
 @end
