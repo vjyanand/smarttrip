@@ -7,7 +7,6 @@
 @synthesize transactionDate;
 @synthesize paymentType;
 @synthesize amount;
-@synthesize currencyCode;
 @synthesize city;
 @synthesize state;
 @synthesize country;
@@ -25,14 +24,6 @@
     if (categoryCode != nil)
         [buf appendFormat:@"<SpendCategoryCode>%@</SpendCategoryCode>", [self xmlEscape:categoryCode]];
     
-    if (qeKey != nil)
-        [buf appendFormat:@"<QuickExpenseKey>%@</QuickExpenseKey>", [self xmlEscape:qeKey]];
-    
-    if (qeKey != nil)
-        [buf appendFormat:@"<QuickExpenseID>%@</QuickExpenseID>", [self xmlEscape:qeKey]];
-    
-    
-    
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     [fmt setDateFormat:@"yyyy-MM-dd"];
     [buf appendFormat:@"<TransactionDate>%@</TransactionDate>", [fmt stringFromDate:transactionDate]];
@@ -42,13 +33,11 @@
     
     [buf appendFormat:@"<TransactionAmount>%f</TransactionAmount>", amount];
     
-    if (currencyCode == nil)
-        currencyCode = @"USD";
-    [buf appendFormat:@"<CurrencyCode>%@</CurrencyCode>", [self xmlEscape:currencyCode]];
+    [buf appendFormat:@"<CurrencyCode>%@</CurrencyCode>", [self xmlEscape:@"USD"]];
     
     if (city != nil)
         [buf appendFormat:@"<LocationCity>%@</LocationCity>", [self xmlEscape:city]];
-
+    
     if (country == nil)
         country = @"US";
     
@@ -62,7 +51,7 @@
     }
     
     [buf appendFormat:@"<LocationCountry>%@</LocationCountry>", [self xmlEscape:country]];
-
+    
     if (vendor != nil)
         [buf appendFormat:@"<VendorDescription>%@</VendorDescription>", [self xmlEscape:vendor]];
     
@@ -71,18 +60,15 @@
     
     if (imageBase64 != nil)
         [buf appendFormat:@"<ImageBase64>%@</ImageBase64>", imageBase64];
-        
-
+    
+    
     [buf appendString:@"</QuickExpense>"];
     
     NSLog(@"QE Save: %@", buf);
     
     return buf;
-
+    
 }
-
-
-
 
 - (NSString *) xmlEscape: (NSString*)src
 {
@@ -92,7 +78,7 @@
     [str replaceOccurrencesOfString:@"'"  withString:@"&apos;" options:NSLiteralSearch range:NSMakeRange(0, [str length])];
     [str replaceOccurrencesOfString:@">"  withString:@"&gt;"   options:NSLiteralSearch range:NSMakeRange(0, [str length])];
     [str replaceOccurrencesOfString:@"<"  withString:@"&lt;"   options:NSLiteralSearch range:NSMakeRange(0, [str length])];
-        
+    
     return str;
     
 }

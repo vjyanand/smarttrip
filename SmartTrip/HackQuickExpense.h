@@ -7,7 +7,6 @@
 @property (strong, nonatomic) NSDate *transactionDate;
 @property (strong, nonatomic) NSString *paymentType;
 @property float amount;
-@property (strong, nonatomic) NSString *currencyCode;
 @property (strong, nonatomic) NSString *city;
 @property (strong, nonatomic) NSString *state;
 @property (strong, nonatomic) NSString *country;
@@ -17,6 +16,5 @@
 @property (strong, nonatomic) NSString *qeKey;
 
 - (NSString*) toXml;
-
 
 @end
