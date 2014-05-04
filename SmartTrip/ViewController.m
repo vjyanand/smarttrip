@@ -10,8 +10,8 @@
 #import "InitView.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "TripViewController.h"
-#import <ENSDK/ENSDK.h>
 #import "ExpenseHelper.h"
+#import "EvernoteSDK.h"
 
 @interface ViewController ()
 
@@ -28,13 +28,10 @@
     InitView *init = [[InitView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     self.view = init;
     
-    [[ENSession sharedSession] authenticateWithViewController:self completion:^(NSError *authenticateError) {
-        if (!authenticateError) {
-            NSLog(@"ALL cool");
-        } else if (authenticateError.code != ENErrorCodeCancelled) {
-          //  [self showSimpleAlertWithMessage:@"Could not authenticate."];
-        }
+    [[EvernoteSession sharedSession] authenticateWithViewController:self completionHandler:^(NSError *error) {
+        
     }];
+    
     
    // Do any additional setup after loading the view, typically from a nib.
 
@@ -43,7 +40,25 @@
     [buttonToTrip setTitle:@"Go To Trip" forState:UIControlStateNormal];
     [buttonToTrip addTarget:self action:@selector(goToTrip:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttonToTrip];
-   // [[ExpenseHelper sharedEverNoteHelper] cre]
+    /*TripDetails *a = [[TripDetails alloc] init];
+    a.destination = @"NY";
+    a.tripStart = [NSDate date];
+    a.tripLength = @10;
+    a.UUID = [[NSUUID UUID] UUIDString];
+    [[ExpenseHelper sharedEverNoteHelper] createTrip:a completion:^(NSError *error) {
+        [[ExpenseHelper sharedEverNoteHelper] getMyTrips:^(NSError *error, NSArray *trips) {
+            NSLog(@"%@", trips);
+        }];
+    }];
+    Expense *e = [[Expense alloc] init];
+    e.category = @"VIJAY";
+    e.dateAndTime = [NSDate date];
+    e.amount = @20.5;
+    e.desc = @"AAA";
+    [[ExpenseHelper sharedEverNoteHelper] addExpense:e fortrip:nil completion:^(NSError *error) {
+        
+    }];*/
+    
 }
 
 - (void)didReceiveMemoryWarning
