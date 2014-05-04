@@ -10,6 +10,8 @@
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "FriendsTableViewCell.h"
 #import "FinishCreatingViewController.h"
+#import "TripDetails.h"
+#import "CreateBudgetViewController.h"
 
 @interface AddFriendsViewController ()
 
@@ -28,6 +30,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.tripDetail = [[TripDetails alloc] init];
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
@@ -50,7 +53,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Add Friends";
-    
+    NSLog(@"%@",self.tripDetail.destination);
     
     friend_list = [[NSMutableDictionary alloc] init];
     
@@ -68,10 +71,13 @@
     // Do any additional setup after loading the view.
 }
 -(void)clickNext{
+    NSArray * allKeys = [friend_list allKeys];
+    self.tripDetail.tripFriends = allKeys;
     
-    FinishCreatingViewController *finish = [[FinishCreatingViewController alloc] init];
-    finish.friend_list = friend_list;
-    [self.navigationController pushViewController:finish animated:YES];
+    CreateBudgetViewController *budget = [[CreateBudgetViewController alloc] init];
+    budget.tripDetail = self.tripDetail;
+    budget.friend_list = friend_list;
+    [self.navigationController pushViewController:budget animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

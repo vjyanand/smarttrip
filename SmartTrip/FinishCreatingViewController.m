@@ -8,6 +8,8 @@
 
 #import "FinishCreatingViewController.h"
 #import "SDWebImage/UIImageView+WebCache.h"
+#import "TripViewController.h"
+
 @interface FinishCreatingViewController ()
 
 @end
@@ -20,6 +22,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.tripDetail = [[TripDetails alloc] init];
+
     }
     return self;
 }
@@ -35,6 +39,7 @@
     CGFloat screenHeight = screenRect.size.height;
     
     NSArray * allKeys = [friend_list allKeys];
+    self.tripDetail.budget.budgetContributors = allKeys;
     int count = 0;
     int line = 1;
     UIView *image_holder = [[UIView alloc] init];
@@ -90,7 +95,46 @@
     [UIView animateWithDuration:0.5 delay:1.5 options:UIViewAnimationOptionCurveEaseIn
                      animations:^{ activate.alpha = 0.4;}
                      completion:nil];
+    
+    UILabel *date = [[UILabel alloc] initWithFrame:CGRectMake(0, 250, screenWidth, 30)];
+    date.font = [UIFont fontWithName:@"AvenirNext-UltraLight" size:25.0f];
+    date.textColor = [UIColor blackColor];
+    date.alpha = 0;
+    date.textAlignment = NSTextAlignmentCenter;
+    NSDate *startOfTrip = self.tripDetail.tripStart;
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MMMM dd, yyyy"];
+    NSString *prettyVersion = [dateFormat stringFromDate:startOfTrip];
+    date.text = prettyVersion;
+    [self.view addSubview:date];
+    [UIView animateWithDuration:0.5 delay:1.5 options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{ date.alpha = 0.8;}
+                     completion:nil];
+    
+    UILabel *budget = [[UILabel alloc] initWithFrame:CGRectMake(0, 300, screenWidth, 30)];
+    budget.font = [UIFont fontWithName:@"AvenirNext-UltraLight" size:25.0f];
+    budget.textColor = [UIColor blackColor];
+    budget.alpha = 0;
+    budget.textAlignment = NSTextAlignmentCenter;
+    budget.text = [NSString stringWithFormat:@"Your Budget: $%@", self.final_budget];
+    [self.view addSubview:budget];
+    [UIView animateWithDuration:0.5 delay:1.5 options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{ budget.alpha = 0.8;}
+                     completion:nil];
+    
+    
+    [NSTimer scheduledTimerWithTimeInterval:6.0
+                                     target:self
+                                   selector:@selector(pushTVC)
+                                   userInfo:nil
+                                    repeats:NO];
     // Do any additional setup after loading the view.
+}
+-(void)pushTVC{
+    self.tripDetail.UUID = @"1";
+    TripViewController *tvc = [[TripViewController alloc] initWithTripDetails:self.tripDetail];
+   // NSLog(@"%@",self.tripDetail);
+    [self.navigationController pushViewController:tvc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

@@ -18,7 +18,7 @@ NSInteger const kbarHeight = 20;
 
 @property (nonatomic, strong) UIView *tripView;
 @property (nonatomic, strong) UIView *tripProgressView;
-@property (nonatomic, strong) UIView *reciept;
+@property (nonatomic, strong) UIView *recieptView;
 @property (nonatomic, strong) UIScrollView *userProgressView;
 @property (nonatomic, strong) UILabel *budget;
 
@@ -172,6 +172,9 @@ NSInteger const kbarHeight = 20;
     [self.tripView addSubview:imageViewContainer];
     [self.scrollView addSubview:self.tripView];
     
+    self.recieptView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    _recieptView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:self.recieptView];
     [self.view addSubview:self.scrollView];
     [self.view setNeedsDisplay];
 

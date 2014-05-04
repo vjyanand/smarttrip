@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TripDetails.h"
 @interface CreateTripViewController : UIViewController <UITextFieldDelegate>
 
+@property (nonatomic, strong) TripDetails *tripDetail;
 @end
