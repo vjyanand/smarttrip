@@ -37,9 +37,9 @@
         lastBudget.categoryName = @"Shopping";
         [self.spendingCategories addObject:lastBudget];
         
-        if (!) {
-            <#statements#>
-        }
+//        if (!) {
+//            <#statements#>
+//        }
 
     }else{
         return nil;
