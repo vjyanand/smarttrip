@@ -36,21 +36,18 @@
     [helper getExpenses:self completion:^(NSError *error, NSArray *expenseList){
         for (int i = 0; i < expenseList.count; i++) {
             NSDictionary *expense = expenseList[i];
-            Expense *currentExpense = [Expense new];
             
-            if ([expense valueForKey:@"VendorDescription"]) {
+            if ([expense valueForKey:@"VendorDescription"] &&  [expense valueForKey:@"VendorDescription"] != [NSNull null] && [expense valueForKey:@"TransactionAmount"] &&[expense valueForKey:@"TransactionDate"]) {
+                Expense *currentExpense = [Expense new];
                 currentExpense.category = [expense valueForKey:@"VendorDescription"];
-            }
-            
-            if ([expense valueForKey:@"TransactionAmount"]) {
                 currentExpense.amount = [expense valueForKey:@"TransactionAmount"];
-            }
-            
-            if ([expense valueForKey:@"TransactionDate"]) {
                 currentExpense.dateAndTime = [expense valueForKey:@"TransactionDate"];
+                [mutableExpenseList addObject:currentExpense];
+                
+                if (self.budget) {
+                    [self.budget updateCategoryAmountSpentWithName:currentExpense.category andAmount:currentExpense.amount];
+                }
             }
-            
-            [mutableExpenseList addObject:currentExpense];
         }
     }];
         

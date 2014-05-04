@@ -78,6 +78,22 @@
     self.amountSpent = [NSNumber numberWithInt:amountSpent];
 }
 
+- (void)updateCategoryAmountSpentWithName:(NSString *)categoryName andAmount:(NSNumber *)amount
+{
+    for (int i=0; i < self.spendingCategories.count; i++) {
+        if ([[[self.spendingCategories objectAtIndex:i] categoryName] isEqualToString:categoryName  ] ) {
+            
+            CategoryBudget *spendingCategory = [self.spendingCategories objectAtIndex:i];
+            NSNumber *oldAmount = spendingCategory.categoryAmountSpent;
+            int newAmount = [oldAmount intValue] + [amount intValue];
+            spendingCategory.categoryAmountSpent = [NSNumber numberWithInt:newAmount];
+            break;
+        }
+    }
+    
+}
+
+
 @end
 
 

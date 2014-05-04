@@ -51,7 +51,7 @@
                   symbolName = "-[ExpenseViewController createExpense]"
                   moduleName = "SmartTrip"
                   urlString = "file:///Users/ifbarrera/git/smarttrip/SmartTrip/ExpenseViewController.m"
-                  timestampString = "420889633.073388"
+                  timestampString = "420894343.227316"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "219"
@@ -65,7 +65,7 @@
                   symbolName = "__38-[ExpenseViewController createExpense]_block_invoke"
                   moduleName = "SmartTrip"
                   urlString = "file:///Users/ifbarrera/git/smarttrip/SmartTrip/ExpenseViewController.m"
-                  timestampString = "420889633.073807"
+                  timestampString = "420894343.227558"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "219"
@@ -73,22 +73,6 @@
                   offsetFromSymbolStart = "63">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SmartTrip/TripViewController.m"
-            timestampString = "420889581.90589"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
-            landmarkName = "-didFinishAddingExpense:"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,32 +94,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SmartTrip/TripViewController.m"
-            timestampString = "420889581.90589"
+            filePath = "SmartTrip/TripDetails.m"
+            timestampString = "420891104.717656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SmartTrip/TripViewController.m"
-            timestampString = "420889581.90589"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-fetchExpenses"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
