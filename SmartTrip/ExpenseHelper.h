@@ -6,8 +6,6 @@
 typedef void (^ENCompletionHandler)(NSError * error);
 typedef void (^ENTripsCompletionHandler)(NSError * error, NSArray *trips);
 
-extern NSString *const ConcurEndPoint;
-
 @interface ExpenseHelper : NSObject
 
 + (id)sharedEverNoteHelper;
@@ -18,4 +16,5 @@ extern NSString *const ConcurEndPoint;
 
 - (void)getMyTrips:(ENTripsCompletionHandler)completion;
 
+- (void)addTripToNote:(TripDetails *)trip completion:(ENCompletionHandler)completion;
 @end

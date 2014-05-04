@@ -58,6 +58,7 @@
     [[ExpenseHelper sharedEverNoteHelper] addExpense:e fortrip:nil completion:^(NSError *error) {
         
     }];*/
+    
 }
 
 - (void)didReceiveMemoryWarning

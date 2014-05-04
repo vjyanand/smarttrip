@@ -1,10 +1,7 @@
 #import "ExpenseHelper.h"
-
 #import "EvernoteSDK.h"
 #import "ASIFormDataRequest.h"
 #import "ASIHTTPRequest.h"
-
-NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/trip/v1.1";
 
 @implementation ExpenseHelper
 
@@ -25,7 +22,7 @@ NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/t
 }
 
 - (void)getMyTrips:(ENTripsCompletionHandler)completion {
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:ConcurEndPoint]];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"https://www.concursolutions.com/api/travel/trip/v1.1"]];
     [request addRequestHeader:@"Authorization" value:@"OAuth DAfaWYrNtoM77hBf+Zy4NaWksPw="];
     [request addRequestHeader:@"Accept" value:@"application/json"];
     [request startSynchronous];
@@ -60,10 +57,25 @@ NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/t
     completion(error);
 }
 
-- (void)addNote:(Expense *)expense forTrip:(NSString *)tripUUID completion:(ENCompletionHandler)completion {
-    EDAMNote *a;
+- (void)addTripToNote:(TripDetails *)trip completion:(ENCompletionHandler)completion {
     
+    NSString *noteContent = [NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+                             "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">"
+                             "<en-note style=\"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;\">"
+                             "Total Budget: $%d"
+                             "</en-note>", [trip.budget.totalBudget intValue]];
     
+   // NSMutableArray* resources = [NSMutableArray arrayWithArray:@[resource]];
+    EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:@"Test photo note" content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:nil];
+    [[EvernoteNoteStore noteStore] createNote:newNote success:^(EDAMNote *note) {
+        completion(nil);
+    } failure:^(NSError *error) {
+        completion(error);
+    }];
+}
+
+- (void)addExpenseToNote:(Expense *)expense forTrip:(NSString *)tripUUID completion:(ENCompletionHandler)completion {
+
     
 }
 
