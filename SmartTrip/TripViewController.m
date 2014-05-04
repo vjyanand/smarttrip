@@ -255,6 +255,16 @@ NSInteger const kbarHeight = 20;
     NSString *txtFileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
     [attributedLabel loadHTMLString:txtFileContents baseURL:nil];
     
+    for (int i = 0; i < self.friendInfo.count; i++) {
+        FriendData *friendData = self.friendInfo[i];
+        
+        //NSString *head = [NSString stringWithFormat:@"<thead><tr><th>%@</th><th >$%f</th></tr>", friendData.firstName, 20.34];
+        
+       
+
+        
+    }
+
     [_recieptView addSubview:attributedLabel];
     
     

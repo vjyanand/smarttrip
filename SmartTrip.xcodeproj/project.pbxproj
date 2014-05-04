@@ -118,15 +118,15 @@
 		426EE12619160F950017DC39 /* checkmark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426EE11919160F950017DC39 /* checkmark.jpg */; };
 		426EE12B19160F950017DC39 /* newyork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426EE12219160F950017DC39 /* newyork.jpg */; };
 		426EE12C19160F950017DC39 /* newyork2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 426EE12319160F950017DC39 /* newyork2.jpg */; };
-		426EE18119164BB30017DC39 /* MyTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE17219164BB30017DC39 /* MyTripViewController.m */; };
 		426EE18219164BB30017DC39 /* evernote_concur.png in Resources */ = {isa = PBXBuildFile; fileRef = 426EE17319164BB30017DC39 /* evernote_concur.png */; };
-		426EE18319164BB30017DC39 /* CreateTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE17419164BB30017DC39 /* CreateTripViewController.m */; };
-		426EE18419164BB30017DC39 /* CreateBudgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE17519164BB30017DC39 /* CreateBudgetViewController.m */; };
-		426EE18519164BB30017DC39 /* CategoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE17619164BB30017DC39 /* CategoriesView.m */; };
-		426EE18619164BB30017DC39 /* AddFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE17819164BB30017DC39 /* AddFriendsViewController.m */; };
-		426EE18719164BB30017DC39 /* FinishCreatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE17D19164BB30017DC39 /* FinishCreatingViewController.m */; };
-		426EE18819164BB30017DC39 /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE17F19164BB30017DC39 /* FriendsTableViewCell.m */; };
 		426EE18A191650F40017DC39 /* html.html in Resources */ = {isa = PBXBuildFile; fileRef = 426EE18919164F070017DC39 /* html.html */; };
+		426EE199191668470017DC39 /* CreateBudgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE18B191668470017DC39 /* CreateBudgetViewController.m */; };
+		426EE19A191668470017DC39 /* CreateTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE18C191668470017DC39 /* CreateTripViewController.m */; };
+		426EE19B191668470017DC39 /* MyTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE18D191668470017DC39 /* MyTripViewController.m */; };
+		426EE19C191668470017DC39 /* AddFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE18F191668470017DC39 /* AddFriendsViewController.m */; };
+		426EE19D191668470017DC39 /* CategoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE191191668470017DC39 /* CategoriesView.m */; };
+		426EE19E191668470017DC39 /* FinishCreatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE195191668470017DC39 /* FinishCreatingViewController.m */; };
+		426EE19F191668470017DC39 /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE197191668470017DC39 /* FriendsTableViewCell.m */; };
 		42F832B61915845600F172D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B51915845600F172D5 /* Foundation.framework */; };
 		42F832B81915845600F172D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B71915845600F172D5 /* CoreGraphics.framework */; };
 		42F832BA1915845600F172D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B91915845600F172D5 /* UIKit.framework */; };
@@ -372,22 +372,22 @@
 		426EE11919160F950017DC39 /* checkmark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkmark.jpg; sourceTree = "<group>"; };
 		426EE12219160F950017DC39 /* newyork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newyork.jpg; sourceTree = "<group>"; };
 		426EE12319160F950017DC39 /* newyork2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newyork2.jpg; sourceTree = "<group>"; };
-		426EE17219164BB30017DC39 /* MyTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTripViewController.m; sourceTree = "<group>"; };
 		426EE17319164BB30017DC39 /* evernote_concur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = evernote_concur.png; sourceTree = "<group>"; };
-		426EE17419164BB30017DC39 /* CreateTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTripViewController.m; sourceTree = "<group>"; };
-		426EE17519164BB30017DC39 /* CreateBudgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBudgetViewController.m; sourceTree = "<group>"; };
-		426EE17619164BB30017DC39 /* CategoriesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesView.m; sourceTree = "<group>"; };
-		426EE17719164BB30017DC39 /* AddFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendsViewController.h; sourceTree = "<group>"; };
-		426EE17819164BB30017DC39 /* AddFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendsViewController.m; sourceTree = "<group>"; };
-		426EE17919164BB30017DC39 /* CategoriesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesView.h; sourceTree = "<group>"; };
-		426EE17A19164BB30017DC39 /* CreateBudgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBudgetViewController.h; sourceTree = "<group>"; };
-		426EE17B19164BB30017DC39 /* CreateTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTripViewController.h; sourceTree = "<group>"; };
-		426EE17C19164BB30017DC39 /* FinishCreatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishCreatingViewController.h; sourceTree = "<group>"; };
-		426EE17D19164BB30017DC39 /* FinishCreatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishCreatingViewController.m; sourceTree = "<group>"; };
-		426EE17E19164BB30017DC39 /* FriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewCell.h; sourceTree = "<group>"; };
-		426EE17F19164BB30017DC39 /* FriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewCell.m; sourceTree = "<group>"; };
-		426EE18019164BB30017DC39 /* MyTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTripViewController.h; sourceTree = "<group>"; };
 		426EE18919164F070017DC39 /* html.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = html.html; sourceTree = "<group>"; };
+		426EE18B191668470017DC39 /* CreateBudgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBudgetViewController.m; sourceTree = "<group>"; };
+		426EE18C191668470017DC39 /* CreateTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTripViewController.m; sourceTree = "<group>"; };
+		426EE18D191668470017DC39 /* MyTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTripViewController.m; sourceTree = "<group>"; };
+		426EE18E191668470017DC39 /* AddFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendsViewController.h; sourceTree = "<group>"; };
+		426EE18F191668470017DC39 /* AddFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendsViewController.m; sourceTree = "<group>"; };
+		426EE190191668470017DC39 /* CategoriesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesView.h; sourceTree = "<group>"; };
+		426EE191191668470017DC39 /* CategoriesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesView.m; sourceTree = "<group>"; };
+		426EE192191668470017DC39 /* CreateBudgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBudgetViewController.h; sourceTree = "<group>"; };
+		426EE193191668470017DC39 /* CreateTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTripViewController.h; sourceTree = "<group>"; };
+		426EE194191668470017DC39 /* FinishCreatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishCreatingViewController.h; sourceTree = "<group>"; };
+		426EE195191668470017DC39 /* FinishCreatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishCreatingViewController.m; sourceTree = "<group>"; };
+		426EE196191668470017DC39 /* FriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewCell.h; sourceTree = "<group>"; };
+		426EE197191668470017DC39 /* FriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewCell.m; sourceTree = "<group>"; };
+		426EE198191668470017DC39 /* MyTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTripViewController.h; sourceTree = "<group>"; };
 		42F832B21915845600F172D5 /* SmartTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F832B51915845600F172D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42F832B71915845600F172D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -828,21 +828,21 @@
 		426EE11419160F320017DC39 /* CreateTripView */ = {
 			isa = PBXGroup;
 			children = (
-				426EE17219164BB30017DC39 /* MyTripViewController.m */,
+				426EE18B191668470017DC39 /* CreateBudgetViewController.m */,
+				426EE18C191668470017DC39 /* CreateTripViewController.m */,
+				426EE18D191668470017DC39 /* MyTripViewController.m */,
+				426EE18E191668470017DC39 /* AddFriendsViewController.h */,
+				426EE18F191668470017DC39 /* AddFriendsViewController.m */,
+				426EE190191668470017DC39 /* CategoriesView.h */,
+				426EE191191668470017DC39 /* CategoriesView.m */,
+				426EE192191668470017DC39 /* CreateBudgetViewController.h */,
+				426EE193191668470017DC39 /* CreateTripViewController.h */,
+				426EE194191668470017DC39 /* FinishCreatingViewController.h */,
+				426EE195191668470017DC39 /* FinishCreatingViewController.m */,
+				426EE196191668470017DC39 /* FriendsTableViewCell.h */,
+				426EE197191668470017DC39 /* FriendsTableViewCell.m */,
+				426EE198191668470017DC39 /* MyTripViewController.h */,
 				426EE17319164BB30017DC39 /* evernote_concur.png */,
-				426EE17419164BB30017DC39 /* CreateTripViewController.m */,
-				426EE17519164BB30017DC39 /* CreateBudgetViewController.m */,
-				426EE17619164BB30017DC39 /* CategoriesView.m */,
-				426EE17719164BB30017DC39 /* AddFriendsViewController.h */,
-				426EE17819164BB30017DC39 /* AddFriendsViewController.m */,
-				426EE17919164BB30017DC39 /* CategoriesView.h */,
-				426EE17A19164BB30017DC39 /* CreateBudgetViewController.h */,
-				426EE17B19164BB30017DC39 /* CreateTripViewController.h */,
-				426EE17C19164BB30017DC39 /* FinishCreatingViewController.h */,
-				426EE17D19164BB30017DC39 /* FinishCreatingViewController.m */,
-				426EE17E19164BB30017DC39 /* FriendsTableViewCell.h */,
-				426EE17F19164BB30017DC39 /* FriendsTableViewCell.m */,
-				426EE18019164BB30017DC39 /* MyTripViewController.h */,
 				426EE11919160F950017DC39 /* checkmark.jpg */,
 				426EE12219160F950017DC39 /* newyork.jpg */,
 				426EE12319160F950017DC39 /* newyork2.jpg */,
@@ -1081,18 +1081,16 @@
 			files = (
 				426EE0B81916046D0017DC39 /* EDAMLimits.m in Sources */,
 				426EE0B71916046D0017DC39 /* EDAMErrors.m in Sources */,
-				426EE18519164BB30017DC39 /* CategoriesView.m in Sources */,
 				426EE0C41916046D0017DC39 /* ENApplicationBridge.m in Sources */,
 				5E98DF621915856800B65A9D /* InitView.m in Sources */,
 				426EE0DF1916046D0017DC39 /* ENMIMEUtils.m in Sources */,
 				426EDFBF1915CA9B0017DC39 /* ASIAuthenticationDialog.m in Sources */,
 				426EE0A61916046D0017DC39 /* KSXMLAttributes.m in Sources */,
-				426EE18319164BB30017DC39 /* CreateTripViewController.m in Sources */,
+				426EE19A191668470017DC39 /* CreateTripViewController.m in Sources */,
 				42F832CC1915845600F172D5 /* ViewController.m in Sources */,
 				426EE10819160F1B0017DC39 /* SDImageCache.m in Sources */,
 				426EE0A71916046D0017DC39 /* KSXMLWriter.m in Sources */,
 				426EE0BD1916046D0017DC39 /* ENConstants.m in Sources */,
-				426EE18419164BB30017DC39 /* CreateBudgetViewController.m in Sources */,
 				426EE0C61916046D0017DC39 /* ENLinkNotebookRequest.m in Sources */,
 				426EE0E21916046D0017DC39 /* ENXMLWriter.m in Sources */,
 				426EE0B41916046D0017DC39 /* THTTPClient.m in Sources */,
@@ -1101,7 +1099,6 @@
 				426EE0AB1916046D0017DC39 /* NSString+URLEncoding.m in Sources */,
 				426EE10719160F1B0017DC39 /* NSData+ImageContentType.m in Sources */,
 				426EE0C01916046D0017DC39 /* EvernoteSDK.m in Sources */,
-				426EE18119164BB30017DC39 /* MyTripViewController.m in Sources */,
 				426EE0E51916046D0017DC39 /* NSData+EvernoteSDK.m in Sources */,
 				426EE0E31916046D0017DC39 /* NSRegularExpression+ENAGRegex.m in Sources */,
 				426EE0BF1916046D0017DC39 /* EvernoteNoteStore.m in Sources */,
@@ -1117,17 +1114,17 @@
 				1677A15B19158EF100DF460F /* TripBudget.m in Sources */,
 				426EE11319160F1B0017DC39 /* UIImageView+WebCache.m in Sources */,
 				426EE0BA1916046D0017DC39 /* EDAMTypes.m in Sources */,
-				426EE18719164BB30017DC39 /* FinishCreatingViewController.m in Sources */,
 				426EE11119160F1B0017DC39 /* UIImage+MultiFormat.m in Sources */,
 				426EE0B61916046D0017DC39 /* TTransportException.m in Sources */,
 				426EE0CB1916046D0017DC39 /* ENSearchRequest.m in Sources */,
+				426EE19E191668470017DC39 /* FinishCreatingViewController.m in Sources */,
 				426EE10A19160F1B0017DC39 /* SDWebImageDecoder.m in Sources */,
 				426EDFC91915CB460017DC39 /* Reachability.m in Sources */,
 				426EE0B91916046D0017DC39 /* EDAMNoteStore.m in Sources */,
-				426EE18819164BB30017DC39 /* FriendsTableViewCell.m in Sources */,
 				426EE0BB1916046D0017DC39 /* EDAMUserStore.m in Sources */,
 				426EE0BE1916046D0017DC39 /* EvernoteNoteStore+Extras.m in Sources */,
 				426EE0A51916046D0017DC39 /* KSWriter.m in Sources */,
+				426EE19F191668470017DC39 /* FriendsTableViewCell.m in Sources */,
 				426EE09F1916046D0017DC39 /* ENAFURLConnectionOperation.m in Sources */,
 				426EE10E19160F1B0017DC39 /* SDWebImagePrefetcher.m in Sources */,
 				426EE11019160F1B0017DC39 /* UIImage+GIF.m in Sources */,
@@ -1136,10 +1133,10 @@
 				426EE0D91916046D0017DC39 /* ENCredentials.m in Sources */,
 				42F832C21915845600F172D5 /* main.m in Sources */,
 				426EE0A01916046D0017DC39 /* ENGCOAuth.m in Sources */,
+				426EE199191668470017DC39 /* CreateBudgetViewController.m in Sources */,
 				1677A1671915D33400DF460F /* FriendData.m in Sources */,
 				426EDFC41915CA9B0017DC39 /* ASIHTTPRequest.m in Sources */,
 				426EE0E71916046D0017DC39 /* NSDate+EDAMAdditions.m in Sources */,
-				426EE18619164BB30017DC39 /* AddFriendsViewController.m in Sources */,
 				426EE0A31916046D0017DC39 /* KSForwardingWriter.m in Sources */,
 				426EE0A21916046D0017DC39 /* NSData+ENBase64.m in Sources */,
 				426EE0DE1916046D0017DC39 /* ENEncryptedContentInfo.m in Sources */,
@@ -1147,9 +1144,11 @@
 				426EE0DD1916046D0017DC39 /* ENMLUtility.m in Sources */,
 				426EE0E61916046D0017DC39 /* NSDataBase64Additions.m in Sources */,
 				426EDFC01915CA9B0017DC39 /* ASIDataCompressor.m in Sources */,
+				426EE19D191668470017DC39 /* CategoriesView.m in Sources */,
 				426EE10D19160F1B0017DC39 /* SDWebImageManager.m in Sources */,
 				426EE0DB1916046D0017DC39 /* ENOAuthViewController.m in Sources */,
 				426EE10919160F1B0017DC39 /* SDWebImageCompat.m in Sources */,
+				426EE19B191668470017DC39 /* MyTripViewController.m in Sources */,
 				426EE0C91916046D0017DC39 /* ENNoteViewRequest.m in Sources */,
 				426EDFC31915CA9B0017DC39 /* ASIFormDataRequest.m in Sources */,
 				42F832F3191597EB00F172D5 /* ExpenseHelper.m in Sources */,
@@ -1175,6 +1174,7 @@
 				42F832F6191599CF00F172D5 /* Expense.m in Sources */,
 				426EE0B01916046D0017DC39 /* TProtocolException.m in Sources */,
 				426EE0B31916046D0017DC39 /* TException.m in Sources */,
+				426EE19C191668470017DC39 /* AddFriendsViewController.m in Sources */,
 				1677A15819158DC200DF460F /* TripDetails.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

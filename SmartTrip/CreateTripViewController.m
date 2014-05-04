@@ -54,6 +54,7 @@
     whereInput = [[UITextField alloc] initWithFrame:CGRectMake(30, 120, screenWidth-60, 30)];
     whereInput.placeholder = @"e.g. New York City";
     whereInput.delegate = self;
+    whereInput.textAlignment = NSTextAlignmentCenter;
     whereInput.font = [UIFont fontWithName:@"Avenir-Light" size:18.0f];
     [self.view addSubview:whereInput];
     
