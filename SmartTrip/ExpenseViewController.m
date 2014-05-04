@@ -95,7 +95,7 @@
     dollarLabel.font = [UIFont fontWithName:@"ArialRoundedMTBold" size:25.0];
 
     
-    self.expenseAmount = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 50, expenseAmountLabel.frame.origin.y + 70, 100, 50)];
+    self.expenseAmount = [[UITextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 50, expenseAmountLabel.frame.origin.y + 70, 80, 50)];
     self.expenseAmount.delegate = self;
     self.expenseAmount.text = @"0.00";
     self.expenseAmount.font = [UIFont fontWithName:@"ArialRoundedMTBold" size:25.0];
@@ -190,7 +190,11 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    self.expense.amount = [NSNumber numberWithInteger:[textField.text integerValue]];
+    if ([textField.text isEqualToString:@""] || [textField.text isEqualToString:@"0.00"]) {
+        textField.text = @"0.00";
+    } else {
+        self.expense.amount = [NSNumber numberWithInteger:[textField.text integerValue]];
+    }
     
     self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 }

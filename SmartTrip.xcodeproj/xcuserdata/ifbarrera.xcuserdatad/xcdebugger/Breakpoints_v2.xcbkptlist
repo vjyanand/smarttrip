@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartTrip/ExpenseViewController.m"
-            timestampString = "420882281.0425"
+            timestampString = "420887752.054338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "-createExpense"
             landmarkType = "5">
             <Locations>
@@ -51,11 +51,11 @@
                   symbolName = "-[ExpenseViewController createExpense]"
                   moduleName = "SmartTrip"
                   urlString = "file:///Users/ifbarrera/git/smarttrip/SmartTrip/ExpenseViewController.m"
-                  timestampString = "420882281.053365"
+                  timestampString = "420889206.986919"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "215"
-                  endingLineNumber = "215"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
                   offsetFromSymbolStart = "407">
                </Location>
                <Location
@@ -65,11 +65,11 @@
                   symbolName = "__38-[ExpenseViewController createExpense]_block_invoke"
                   moduleName = "SmartTrip"
                   urlString = "file:///Users/ifbarrera/git/smarttrip/SmartTrip/ExpenseViewController.m"
-                  timestampString = "420882281.053856"
+                  timestampString = "420889206.987289"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "215"
-                  endingLineNumber = "215"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
                   offsetFromSymbolStart = "63">
                </Location>
             </Locations>
@@ -82,11 +82,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartTrip/TripViewController.m"
-            timestampString = "420882288.302696"
+            timestampString = "420889581.90589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
             landmarkName = "-didFinishAddingExpense:"
             landmarkType = "5">
          </BreakpointContent>
@@ -98,11 +98,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartTrip/ExpenseViewController.m"
-            timestampString = "420882345.842982"
+            timestampString = "420887752.054338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
             landmarkName = "-createExpense"
             landmarkType = "5">
          </BreakpointContent>
@@ -113,13 +113,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SmartTrip/TripBudget.m"
-            timestampString = "420882434.687814"
+            filePath = "SmartTrip/TripViewController.m"
+            timestampString = "420889581.90589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "-addExpense:"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartTrip/TripViewController.m"
+            timestampString = "420889581.90589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

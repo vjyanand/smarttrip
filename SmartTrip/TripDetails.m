@@ -7,6 +7,7 @@
 //
 
 #import "TripDetails.h"
+#import "ExpenseHelper.h"
 
 @implementation TripDetails
 
@@ -25,6 +26,38 @@
 {
     NSString *budgetString = [NSString stringWithFormat:@"$ %i", (int)[self.budget.totalBudget integerValue]];
     return budgetString;
+}
+
+- (void)fetchExpenses
+{
+    NSMutableArray *mutableExpenseList = [[NSMutableArray alloc] init];
+    
+    ExpenseHelper *helper = [ExpenseHelper sharedEverNoteHelper];
+    [helper getExpenses:self completion:^(NSError *error, NSArray *expenseList){
+        for (int i = 0; i < expenseList.count; i++) {
+            NSDictionary *expense = expenseList[i];
+            Expense *currentExpense = [Expense new];
+            
+            if ([expense valueForKey:@"VendorDescription"]) {
+                currentExpense.category = [expense valueForKey:@"VendorDescription"];
+            }
+            
+            if ([expense valueForKey:@"TransactionAmount"]) {
+                currentExpense.amount = [expense valueForKey:@"TransactionAmount"];
+            }
+            
+            if ([expense valueForKey:@"TransactionDate"]) {
+                currentExpense.dateAndTime = [expense valueForKey:@"TransactionDate"];
+            }
+            
+            [mutableExpenseList addObject:currentExpense];
+        }
+    }];
+        
+    if (self.budget) {
+        self.budget.expenseList = mutableExpenseList;
+        [self.budget updateAmountSpent];
+    }
 }
 
 

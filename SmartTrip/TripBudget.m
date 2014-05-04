@@ -9,7 +9,6 @@
 #import "TripBudget.h"
 #import "CategoryBudget.h"
 
-
 @interface TripBudget()
 
 @end
@@ -29,18 +28,16 @@
         self.spendingCategories = [[NSMutableArray alloc] init];
         CategoryBudget *budget = [[CategoryBudget alloc] init];
         budget.categoryName = @"Entertainment";
+        budget.categoryBudget = [NSNumber numberWithInt:200];
         [self.spendingCategories addObject:budget];
         CategoryBudget *otherBudget = [[CategoryBudget alloc] init];
         otherBudget.categoryName = @"Nightlife";
+        otherBudget.categoryBudget = [NSNumber numberWithInt:300];
         [self.spendingCategories addObject:otherBudget];
         CategoryBudget *lastBudget = [[CategoryBudget alloc] init];
         lastBudget.categoryName = @"Shopping";
+        lastBudget.categoryBudget = [NSNumber numberWithInt:100];
         [self.spendingCategories addObject:lastBudget];
-        
-//        if (!) {
-//            <#statements#>
-//        }
-
     }else{
         return nil;
     }

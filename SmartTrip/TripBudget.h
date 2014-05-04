@@ -22,5 +22,7 @@
 
 - (NSString *)getRemaningBudgetString;
 - (void)addExpense:(Expense *)expense;
+- (void)updateAmountSpent;
+
 
 @end
