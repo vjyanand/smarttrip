@@ -179,9 +179,7 @@ NSInteger const kbarHeight = 20;
     [self.tripView addSubview:addExpense];
     [self.tripView addSubview:imageViewContainer];
     [self.scrollView addSubview:self.tripView];
-<<<<<<< HEAD
     [self.scrollView addSubview:self.userProgressView];
-=======
     
     self.recieptView = [[UIView alloc] initWithFrame:CGRectMake(2 * self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
@@ -258,7 +256,6 @@ NSInteger const kbarHeight = 20;
     _recieptView.backgroundColor = [UIColor grayColor];
     [self.scrollView addSubview:_recieptView];
     
->>>>>>> FETCH_HEAD
     [self.view addSubview:self.scrollView];
     [self.view setNeedsDisplay];
 
