@@ -33,6 +33,7 @@
     UIImageView *imageview = [[UIImageView alloc] initWithImage: image];
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:100.0/255.0 green:200.0/255.0 blue:221/255.0 alpha:1];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createTrip)];
+    self.navigationItem.hidesBackButton=YES;
     self.navigationItem.titleView = imageview;
     
     // Do any additional setup after loading the view.
