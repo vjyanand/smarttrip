@@ -17,7 +17,8 @@ NSInteger const kbarHeight = 20;
 @interface TripViewController () 
 
 @property (nonatomic, strong) UIView *tripView;
-@property (nonatomic, strong) UIView *reciept;
+@property (nonatomic, strong) UIView *tripProgressView;
+@property (nonatomic, strong) UIView *recieptView;
 @property (nonatomic, strong) UIScrollView *userProgressView;
 @property (nonatomic, strong) UILabel *budget;
 
@@ -66,6 +67,7 @@ NSInteger const kbarHeight = 20;
     [self.scrollView setBounces:NO];
     [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width, kbarHeight)];
     [self.scrollView setShowsHorizontalScrollIndicator:NO];
+    [self.scrollView setShowsVerticalScrollIndicator:NO];
     
     NSLog(@"%f",self.scrollView.frame.size.height);
     
@@ -174,11 +176,89 @@ NSInteger const kbarHeight = 20;
         count++;
     }
     
-    
     [self.tripView addSubview:addExpense];
     [self.tripView addSubview:imageViewContainer];
     [self.scrollView addSubview:self.tripView];
+<<<<<<< HEAD
     [self.scrollView addSubview:self.userProgressView];
+=======
+    
+    self.recieptView = [[UIView alloc] initWithFrame:CGRectMake(2 * self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    
+    UIImageView *imageBackground1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"newyork3.jpg"]];
+    imageBackground1.frame = CGRectMake(0, 0, self.tripView.frame.size.width, self.tripView.frame.size.height);
+    imageBackground1.contentMode = UIViewContentModeScaleAspectFill;
+    imageBackground1.layer.masksToBounds = YES;
+    [self.recieptView addSubview:imageBackground1];
+    
+    
+    UILabel *header1 = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 50, 200, 50)];
+    header1.text = @"Expense Receipt";
+    header1.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0];
+    header1.backgroundColor = [UIColor clearColor];
+    header1.textColor = [UIColor blackColor];
+    header1.textAlignment = NSTextAlignmentCenter;
+    
+    [self.recieptView addSubview:header1];
+    
+    UILabel *destination1 = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 120, 200, 50)];
+    destination1.text = self.tripDetails.destination;
+    destination1.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:30.0];
+    destination1.backgroundColor = [UIColor clearColor];
+    destination1.textColor = [UIColor whiteColor];
+    destination1.textAlignment = NSTextAlignmentCenter;
+    [self.recieptView addSubview:destination1];
+    
+    UILabel *recepitDate = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 160, 200, 50)];
+    recepitDate.text = @"April 29th, 2014";
+    recepitDate.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:30.0];
+    recepitDate.backgroundColor = [UIColor clearColor];
+    recepitDate.textColor = [UIColor grayColor];
+    recepitDate.adjustsFontSizeToFitWidth = YES;
+    destination1.textAlignment = NSTextAlignmentCenter;
+    [self.recieptView addSubview:recepitDate];
+    
+    NSLog(@"%@", self.tripDetails);
+    
+   // UILabel
+    UILabel *attributedLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, self.view.frame.size.width - 20, self.view.frame.size.height-10)];
+    [_recieptView addSubview:attributedLabel];
+    
+    NSString *string1 = @"aaa";
+    NSString *string2 = @"aaa";
+    NSString *string3 = @"aaa";
+    NSString *string4 = @"aaa";
+    
+    NSDictionary *attribute1 = @{NSForegroundColorAttributeName: [UIColor blackColor],
+                                 NSBackgroundColorAttributeName: [UIColor clearColor],
+                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:22.0],
+                                 };
+    
+    NSDictionary *attribute2 = @{NSForegroundColorAttributeName: [UIColor blackColor],
+                                 NSBackgroundColorAttributeName: [UIColor clearColor],
+                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:10],
+                                 };
+    
+    NSDictionary *attribute3 = @{NSForegroundColorAttributeName: [UIColor blackColor],
+                                 NSBackgroundColorAttributeName: [UIColor clearColor],
+                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:14.0]
+                                 };
+    
+    NSMutableAttributedString *info = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ %@ %@ \n\n%@ \n     ", string1, string2 , string3, string4]];
+    
+    [info setAttributes:attribute1 range:NSMakeRange(0, ([string1 length]))];
+    [info setAttributes:attribute2 range:NSMakeRange(([string1 length]),([string2 length]+[string3 length]))];
+    [info setAttributes:attribute3 range:NSMakeRange(([string1 length] + [string2 length]+[string3 length]), [string4 length])];
+    
+    attributedLabel.attributedText = info;
+    attributedLabel.backgroundColor = [UIColor clearColor];
+  //  attributedLabel.editable = NO;
+    attributedLabel.textColor = [UIColor blackColor];
+    
+    _recieptView.backgroundColor = [UIColor grayColor];
+    [self.scrollView addSubview:_recieptView];
+    
+>>>>>>> FETCH_HEAD
     [self.view addSubview:self.scrollView];
     [self.view setNeedsDisplay];
 
@@ -218,13 +298,13 @@ NSInteger const kbarHeight = 20;
     
 }
 
-- (void)addExpense:(id)sender
-{
+- (void)addExpense:(id)sender {
     ExpenseViewController *expenseVC = [[ExpenseViewController alloc] initWithTripDetails:self.tripDetails];
     expenseVC.delegate = self;
-
+    //expenseVC.view.backgroundColor = [UIColor clearColor];
     self.modalPresentationStyle = UIModalPresentationFullScreen;
     self.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    //self.modalPresentationStyle = UIModalPresentationCurrentContext;
     
     [self presentViewController:expenseVC animated:YES completion:nil];
 }

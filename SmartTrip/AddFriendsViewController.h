@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TripDetails.h"
 
 @interface AddFriendsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) TripDetails *tripDetail;
 @end

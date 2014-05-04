@@ -16,6 +16,11 @@
 
 @implementation CreateTripViewController{
     UILabel *longQuestion;
+    NSNumber *lengthOfTrip;
+    NSDate *dateOfTrip;
+    UIDatePicker *leaving;
+    NSString *destinationOfTrip;
+    UITextField *whereInput;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,6 +35,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tripDetail = [[TripDetails alloc] init];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Add A Trip";
     
@@ -43,7 +50,7 @@
     whereQuestion.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:whereQuestion];
     
-    UITextField *whereInput = [[UITextField alloc] initWithFrame:CGRectMake(30, 120, screenWidth-60, 30)];
+    whereInput = [[UITextField alloc] initWithFrame:CGRectMake(30, 120, screenWidth-60, 30)];
     whereInput.placeholder = @"E.g. New York City";
     whereInput.delegate = self;
     [self.view addSubview:whereInput];
@@ -54,7 +61,7 @@
     whenQuestion.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:whenQuestion];
     
-    UIDatePicker *leaving = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 190, screenWidth, 30)];
+    leaving = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 190, screenWidth, 30)];
     leaving.datePickerMode = UIDatePickerModeDate;
     [self.view addSubview:leaving];
     
@@ -67,7 +74,6 @@
     length.maximumValue = 50.0;
     length.continuous = YES;
     length.value = 0.0;
-    
     
     longQuestion = [[UILabel alloc] initWithFrame:CGRectMake(0, 410, screenWidth, 30)];
     
@@ -91,13 +97,27 @@
     CGFloat screenHeight = screenRect.size.height;
     
     UISlider *slider = (UISlider*)sender;
+    lengthOfTrip = [NSNumber numberWithFloat:slider.value];
     longQuestion.text = [NSString stringWithFormat:@" Length of stay %d days", (int)slider.value];
 }
 -(void)clickNext{
+    self.tripDetail.tripLength = lengthOfTrip;
     
+    NSDate *myDate = leaving.date;
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd, MM yyy"];
+    // NSString *prettyVersion = [dateFormat stringFromDate:myDate];
     
-    CreateBudgetViewController *bvc = [[CreateBudgetViewController alloc] init];
-   // AddFriendsViewController  *bvc = [[AddFriendsViewController alloc] init];
+    dateOfTrip = myDate;
+    
+    self.tripDetail.tripStart = dateOfTrip;
+    
+    destinationOfTrip = whereInput.text;
+    self.tripDetail.destination = destinationOfTrip;
+    
+    //CreateBudgetViewController *bvc = [[CreateBudgetViewController alloc] init];
+    AddFriendsViewController  *bvc = [[AddFriendsViewController alloc] init];
+    bvc.tripDetail = self.tripDetail;
     [self.navigationController pushViewController:bvc animated:YES];
 }
 - (void)didReceiveMemoryWarning

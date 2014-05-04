@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TripDetails.h"
 @interface FinishCreatingViewController : UIViewController
 @property (nonatomic, strong) NSMutableDictionary *friend_list;
+@property (nonatomic, strong) TripDetails *tripDetail;
+@property (nonatomic, strong) NSString *final_budget;
 @end

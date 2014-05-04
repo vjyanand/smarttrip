@@ -29,7 +29,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    UIImage *image = [UIImage imageNamed: @"smartrip_03.png"];
+    UIImage *image = [UIImage imageNamed: @"smarttrip-large_10.png"];
     UIImageView *imageview = [[UIImageView alloc] initWithImage: image];
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:100.0/255.0 green:200.0/255.0 blue:221/255.0 alpha:1];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createTrip)];

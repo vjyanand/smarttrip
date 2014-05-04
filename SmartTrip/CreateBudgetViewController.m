@@ -9,6 +9,9 @@
 #import "CreateBudgetViewController.h"
 #import "CategoriesView.h"
 #import "AddFriendsViewController.h"
+#import "TripBudget.h"
+#import "FinishCreatingViewController.h"
+#import "CategoryBudget.h"
 
 @interface CreateBudgetViewController ()
 
@@ -16,6 +19,8 @@
 
 @implementation CreateBudgetViewController{
     CategoriesView *travel, *night, *accom, *food;
+    UILabel *real_budget;
+    CategoryBudget *travelB, *nightB, *accomB, *foodB;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -23,6 +28,13 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.friend_list = [[NSMutableDictionary alloc] init];
+        self.tripDetail = [[TripDetails alloc] init];
+        
+        travelB = [[CategoryBudget alloc] init];
+        nightB = [[CategoryBudget alloc] init];
+        accomB = [[CategoryBudget alloc] init];
+        foodB   = [[CategoryBudget alloc] init];
     }
     return self;
 }
@@ -30,11 +42,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
-//    CGFloat screenHeight = screenRect.size.height;
+    CGFloat screenHeight = screenRect.size.height;
     
+    real_budget = [[UILabel alloc] initWithFrame:CGRectMake(0, 450, screenWidth, 50)];
     self.title = @"Budget";
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -88,6 +101,15 @@
     
     self.navigationItem.rightBarButtonItem = next;
 
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button addTarget:self
+               action:@selector(createBudget:)
+     forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"Create Budget" forState:UIControlStateNormal];
+    button.frame = CGRectMake(80.0, 500.0, 160.0, 40.0);
+    [self.view addSubview:button];
+    
     //NSLog(travel.title.text);
 
     //travel.title.frame = CGRectMake(0, 100, screenWidth, 30);
@@ -95,44 +117,77 @@
     
     // Do any additional setup after loading the view.
 }
--(void)travelSlider:(id)sender{
+-(void)createBudget:(id)sender{
+    int travelPrice = [[travel.price.text stringByReplacingOccurrencesOfString:@"$" withString:@""] intValue];
+    int foodPrice = [[food.price.text stringByReplacingOccurrencesOfString:@"$" withString:@""] intValue];
+    int nightPrice = [[night.price.text stringByReplacingOccurrencesOfString:@"$" withString:@""] intValue];
+    int accomPrice = [[accom.price.text stringByReplacingOccurrencesOfString:@"$" withString:@""] intValue];
+    
+    
+    travelB.categoryBudget = [NSNumber numberWithInt:travelPrice];
+    nightB.categoryBudget = [NSNumber numberWithInt:nightPrice];
+    foodB.categoryBudget = [NSNumber numberWithInt:foodPrice];
+    accomB.categoryBudget = [NSNumber numberWithInt:accomPrice];
+    
+    travelB.categoryName = @"Travel";
+    nightB.categoryName = @"Nightlife";
+    foodB.categoryName = @"Food";
+    accomB.categoryName = @"Accommodation";
+    
+    travelB.categoryAmountSpent = [NSNumber numberWithInt:0];
+    nightB.categoryAmountSpent = [NSNumber numberWithInt:0];
+    foodB.categoryAmountSpent = [NSNumber numberWithInt:0];
+    accomB.categoryAmountSpent = [NSNumber numberWithInt:0];
+    
+    int final_budget = travelPrice+foodPrice+nightPrice+accomPrice;
+    
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
     
+    real_budget.textAlignment = NSTextAlignmentCenter;
+    real_budget.font = [UIFont fontWithName:@"AvenirNext-UltraLight" size:40.0f];
+    [self.view addSubview:real_budget];
+    NSString *final = [NSString stringWithFormat:@"%d", final_budget];
+    real_budget.text = final;
+
+}
+-(void)travelSlider:(id)sender{
     UISlider *slider = (UISlider*)sender;
     travel.price.text = [NSString stringWithFormat:@"$%d", (int)slider.value];
 }
 -(void)accomSlider:(id)sender{
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
-    
     UISlider *slider = (UISlider*)sender;
     accom.price.text = [NSString stringWithFormat:@"$%d", (int)slider.value];
     
 }
 -(void)foodSlider:(id)sender{
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
-    
     UISlider *slider = (UISlider*)sender;
     food.price.text = [NSString stringWithFormat:@"$%d", (int)slider.value];
     
 }
 -(void)nightSlider:(id)sender{
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
     
     UISlider *slider = (UISlider*)sender;
     night.price.text = [NSString stringWithFormat:@"$%d", (int)slider.value];
     
 }
 -(void)clickNext{
-    AddFriendsViewController *addFriends = [[AddFriendsViewController alloc] init];
-    [self.navigationController pushViewController:addFriends animated:YES];
+    TripBudget *tripBudget = [[TripBudget alloc] init];
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber * myNumber = [f numberFromString:real_budget.text];
+    tripBudget.totalBudget = myNumber;
+    
+    tripBudget.spendingCategories = [[NSMutableArray alloc] initWithObjects:travelB, foodB, accomB, nightB, nil];
+    
+    self.tripDetail.budget = tripBudget;
+    FinishCreatingViewController *finish = [[FinishCreatingViewController alloc] init];
+    finish.friend_list = self.friend_list;
+    finish.tripDetail = self.tripDetail;
+    finish.final_budget = real_budget.text;
+    //AddFriendsViewController *addFriends = [[AddFriendsViewController alloc] init];
+    [self.navigationController pushViewController:finish animated:YES];
 }
 - (void)didReceiveMemoryWarning
 {
