@@ -15,10 +15,8 @@
     self = [super init];
     
     if (self) {
-        //do shit
-        
+        self.UUID = [[NSUUID UUID] UUIDString];
     }
-    
     return self;
 }
 

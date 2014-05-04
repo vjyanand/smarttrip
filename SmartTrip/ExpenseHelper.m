@@ -78,10 +78,11 @@
                              "Total Budget: $%d"
                              "</en-note>", [trip.budget.totalBudget intValue]];
     
-    EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:@"Test photo note" content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:nil];
+    EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:[trip destination] content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:@[trip.UUID]];
     [[EvernoteNoteStore noteStore] createNote:newNote success:^(EDAMNote *note) {
         completion(nil);
     } failure:^(NSError *error) {
+        NSLog(@"ERRR %@", error);
         completion(error);
     }];
 }
