@@ -1,8 +1,8 @@
 #import "ExpenseHelper.h"
-#import <ENSDK/ENSDK.h>
+
+#import "EvernoteSDK.h"
 #import "ASIFormDataRequest.h"
 #import "ASIHTTPRequest.h"
-#import "ENSDK/AdvancedHeaders/EDAM.h"
 
 NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/trip/v1.1";
 
