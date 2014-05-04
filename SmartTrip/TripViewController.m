@@ -9,8 +9,9 @@
 #import "TripViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "FriendData.h"
+#import "ExpenseViewController.h"
 
-NSInteger const kbarHeight = 45;
+NSInteger const kbarHeight = 20;
 
 @interface TripViewController ()
 
@@ -55,12 +56,15 @@ NSInteger const kbarHeight = 45;
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
-    self.scrollView.backgroundColor = [UIColor whiteColor];
-    [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width*3, self.view.frame.size.height - kbarHeight)];
+//    self.scrollView.backgroundColor = [UIColor redColor];
+    [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width*3, self.view.frame.size.height)];
     [self.scrollView setPagingEnabled:YES];
     [self.scrollView setScrollEnabled:YES];
-    [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width, 0)];
+    [self.scrollView setBounces:YES];
+    [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width, kbarHeight)];
     [self.scrollView setShowsHorizontalScrollIndicator:NO];
+    
+    NSLog(@"%f",self.scrollView.frame.size.height);
     
     self.tripView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height)];
    
@@ -134,6 +138,7 @@ NSInteger const kbarHeight = 45;
     addExpense.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
     [addExpense setTitle:@"Add Expense" forState:UIControlStateNormal];
     [addExpense setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [addExpense addTarget:self action:@selector(addExpense:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.tripView addSubview:addExpense];
     [self.tripView addSubview:imageViewContainer];
@@ -151,44 +156,40 @@ NSInteger const kbarHeight = 45;
 
 - (void)getFBUserData
 {
-//    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-//                            NO, @"redirect",
-//                            @"200", @"height",
-//                            @"normal", @"type",
-//                            @"200", @"width",
-//                            nil
-//                            ];
-//    
-//    /* make the FB API call */
-//    [FBRequestConnection startWithGraphPath:@"/10152415181973679/picture"
-//                                 parameters:params
-//                                 HTTPMethod:@"GET"
-//                          completionHandler:^(
-//                                              FBRequestConnection *connection,
-//                                              id result,
-//                                              NSError *error
-//                                              ) {
-//                              /* handle the result */
-//                              self.friendData = [[NSDictionary alloc] initWithDictionary:result];
-//                              NSLog(@"%@", result);
-//                              NSLog(@"%@", error);
-//                          }];
-    NSString *base  =@"http://graph.facebook.com/";
+
+    NSString *baseURL = @"http://graph.facebook.com/";
     self.friendInfo = [[NSMutableArray alloc] init];
     
     for (NSString *userid in self.tripDetails.tripFriends) {
-        base = [base stringByAppendingString:userid];
+        NSString *base = [baseURL stringByAppendingString:userid];
         base = [base stringByAppendingString:@"/picture?width=200&height=200"];
         base = [base stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
         NSURL *url = [NSURL URLWithString:base];
         FriendData *friendData = [[FriendData alloc] init];
         friendData.profileImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
-        friendData.firstName = @"Isabel";
+        
+        NSURL *dataUrl = [NSURL URLWithString:[baseURL stringByAppendingString:userid]];
+        NSData *data = [NSData dataWithContentsOfURL:dataUrl];
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        
+        NSLog(@"%@", dictionary);
+        friendData.firstName = [dictionary objectForKey:@"first_name"];
+        friendData.lastName = [dictionary objectForKey:@"last_name"];
         
         [self.friendInfo addObject:friendData];
     }
     
+}
+
+- (void)addExpense:(id)sender
+{
+    ExpenseViewController *expenseVC = [[ExpenseViewController alloc] initWithTripDetails:self.tripDetails];
+
+    self.modalPresentationStyle = UIModalPresentationFullScreen;
+    self.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    
+    [self presentViewController:expenseVC animated:YES completion:nil];
 }
 
 @end

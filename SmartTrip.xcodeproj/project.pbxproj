@@ -14,6 +14,8 @@
 		1677A15E19158F4100DF460F /* CategoryBudget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15D19158F4100DF460F /* CategoryBudget.m */; };
 		1677A1641915BE4F00DF460F /* newyork3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1677A1631915BE4F00DF460F /* newyork3.jpg */; };
 		1677A1671915D33400DF460F /* FriendData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A1661915D33400DF460F /* FriendData.m */; };
+		1677A1701915E39900DF460F /* ExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A16F1915E39900DF460F /* ExpenseViewController.m */; };
+		1677A1721915F0D300DF460F /* checkmark_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 1677A1711915F0D300DF460F /* checkmark_06.png */; };
 		426EDFA81915B8F90017DC39 /* TripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EDFA71915B8F90017DC39 /* TripViewController.m */; };
 		426EDFBF1915CA9B0017DC39 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EDFAC1915CA9B0017DC39 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		426EDFC01915CA9B0017DC39 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EDFAF1915CA9B0017DC39 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -166,6 +168,9 @@
 		1677A1631915BE4F00DF460F /* newyork3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newyork3.jpg; sourceTree = "<group>"; };
 		1677A1651915D33400DF460F /* FriendData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendData.h; sourceTree = "<group>"; };
 		1677A1661915D33400DF460F /* FriendData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendData.m; sourceTree = "<group>"; };
+		1677A16E1915E39900DF460F /* ExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseViewController.h; sourceTree = "<group>"; };
+		1677A16F1915E39900DF460F /* ExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseViewController.m; sourceTree = "<group>"; };
+		1677A1711915F0D300DF460F /* checkmark_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark_06.png; sourceTree = "<group>"; };
 		426EDFA71915B8F90017DC39 /* TripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripViewController.m; sourceTree = "<group>"; };
 		426EDFA91915BA590017DC39 /* TripViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TripViewController.h; sourceTree = "<group>"; };
 		426EDFAB1915CA9B0017DC39 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
@@ -439,6 +444,7 @@
 		1677A14C19158C7000DF460F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1677A1711915F0D300DF460F /* checkmark_06.png */,
 				1677A14D19158C8B00DF460F /* smartrip_03.png */,
 				1677A1631915BE4F00DF460F /* newyork3.jpg */,
 				1677A14E19158C8B00DF460F /* smarttrip-large_10.png */,
@@ -451,6 +457,10 @@
 			children = (
 				426EDFA91915BA590017DC39 /* TripViewController.h */,
 				426EDFA71915B8F90017DC39 /* TripViewController.m */,
+				1677A16E1915E39900DF460F /* ExpenseViewController.h */,
+				1677A16F1915E39900DF460F /* ExpenseViewController.m */,
+				42F8330E1915AC1E00F172D5 /* CreateTripViewController.h */,
+				42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */,
 			);
 			name = TripViewController;
 			sourceTree = "<group>";
@@ -1020,6 +1030,8 @@
 				426EE0D01916046D0017DC39 /* index.php in Resources */,
 				426EE12619160F950017DC39 /* checkmark.jpg in Resources */,
 				42F832CE1915845600F172D5 /* Images.xcassets in Resources */,
+				42F832ED1915893300F172D5 /* ENSDKResources.bundle in Resources */,
+				1677A1721915F0D300DF460F /* checkmark_06.png in Resources */,
 				426EE0D31916046D0017DC39 /* xhtml-lat1.ent in Resources */,
 				426EE0CE1916046D0017DC39 /* enml2.dtd in Resources */,
 				426EE0A11916046D0017DC39 /* LICENSE in Resources */,
@@ -1144,6 +1156,7 @@
 				426EDFC51915CA9B0017DC39 /* ASIInputStream.m in Sources */,
 				426EE0E01916046D0017DC39 /* ENMLWriter.m in Sources */,
 				426EDFA81915B8F90017DC39 /* TripViewController.m in Sources */,
+				1677A1701915E39900DF460F /* ExpenseViewController.m in Sources */,
 				426EE0B51916046D0017DC39 /* TMemoryBuffer.m in Sources */,
 				426EE0C31916046D0017DC39 /* EvernoteUserStore.m in Sources */,
 				426EE10619160F1B0017DC39 /* MKAnnotationView+WebCache.m in Sources */,

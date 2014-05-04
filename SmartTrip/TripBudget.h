@@ -14,7 +14,7 @@
 //How much of the budget have they spent
 @property (nonatomic, strong) NSNumber *amountSpent;
 
-@property (nonatomic, strong) NSArray *spendingCategories;
+@property (nonatomic, strong) NSMutableArray *spendingCategories;
 //FB friends on the budget
 @property (nonatomic, strong) NSArray *budgetContributors;
 
