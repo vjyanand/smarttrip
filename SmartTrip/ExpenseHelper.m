@@ -2,6 +2,7 @@
 #import <ENSDK/ENSDK.h>
 #import "ASIFormDataRequest.h"
 #import "ASIHTTPRequest.h"
+#import "ENSDK/AdvancedHeaders/EDAM.h"
 
 NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/trip/v1.1";
 
@@ -60,6 +61,9 @@ NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/t
 }
 
 - (void)addNote:(Expense *)expense forTrip:(NSString *)tripUUID completion:(ENCompletionHandler)completion {
+    EDAMNote *a;
+    
+    
     
 }
 
