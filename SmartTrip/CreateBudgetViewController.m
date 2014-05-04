@@ -53,6 +53,7 @@
     
     UILabel *add = [[UILabel alloc] initWithFrame:CGRectMake(0, 60, screenWidth, 40)];
     add.text = @"Add Spending Categories";
+    add.font = [UIFont fontWithName:@"AvenirNext-UltraLight" size:20.0f];
     add.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:add];
     
@@ -174,6 +175,7 @@
 }
 -(void)clickNext{
     TripBudget *tripBudget = [[TripBudget alloc] init];
+    [self createBudget:nil];
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
     NSNumber * myNumber = [f numberFromString:real_budget.text];

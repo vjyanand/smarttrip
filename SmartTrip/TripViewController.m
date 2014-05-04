@@ -218,14 +218,6 @@ NSInteger const kbarHeight = 20;
     [self.scrollView addSubview:self.userProgressView];
     
     self.recieptView = [[UIView alloc] initWithFrame:CGRectMake(2 * self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    
-    UIImageView *imageBackground1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"newyork3.jpg"]];
-    imageBackground1.frame = CGRectMake(0, 0, self.tripView.frame.size.width, self.tripView.frame.size.height);
-    imageBackground1.contentMode = UIViewContentModeScaleAspectFill;
-    imageBackground1.layer.masksToBounds = YES;
-    [self.recieptView addSubview:imageBackground1];
-    
-    
     UILabel *header1 = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 50, 200, 50)];
     header1.text = @"Expense Receipt";
     header1.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0];
@@ -243,7 +235,7 @@ NSInteger const kbarHeight = 20;
     destination1.textAlignment = NSTextAlignmentCenter;
     [self.recieptView addSubview:destination1];
     
-    UILabel *recepitDate = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 160, 200, 50)];
+    UILabel *recepitDate = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 120, 200, 50)];
     recepitDate.text = @"April 29th, 2014";
     recepitDate.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:30.0];
     recepitDate.backgroundColor = [UIColor clearColor];
@@ -255,43 +247,20 @@ NSInteger const kbarHeight = 20;
     NSLog(@"%@", self.tripDetails);
     
    // UILabel
-    UILabel *attributedLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, self.view.frame.size.width - 20, self.view.frame.size.height-10)];
+    UIWebView *attributedLabel = [[UIWebView alloc] initWithFrame:CGRectMake(10, recepitDate.frame.origin.y + 70, self.view.frame.size.width - 20, self.view.frame.size.height-10-recepitDate.frame.origin.y)];
+    
+    NSString *pathFile = [[NSBundle mainBundle] bundlePath];
+    NSString *path = [[NSString alloc] initWithString:[pathFile stringByAppendingPathComponent:@"html.html"]];
+    NSString *txtFileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    [attributedLabel loadHTMLString:txtFileContents baseURL:nil];
+    
     [_recieptView addSubview:attributedLabel];
     
-    NSString *string1 = @"aaa";
-    NSString *string2 = @"aaa";
-    NSString *string3 = @"aaa";
-    NSString *string4 = @"aaa";
     
-    NSDictionary *attribute1 = @{NSForegroundColorAttributeName: [UIColor blackColor],
-                                 NSBackgroundColorAttributeName: [UIColor clearColor],
-                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:22.0],
-                                 };
-    
-    NSDictionary *attribute2 = @{NSForegroundColorAttributeName: [UIColor blackColor],
-                                 NSBackgroundColorAttributeName: [UIColor clearColor],
-                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:10],
-                                 };
-    
-    NSDictionary *attribute3 = @{NSForegroundColorAttributeName: [UIColor blackColor],
-                                 NSBackgroundColorAttributeName: [UIColor clearColor],
-                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:14.0]
-                                 };
-    
-    NSMutableAttributedString *info = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ %@ %@ \n\n%@ \n     ", string1, string2 , string3, string4]];
-    
-    [info setAttributes:attribute1 range:NSMakeRange(0, ([string1 length]))];
-    [info setAttributes:attribute2 range:NSMakeRange(([string1 length]),([string2 length]+[string3 length]))];
-    [info setAttributes:attribute3 range:NSMakeRange(([string1 length] + [string2 length]+[string3 length]), [string4 length])];
-    
-    attributedLabel.attributedText = info;
-    attributedLabel.backgroundColor = [UIColor clearColor];
-  //  attributedLabel.editable = NO;
-    attributedLabel.textColor = [UIColor blackColor];
-    
-    _recieptView.backgroundColor = [UIColor grayColor];
+    _recieptView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:_recieptView];
-        [self.view addSubview:self.scrollView];
+    [self.view addSubview:self.scrollView];
+    [self.view addSubview:self.scrollView];
     [self.view setNeedsDisplay];
 
 }

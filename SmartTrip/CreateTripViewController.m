@@ -46,23 +46,26 @@
     
     UILabel *whereQuestion = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, screenWidth, 30)];
     whereQuestion.text = @"Where are you going?";
-    whereQuestion.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:19.0f];
+    //whereQuestion.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:19.0f];
     whereQuestion.textAlignment = NSTextAlignmentCenter;
+    whereQuestion.font = [UIFont fontWithName:@"AvenirNext-UltraLight" size:20.0f];
     [self.view addSubview:whereQuestion];
     
     whereInput = [[UITextField alloc] initWithFrame:CGRectMake(30, 120, screenWidth-60, 30)];
-    whereInput.placeholder = @"E.g. New York City";
+    whereInput.placeholder = @"e.g. New York City";
     whereInput.delegate = self;
+    whereInput.font = [UIFont fontWithName:@"Avenir-Light" size:18.0f];
     [self.view addSubview:whereInput];
     
     UILabel *whenQuestion = [[UILabel alloc] initWithFrame:CGRectMake(0, 160, screenWidth, 30)];
     whenQuestion.text = @"When?";
-    whenQuestion.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:19.0f];
+    whenQuestion.font = [UIFont fontWithName:@"AvenirNext-UltraLight" size:20.0f];
     whenQuestion.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:whenQuestion];
     
     leaving = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 190, screenWidth, 30)];
     leaving.datePickerMode = UIDatePickerModeDate;
+
     [self.view addSubview:leaving];
     
     
@@ -77,7 +80,7 @@
     
     longQuestion = [[UILabel alloc] initWithFrame:CGRectMake(0, 410, screenWidth, 30)];
     
-    longQuestion.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:19.0f];
+    longQuestion.font = [UIFont fontWithName:@"AvenirNext-UltraLight" size:20.0f];
     longQuestion.textAlignment = NSTextAlignmentCenter;
     longQuestion.text = [NSString stringWithFormat:@" Length of stay %d days", (int)length.value];
     [self.view addSubview:longQuestion];
