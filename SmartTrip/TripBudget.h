@@ -9,15 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface TripBudget : NSObject
-    @property (nonatomic, strong) NSNumber *totalBudget;
+@property (nonatomic, strong) NSNumber *totalBudget;
 
-    //How much of the budget have they spent
-    @property (nonatomic, strong) NSNumber *amountSpent;
+//How much of the budget have they spent
+@property (nonatomic, strong) NSNumber *amountSpent;
 
-    @property (nonatomic, strong) NSArray *spendingCategories;
-    //FB friends on the budget
-    @property (nonatomic, strong) NSArray *budgetContributors;
-
-+ (NSNumber *)getRemainingBudget;
+@property (nonatomic, strong) NSArray *spendingCategories;
+//FB friends on the budget
+@property (nonatomic, strong) NSArray *budgetContributors;
 
 @end

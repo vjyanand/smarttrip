@@ -12,6 +12,7 @@
 		1677A15819158DC200DF460F /* TripDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15719158DC200DF460F /* TripDetails.m */; };
 		1677A15B19158EF100DF460F /* TripBudget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15A19158EF100DF460F /* TripBudget.m */; };
 		1677A15E19158F4100DF460F /* CategoryBudget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15D19158F4100DF460F /* CategoryBudget.m */; };
+		426EDFA81915B8F90017DC39 /* TripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EDFA71915B8F90017DC39 /* TripViewController.m */; };
 		42F832B61915845600F172D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B51915845600F172D5 /* Foundation.framework */; };
 		42F832B81915845600F172D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B71915845600F172D5 /* CoreGraphics.framework */; };
 		42F832BA1915845600F172D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B91915845600F172D5 /* UIKit.framework */; };
@@ -60,6 +61,8 @@
 		1677A15A19158EF100DF460F /* TripBudget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripBudget.m; sourceTree = "<group>"; };
 		1677A15C19158F4100DF460F /* CategoryBudget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryBudget.h; sourceTree = "<group>"; };
 		1677A15D19158F4100DF460F /* CategoryBudget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryBudget.m; sourceTree = "<group>"; };
+		426EDFA71915B8F90017DC39 /* TripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripViewController.m; sourceTree = "<group>"; };
+		426EDFA91915BA590017DC39 /* TripViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TripViewController.h; sourceTree = "<group>"; };
 		42F832B21915845600F172D5 /* SmartTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F832B51915845600F172D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42F832B71915845600F172D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +144,8 @@
 		1677A15119158D3500DF460F /* TripViewController */ = {
 			isa = PBXGroup;
 			children = (
+				426EDFA71915B8F90017DC39 /* TripViewController.m */,
+				426EDFA91915BA590017DC39 /* TripViewController.h */,
 				42F8330E1915AC1E00F172D5 /* CreateTripViewController.h */,
 				42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */,
 			);
@@ -392,6 +397,7 @@
 				42F833101915AC1E00F172D5 /* CreateTripViewController.m in Sources */,
 				42F833011915A28C00F172D5 /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				42F832F3191597EB00F172D5 /* ExpenseHelper.m in Sources */,
+				426EDFA81915B8F90017DC39 /* TripViewController.m in Sources */,
 				42F832F6191599CF00F172D5 /* Expense.m in Sources */,
 				1677A15819158DC200DF460F /* TripDetails.m in Sources */,
 			);
