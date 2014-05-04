@@ -199,7 +199,7 @@ NSInteger const kbarHeight = 20;
     destination1.textAlignment = NSTextAlignmentCenter;
     [self.recieptView addSubview:destination1];
     
-    UILabel *recepitDate = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 160, 200, 50)];
+    UILabel *recepitDate = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 120, 200, 50)];
     recepitDate.text = @"April 29th, 2014";
     recepitDate.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:30.0];
     recepitDate.backgroundColor = [UIColor clearColor];
@@ -214,9 +214,8 @@ NSInteger const kbarHeight = 20;
     UIWebView *attributedLabel = [[UIWebView alloc] initWithFrame:CGRectMake(10, recepitDate.frame.origin.y + 70, self.view.frame.size.width - 20, self.view.frame.size.height-10-recepitDate.frame.origin.y)];
     
     NSString *pathFile = [[NSBundle mainBundle] bundlePath];
-    NSString *path = [[NSString alloc] initWithString:[pathFile stringByAppendingPathComponent:@"html.h"]];
+    NSString *path = [[NSString alloc] initWithString:[pathFile stringByAppendingPathComponent:@"html.html"]];
     NSString *txtFileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
-    NSLog(txtFileContents);
     [attributedLabel loadHTMLString:txtFileContents baseURL:nil];
     
     [_recieptView addSubview:attributedLabel];

@@ -126,6 +126,7 @@
 		426EE18619164BB30017DC39 /* AddFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE17819164BB30017DC39 /* AddFriendsViewController.m */; };
 		426EE18719164BB30017DC39 /* FinishCreatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE17D19164BB30017DC39 /* FinishCreatingViewController.m */; };
 		426EE18819164BB30017DC39 /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EE17F19164BB30017DC39 /* FriendsTableViewCell.m */; };
+		426EE18A191650F40017DC39 /* html.html in Resources */ = {isa = PBXBuildFile; fileRef = 426EE18919164F070017DC39 /* html.html */; };
 		42F832B61915845600F172D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B51915845600F172D5 /* Foundation.framework */; };
 		42F832B81915845600F172D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B71915845600F172D5 /* CoreGraphics.framework */; };
 		42F832BA1915845600F172D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B91915845600F172D5 /* UIKit.framework */; };
@@ -386,7 +387,7 @@
 		426EE17E19164BB30017DC39 /* FriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewCell.h; sourceTree = "<group>"; };
 		426EE17F19164BB30017DC39 /* FriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewCell.m; sourceTree = "<group>"; };
 		426EE18019164BB30017DC39 /* MyTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTripViewController.h; sourceTree = "<group>"; };
-		426EE18919164F070017DC39 /* html.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = html.h; sourceTree = "<group>"; };
+		426EE18919164F070017DC39 /* html.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = html.html; sourceTree = "<group>"; };
 		42F832B21915845600F172D5 /* SmartTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F832B51915845600F172D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42F832B71915845600F172D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -885,7 +886,7 @@
 		42F832BB1915845600F172D5 /* SmartTrip */ = {
 			isa = PBXGroup;
 			children = (
-				426EE18919164F070017DC39 /* html.h */,
+				426EE18919164F070017DC39 /* html.html */,
 				426EE11419160F320017DC39 /* CreateTripView */,
 				42F832F0191597C400F172D5 /* Helpers */,
 				42F832C41915845600F172D5 /* AppDelegate.h */,
@@ -1030,6 +1031,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426EE18A191650F40017DC39 /* html.html in Resources */,
 				426EE0D01916046D0017DC39 /* index.php in Resources */,
 				426EE12619160F950017DC39 /* checkmark.jpg in Resources */,
 				42F832CE1915845600F172D5 /* Images.xcassets in Resources */,
