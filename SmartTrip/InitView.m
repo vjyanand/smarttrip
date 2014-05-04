@@ -34,7 +34,8 @@
 }
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
-    NSLog(user.name);
+//    NSLog(user.name);
+    NSLog(@"%@", user.id);
 }
 /*
 // Only override drawRect: if you perform custom drawing.

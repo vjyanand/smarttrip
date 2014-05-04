@@ -22,6 +22,10 @@
     
     if (!self) {
         return nil;
+        
+        if (!self.amountSpent) {
+            self.amountSpent = [[NSNumber alloc] initWithInt:0];
+        }
     }
     
     return self;
@@ -29,12 +33,13 @@
 
 - (double)getRemainingBudget
 {
-    if (self.totalBudget && self.amountSpent) {
         double difference = [self.totalBudget doubleValue] - [self.amountSpent doubleValue];
         return difference;
-    } else {
-        return 0.0;
-    }
+}
+
+- (NSString *)getRemaningBudgetString
+{
+    return [NSString stringWithFormat:@"$ %i", (int)[self getRemainingBudget]];
 }
 
 @end

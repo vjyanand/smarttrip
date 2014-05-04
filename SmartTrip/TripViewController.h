@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) TripDetails *tripDetails;
 @property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIImage *friendImage;
+@property (nonatomic, strong) NSMutableArray *friendInfo;
 
 - (id)initWithTripDetails:(TripDetails *)details;
 @end

@@ -25,8 +25,9 @@
 
 - (NSString *)getTotalBudgetString
 {
-    NSString *budgetString = [NSString stringWithFormat:@"$ %i", [self.budget.totalBudget integerValue]];
+    NSString *budgetString = [NSString stringWithFormat:@"$ %i", (int)[self.budget.totalBudget integerValue]];
     return budgetString;
 }
+
 
 @end

@@ -12,6 +12,8 @@
 		1677A15819158DC200DF460F /* TripDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15719158DC200DF460F /* TripDetails.m */; };
 		1677A15B19158EF100DF460F /* TripBudget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15A19158EF100DF460F /* TripBudget.m */; };
 		1677A15E19158F4100DF460F /* CategoryBudget.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A15D19158F4100DF460F /* CategoryBudget.m */; };
+		1677A1641915BE4F00DF460F /* newyork3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1677A1631915BE4F00DF460F /* newyork3.jpg */; };
+		1677A1671915D33400DF460F /* FriendData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677A1661915D33400DF460F /* FriendData.m */; };
 		426EDFA81915B8F90017DC39 /* TripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 426EDFA71915B8F90017DC39 /* TripViewController.m */; };
 		42F832B61915845600F172D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B51915845600F172D5 /* Foundation.framework */; };
 		42F832B81915845600F172D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F832B71915845600F172D5 /* CoreGraphics.framework */; };
@@ -61,6 +63,9 @@
 		1677A15A19158EF100DF460F /* TripBudget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripBudget.m; sourceTree = "<group>"; };
 		1677A15C19158F4100DF460F /* CategoryBudget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryBudget.h; sourceTree = "<group>"; };
 		1677A15D19158F4100DF460F /* CategoryBudget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryBudget.m; sourceTree = "<group>"; };
+		1677A1631915BE4F00DF460F /* newyork3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newyork3.jpg; sourceTree = "<group>"; };
+		1677A1651915D33400DF460F /* FriendData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendData.h; sourceTree = "<group>"; };
+		1677A1661915D33400DF460F /* FriendData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendData.m; sourceTree = "<group>"; };
 		426EDFA71915B8F90017DC39 /* TripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripViewController.m; sourceTree = "<group>"; };
 		426EDFA91915BA590017DC39 /* TripViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TripViewController.h; sourceTree = "<group>"; };
 		42F832B21915845600F172D5 /* SmartTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				1677A14D19158C8B00DF460F /* smartrip_03.png */,
+				1677A1631915BE4F00DF460F /* newyork3.jpg */,
 				1677A14E19158C8B00DF460F /* smarttrip-large_10.png */,
 			);
 			name = Images;
@@ -144,8 +150,8 @@
 		1677A15119158D3500DF460F /* TripViewController */ = {
 			isa = PBXGroup;
 			children = (
-				426EDFA71915B8F90017DC39 /* TripViewController.m */,
 				426EDFA91915BA590017DC39 /* TripViewController.h */,
+				426EDFA71915B8F90017DC39 /* TripViewController.m */,
 				42F8330E1915AC1E00F172D5 /* CreateTripViewController.h */,
 				42F8330F1915AC1E00F172D5 /* CreateTripViewController.m */,
 			);
@@ -161,6 +167,8 @@
 				1677A15A19158EF100DF460F /* TripBudget.m */,
 				1677A15C19158F4100DF460F /* CategoryBudget.h */,
 				1677A15D19158F4100DF460F /* CategoryBudget.m */,
+				1677A1651915D33400DF460F /* FriendData.h */,
+				1677A1661915D33400DF460F /* FriendData.m */,
 				42F832F4191599CF00F172D5 /* Expense.h */,
 				42F832F5191599CF00F172D5 /* Expense.m */,
 			);
@@ -365,6 +373,7 @@
 				42F832ED1915893300F172D5 /* ENSDKResources.bundle in Resources */,
 				1677A14F19158C8B00DF460F /* smartrip_03.png in Resources */,
 				42F832C01915845600F172D5 /* InfoPlist.strings in Resources */,
+				1677A1641915BE4F00DF460F /* newyork3.jpg in Resources */,
 				42F832C91915845600F172D5 /* Main.storyboard in Resources */,
 				1677A15019158C8B00DF460F /* smarttrip-large_10.png in Resources */,
 			);
@@ -394,6 +403,7 @@
 				1677A15B19158EF100DF460F /* TripBudget.m in Sources */,
 				42F833041915A28C00F172D5 /* GTMHTTPFetcher.m in Sources */,
 				42F832C21915845600F172D5 /* main.m in Sources */,
+				1677A1671915D33400DF460F /* FriendData.m in Sources */,
 				42F833101915AC1E00F172D5 /* CreateTripViewController.m in Sources */,
 				42F833011915A28C00F172D5 /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				42F832F3191597EB00F172D5 /* ExpenseHelper.m in Sources */,

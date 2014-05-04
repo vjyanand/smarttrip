@@ -18,4 +18,6 @@
 //FB friends on the budget
 @property (nonatomic, strong) NSArray *budgetContributors;
 
+-(NSString *)getRemaningBudgetString;
+
 @end
