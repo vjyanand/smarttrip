@@ -9,6 +9,7 @@
 #import "FinishCreatingViewController.h"
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "TripViewController.h"
+#import "ExpenseHelper.h"
 
 @interface FinishCreatingViewController ()
 
@@ -37,7 +38,6 @@
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
     
     NSArray * allKeys = [friend_list allKeys];
     self.tripDetail.budget.budgetContributors = allKeys;
@@ -133,13 +133,13 @@
 }
 -(void)pushTVC{
     
-    self.tripDetail.UUID = @"1";
-    
-    NSLog(@"%@",self.tripDetail);
     self.tripDetail.budget.amountSpent = [NSNumber numberWithInt:0];
     self.tripDetail.budget.expenseList  = [[NSMutableArray alloc] init];
-    TripViewController *tvc = [[TripViewController alloc] initWithTripDetails:self.tripDetail];
-    [self.navigationController pushViewController:tvc animated:YES];
+    [[ExpenseHelper sharedEverNoteHelper] createTrip:self.tripDetail completion:^(NSError *error) {
+        TripViewController *tvc = [[TripViewController alloc] initWithTripDetails:self.tripDetail];
+        [self.navigationController pushViewController:tvc animated:YES];
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning

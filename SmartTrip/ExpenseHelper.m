@@ -16,7 +16,7 @@
 
 - (id)init {
     if (self = [super init]) {
-       
+        
     }
     return self;
 }
@@ -45,10 +45,10 @@
     [request startSynchronous];
     NSError *error = [request error];
     if(error) {
-     completion(error);
+        completion(error);
     }
     [self addTripToNote:detail completion:^(NSError *error) {
-     completion(error);
+        completion(error);
     }];
 }
 
@@ -81,9 +81,10 @@
                              "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">"
                              "<en-note style=\"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;\">"
                              "Total Budget: $%d"
+                             "<div>HELLO</div>"
                              "</en-note>", [trip.budget.totalBudget intValue]];
-    NSMutableArray *tags = [NSMutableArray arrayWithArray:@[trip.UUID, @"VVV"]];
-    EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:[trip destination] content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:tags];
+    NSMutableArray *tags = [NSMutableArray arrayWithArray:@[trip.UUID, @"Disrupt"]];
+    EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:trip.destination content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:tags];
     newNote.tagNames = tags;
     [[EvernoteNoteStore noteStore] createNote:newNote success:^(EDAMNote *note) {
         completion(nil);
@@ -106,7 +107,7 @@
             } failure:^(NSError *error) {
                 NSLog(@"%@", error);
             }];
-           NSLog(@"%@", [note tagGuids]);
+            NSLog(@"%@", [note tagGuids]);
         }
     } failure:^(NSError *error) {
         //
@@ -114,7 +115,7 @@
     }];
     
     
-   
+    
 }
 
 - (void)dealloc {
