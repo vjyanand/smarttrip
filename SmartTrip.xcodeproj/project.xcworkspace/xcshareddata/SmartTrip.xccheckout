@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>38B72340-7B34-4011-959D-8583B72937C4</string>
+	<string>009FB83D-A40C-40CC-8BC1-725F8BD05EE4</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SmartTrip</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C8F87F6C-E716-4626-92FF-5FED6C128823</key>
+		<key>72D25BCC-E371-4508-A389-E1D9E21BF4C1</key>
 		<string>https://github.com/vjyanand/smarttrip.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SmartTrip.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C8F87F6C-E716-4626-92FF-5FED6C128823</key>
+		<key>72D25BCC-E371-4508-A389-E1D9E21BF4C1</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C8F87F6C-E716-4626-92FF-5FED6C128823</string>
+	<string>72D25BCC-E371-4508-A389-E1D9E21BF4C1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C8F87F6C-E716-4626-92FF-5FED6C128823</string>
+			<string>72D25BCC-E371-4508-A389-E1D9E21BF4C1</string>
 			<key>IDESourceControlWCCName</key>
 			<string>smarttrip</string>
 		</dict>

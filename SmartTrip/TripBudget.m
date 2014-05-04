@@ -20,12 +20,25 @@
 {
     self = [super init];
     
-    if (!self) {
-        return nil;
-        
+    if (self) {        
         if (!self.amountSpent) {
             self.amountSpent = [[NSNumber alloc] initWithInt:0];
         }
+        
+       
+        self.spendingCategories = [[NSMutableArray alloc] init];
+        CategoryBudget *budget = [[CategoryBudget alloc] init];
+        budget.categoryName = @"Entertainment";
+        [self.spendingCategories addObject:budget];
+        CategoryBudget *otherBudget = [[CategoryBudget alloc] init];
+        otherBudget.categoryName = @"Nightlife";
+        [self.spendingCategories addObject:otherBudget];
+        CategoryBudget *lastBudget = [[CategoryBudget alloc] init];
+        lastBudget.categoryName = @"Shopping";
+        [self.spendingCategories addObject:lastBudget];
+
+    }else{
+        return nil;
     }
     
     return self;
