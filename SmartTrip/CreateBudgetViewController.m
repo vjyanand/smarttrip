@@ -11,6 +11,7 @@
 #import "AddFriendsViewController.h"
 #import "TripBudget.h"
 #import "FinishCreatingViewController.h"
+#import "CategoryBudget.h"
 
 @interface CreateBudgetViewController ()
 
@@ -19,6 +20,7 @@
 @implementation CreateBudgetViewController{
     CategoriesView *travel, *night, *accom, *food;
     UILabel *real_budget;
+    CategoryBudget *travelB, *nightB, *accomB, *foodB;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -28,6 +30,11 @@
         // Custom initialization
         self.friend_list = [[NSMutableDictionary alloc] init];
         self.tripDetail = [[TripDetails alloc] init];
+        
+        travelB = [[CategoryBudget alloc] init];
+        nightB = [[CategoryBudget alloc] init];
+        accomB = [[CategoryBudget alloc] init];
+        foodB   = [[CategoryBudget alloc] init];
     }
     return self;
 }
@@ -116,6 +123,22 @@
     int nightPrice = [[night.price.text stringByReplacingOccurrencesOfString:@"$" withString:@""] intValue];
     int accomPrice = [[accom.price.text stringByReplacingOccurrencesOfString:@"$" withString:@""] intValue];
     
+    
+    travelB.categoryBudget = [NSNumber numberWithInt:travelPrice];
+    nightB.categoryBudget = [NSNumber numberWithInt:nightPrice];
+    foodB.categoryBudget = [NSNumber numberWithInt:foodPrice];
+    accomB.categoryBudget = [NSNumber numberWithInt:accomPrice];
+    
+    travelB.categoryName = @"Travel";
+    nightB.categoryName = @"Nightlife";
+    foodB.categoryName = @"Food";
+    accomB.categoryName = @"Accommodation";
+    
+    travelB.categoryAmountSpent = [NSNumber numberWithInt:0];
+    nightB.categoryAmountSpent = [NSNumber numberWithInt:0];
+    foodB.categoryAmountSpent = [NSNumber numberWithInt:0];
+    accomB.categoryAmountSpent = [NSNumber numberWithInt:0];
+    
     int final_budget = travelPrice+foodPrice+nightPrice+accomPrice;
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
@@ -156,13 +179,13 @@
     NSNumber * myNumber = [f numberFromString:real_budget.text];
     tripBudget.totalBudget = myNumber;
     
-    tripBudget.spendingCategories = [[NSMutableArray alloc] initWithObjects:@"Travel", @"Food", @"Accommodation", @"Nightlife", nil];
+    tripBudget.spendingCategories = [[NSMutableArray alloc] initWithObjects:travelB, foodB, accomB, nightB, nil];
     
     self.tripDetail.budget = tripBudget;
     FinishCreatingViewController *finish = [[FinishCreatingViewController alloc] init];
     finish.friend_list = self.friend_list;
     finish.tripDetail = self.tripDetail;
-    finish.final_budget =real_budget.text;
+    finish.final_budget = real_budget.text;
     //AddFriendsViewController *addFriends = [[AddFriendsViewController alloc] init];
     [self.navigationController pushViewController:finish animated:YES];
 }

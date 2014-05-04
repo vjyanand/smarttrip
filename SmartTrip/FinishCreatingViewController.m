@@ -22,8 +22,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
         self.tripDetail = [[TripDetails alloc] init];
-
     }
     return self;
 }
@@ -31,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -123,7 +124,7 @@
                      completion:nil];
     
     
-    [NSTimer scheduledTimerWithTimeInterval:6.0
+    [NSTimer scheduledTimerWithTimeInterval:3.0
                                      target:self
                                    selector:@selector(pushTVC)
                                    userInfo:nil
@@ -131,9 +132,13 @@
     // Do any additional setup after loading the view.
 }
 -(void)pushTVC{
+    
     self.tripDetail.UUID = @"1";
+    
+    NSLog(@"%@",self.tripDetail);
+    self.tripDetail.budget.amountSpent = [NSNumber numberWithInt:0];
+    self.tripDetail.budget.expenseList  = [[NSMutableArray alloc] init];
     TripViewController *tvc = [[TripViewController alloc] initWithTripDetails:self.tripDetail];
-   // NSLog(@"%@",self.tripDetail);
     [self.navigationController pushViewController:tvc animated:YES];
 }
 
