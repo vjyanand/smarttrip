@@ -37,13 +37,14 @@ NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/t
 }
 
 - (void)createTrip:(TripDetails *)detail completion:(ENCompletionHandler)completion {
-    NSString *xml = [NSString stringWithFormat:@"<?xml version=\"1.0\"?> <Itinerary xmlns=\"http://www.concursolutions.com/api/travel/trip/2010/06\"> <TripName>%@</TripName> <TravelRequestId>%@</TravelRequestId> <Bookings> <Booking> <RecordLocator>Air Locator</RecordLocator> <BookingSource>Sample Itin for Disrupt</BookingSource> <DateBookedLocal>2014-04-30T03:47:14</DateBookedLocal></Booking> </Bookings> </Itinerary>", detail.destination, detail.UUID];
-    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-ddTHH:mm:ss"];
+    NSString *xml = [NSString stringWithFormat:@"<?xml version=\"1.0\"?> <Itinerary xmlns=\"http://www.concursolutions.com/api/travel/trip/2010/06\"> <TripName>%@</TripName> <StartDateLocal>%@</StartDateLocal> <EndDateLocal>%@</EndDateLocal> <Bookings> <Booking> <RecordLocator>%@</RecordLocator> <BookingSource>Sample Itin for Disrupt</BookingSource> <DateBookedLocal>2014-04-30T03:47:14</DateBookedLocal> </Booking> </Bookings> </Itinerary>", detail.destination, [dateFormatter stringFromDate:detail.tripStart], [dateFormatter stringFromDate:[detail.tripStart dateByAddingTimeInterval:60*60*24*[detail.tripLength intValue]]], detail.UUID];
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:ConcurEndPoint]];
     [request addRequestHeader:@"Content-Type" value:@"application/xml"];
     [request addRequestHeader:@"Authorization" value:@"OAuth DAfaWYrNtoM77hBf+Zy4NaWksPw="];
     [request setPostBody: [NSMutableData dataWithData:[xml dataUsingEncoding:NSUTF8StringEncoding]]];
-    [request startAsynchronous];
+    [request startSynchronous];
     NSError *error = [request error];
     completion(error);
 }

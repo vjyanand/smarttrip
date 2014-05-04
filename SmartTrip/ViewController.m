@@ -43,7 +43,16 @@
     [buttonToTrip setTitle:@"Go To Trip" forState:UIControlStateNormal];
     [buttonToTrip addTarget:self action:@selector(goToTrip:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttonToTrip];
-   // [[ExpenseHelper sharedEverNoteHelper] cre]
+    TripDetails *a = [[TripDetails alloc] init];
+    a.destination = @"NY";
+    a.tripStart = [NSDate date];
+    a.tripLength = @10;
+    a.UUID = [[NSUUID UUID] UUIDString];
+    [[ExpenseHelper sharedEverNoteHelper] createTrip:a completion:^(NSError *error) {
+        [[ExpenseHelper sharedEverNoteHelper] getMyTrips:^(NSError *error, NSArray *trips) {
+            NSLog(@"%@", trips);
+        }];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
