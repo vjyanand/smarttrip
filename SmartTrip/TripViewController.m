@@ -18,6 +18,7 @@ NSInteger const kbarHeight = 20;
 @property (nonatomic, strong) UIView *tripView;
 @property (nonatomic, strong) UIView *tripProgressView;
 @property (nonatomic, strong) UIView *userProgressView;
+@property (nonatomic, strong) UIView *reportView;
 @property (nonatomic, strong) UILabel *budget;
 
 @end
@@ -144,6 +145,7 @@ NSInteger const kbarHeight = 20;
     [self.tripView addSubview:addExpense];
     [self.tripView addSubview:imageViewContainer];
     [self.scrollView addSubview:self.tripView];
+    
     [self.view addSubview:self.scrollView];
     [self.view setNeedsDisplay];
 
@@ -183,11 +185,10 @@ NSInteger const kbarHeight = 20;
     
 }
 
-- (void)addExpense:(id)sender
-{
+- (void)addExpense:(id)sender {
     ExpenseViewController *expenseVC = [[ExpenseViewController alloc] initWithTripDetails:self.tripDetails];
     expenseVC.delegate = self;
-
+    expenseVC.view.backgroundColor = [UIColor clearColor];
     self.modalPresentationStyle = UIModalPresentationFullScreen;
     self.modalTransitionStyle = UIModalTransitionStylePartialCurl;
     

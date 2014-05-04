@@ -84,8 +84,7 @@
     [textField resignFirstResponder];
     return NO;
 }
--(IBAction)sliderAction:(id)sender
-{
+-(IBAction)sliderAction:(id)sender{
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
