@@ -10,14 +10,15 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "FriendData.h"
 #import "ExpenseViewController.h"
+#import "CategoryBudget.h"
 
 NSInteger const kbarHeight = 20;
 
 @interface TripViewController () 
 
 @property (nonatomic, strong) UIView *tripView;
-@property (nonatomic, strong) UIView *tripProgressView;
-@property (nonatomic, strong) UIView *userProgressView;
+@property (nonatomic, strong) UIView *reciept;
+@property (nonatomic, strong) UIScrollView *userProgressView;
 @property (nonatomic, strong) UILabel *budget;
 
 @end
@@ -140,6 +141,31 @@ NSInteger const kbarHeight = 20;
     [addExpense setTitle:@"Add Expense" forState:UIControlStateNormal];
     [addExpense setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [addExpense addTarget:self action:@selector(addExpense:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.userProgressView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [self.userProgressView setContentSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + self.tripDetails.budget.spendingCategories.count*50 + 20)];
+    self.userProgressView.showsVerticalScrollIndicator = YES;
+    
+    header.text = @"Your Progress";
+    
+    [self.userProgressView addSubview:header];
+    
+    for (CategoryBudget *category in self.tripDetails.budget.spendingCategories) {
+        int count = 0;
+        
+        UIView *categoryView = [[UIView alloc] initWithFrame:CGRectMake(0, count*50 + 20, self.view.frame.size.width, 50)];
+        UILabel *categoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(header.frame.origin.x, header.frame.origin.y +60*count, header.frame.size.width, header.frame.size.height)];
+        categoryLabel.textAlignment = NSTextAlignmentLeft;
+        categoryLabel.text = category.categoryName;
+        categoryLabel.textColor = [UIColor colorWithRed:144.0/255.0 green:206.0/255.0 blue:221.0/255.0 alpha:1];
+        [categoryView addSubview:categoryLabel];
+        
+        UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleBar];
+        float progress = [category.categoryAmountSpent floatValue]/[category.categoryBudget floatValue];
+        [progressView setProgress:progress];
+        [categoryView addSubview:progressView];
+    }
+    
     
     [self.tripView addSubview:addExpense];
     [self.tripView addSubview:imageViewContainer];
