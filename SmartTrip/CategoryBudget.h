@@ -6,4 +6,7 @@
 @property (nonatomic, strong) NSNumber *categoryAmountSpent;
 @property (nonatomic, strong) NSString *categoryName;
 
+
+- (NSString *)getRemainingBudgetString;
+
 @end

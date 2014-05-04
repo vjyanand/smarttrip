@@ -150,8 +150,9 @@ NSInteger const kbarHeight = 20;
     [self.userProgressView setContentSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + self.tripDetails.budget.spendingCategories.count*50 + 20)];
     self.userProgressView.showsVerticalScrollIndicator = YES;
     
-    UILabel *headerUserView = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 50)];
+    UILabel *headerUserView = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 50)];
     headerUserView.text = @"Your Progress";
+    headerUserView.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0];
     headerUserView.textAlignment = NSTextAlignmentCenter;
     
     [self.userProgressView addSubview:headerUserView];
@@ -159,7 +160,7 @@ NSInteger const kbarHeight = 20;
     int count = 0;
 
     for (CategoryBudget *category in self.tripDetails.budget.spendingCategories) {
-        UIView *categoryView = [[UIView alloc] initWithFrame:CGRectMake(0, count*140 + 80, self.view.frame.size.width, 120)];
+        UIView *categoryView = [[UIView alloc] initWithFrame:CGRectMake(0, count*140 + 100, self.view.frame.size.width, 120)];
         UILabel *categoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 150,  10, 300, 20)];
         categoryLabel.textAlignment = NSTextAlignmentLeft;
 
@@ -172,6 +173,41 @@ NSInteger const kbarHeight = 20;
         float progress = [category.categoryAmountSpent floatValue]/[category.categoryBudget floatValue];
         [progressView setProgress:progress];
         [categoryView addSubview:progressView];
+        
+        
+        UILabel *spentLabel = [[UILabel alloc] initWithFrame:CGRectMake(10,  categoryLabel.frame.origin.y + 35, 100, 40)];
+        spentLabel.textAlignment = NSTextAlignmentLeft;
+        spentLabel.font = [UIFont fontWithName:@"ArialRoundedMTBold" size:25.0];
+        spentLabel.text = [NSString stringWithFormat:@"$%i", [category.categoryAmountSpent intValue]];
+        
+        UILabel *spentLabelText = [[UILabel alloc] initWithFrame:CGRectMake(80,  spentLabel.frame.origin.y + 15, 40, 20)];
+        spentLabelText.textAlignment = NSTextAlignmentLeft;
+        spentLabelText.textColor = [UIColor colorWithRed:112.0/255.0 green:114.0/255.0 blue:114.0/255.0 alpha:1.0];
+        spentLabelText.font = [UIFont fontWithName:@"HelveticaNeue" size:12.0];
+        spentLabelText.text = @"spent";
+        
+        [categoryView addSubview:spentLabelText];
+        
+        UILabel *remainingLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 110,  categoryLabel.frame.origin.y + 35, 100, 40)];
+        remainingLabel.textAlignment = NSTextAlignmentRight;
+        remainingLabel.font = [UIFont fontWithName:@"ArialRoundedMTBold" size:25.0];
+        remainingLabel.text = [NSString stringWithFormat:@"$%@", [category getRemainingBudgetString]];
+        
+        if ([[category getRemainingBudgetString] integerValue] < 0) {
+            remainingLabel.textColor = [UIColor redColor];
+        }
+        
+        UILabel *remainingLabelText = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 150,  spentLabel.frame.origin.y + 15, 60, 20)];
+        remainingLabelText.textAlignment = NSTextAlignmentRight;
+        remainingLabelText.font = [UIFont fontWithName:@"HelveticaNeue" size:12.0];
+        remainingLabelText.textColor = [UIColor colorWithRed:112.0/255.0 green:114.0/255.0 blue:114.0/255.0 alpha:1.0];
+        remainingLabelText.text = @"remaining";
+        
+        [categoryView addSubview:remainingLabelText];
+
+        
+        [categoryView addSubview:spentLabel];
+        [categoryView addSubview:remainingLabel];
         [self.userProgressView addSubview:categoryView];
         
         count++;
@@ -224,7 +260,7 @@ NSInteger const kbarHeight = 20;
     
     _recieptView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:_recieptView];
-    
+    [self.view addSubview:self.scrollView];
     [self.view addSubview:self.scrollView];
     [self.view setNeedsDisplay];
 
