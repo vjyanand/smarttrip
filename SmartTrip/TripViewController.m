@@ -182,7 +182,6 @@ NSInteger const kbarHeight = 20;
     [self.scrollView addSubview:self.userProgressView];
     
     self.recieptView = [[UIView alloc] initWithFrame:CGRectMake(2 * self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    _recieptView.backgroundColor = [UIColor whiteColor];
     UILabel *header1 = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 50, 200, 50)];
     header1.text = @"Expense Receipt";
     header1.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:25.0];
@@ -236,7 +235,7 @@ NSInteger const kbarHeight = 20;
     [_recieptView addSubview:attributedLabel];
     
     
-    _recieptView.backgroundColor = [UIColor grayColor];
+    _recieptView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:_recieptView];
     
     [self.view addSubview:self.scrollView];
