@@ -68,7 +68,6 @@
         completion(error, [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error]);
     }
     completion(error, nil);
-
 }
 
 - (void)addTripToNote:(TripDetails *)trip completion:(ENCompletionHandler)completion {
