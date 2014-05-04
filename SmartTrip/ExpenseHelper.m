@@ -47,7 +47,10 @@ NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/t
     [request startSynchronous];
     NSError *error = [request error];
     completion(error);
+    
+    
 }
+
 
 - (void)addNote:(Expense *)expense forTrip:(NSString *)tripUUID completion:(ENCompletionHandler)completion {
     
