@@ -77,8 +77,9 @@
                              "<en-note style=\"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;\">"
                              "Total Budget: $%d"
                              "</en-note>", [trip.budget.totalBudget intValue]];
-    
-    EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:[trip destination] content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:@[trip.UUID]];
+    NSMutableArray *tags = [NSMutableArray arrayWithArray:@[trip.UUID, @"VVV"]];
+    EDAMNote *newNote = [[EDAMNote alloc] initWithGuid:nil title:[trip destination] content:noteContent contentHash:nil contentLength:noteContent.length created:0 updated:0 deleted:0 active:YES updateSequenceNum:0 notebookGuid:nil tagGuids:nil resources:nil attributes:nil tagNames:tags];
+    newNote.tagNames = tags;
     [[EvernoteNoteStore noteStore] createNote:newNote success:^(EDAMNote *note) {
         completion(nil);
     } failure:^(NSError *error) {
@@ -88,8 +89,27 @@
 }
 
 - (void)addExpenseToNote:(Expense *)expense forTrip:(NSString *)tripUUID completion:(ENCompletionHandler)completion {
-
+    NSMutableArray *tags = [NSMutableArray arrayWithArray:@[@"vvv"]];
+    EDAMNoteFilter *filter = [[EDAMNoteFilter alloc] initWithOrder:0 ascending:YES words:nil notebookGuid:nil tagGuids:tags timeZone:nil inactive:NO emphasized:nil];
     
+    EvernoteNoteStore *noteStore = [EvernoteNoteStore noteStore];
+    [noteStore findNotesWithFilter:filter offset:0 maxNotes:[EDAMLimitsConstants EDAM_USER_NOTES_MAX] success:^(EDAMNoteList *list) {
+        for (int i=0; i< list.notes.count; i++) {
+            EDAMNote *note = list.notes[i];
+            [noteStore getNoteTagNamesWithGuid:@"c67b303e-d20b-488a-90e0-2c777a900768" success:^(NSArray *names) {
+                NSLog(@"%@", names);
+            } failure:^(NSError *error) {
+                NSLog(@"%@", error);
+            }];
+           NSLog(@"%@", [note tagGuids]);
+        }
+    } failure:^(NSError *error) {
+        //
+        NSLog(@"FN error: %@", error);
+    }];
+    
+    
+   
 }
 
 - (void)dealloc {

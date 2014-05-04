@@ -13,7 +13,7 @@ typedef void (^ENExpenseCompletionHandler)(NSError * error, NSArray *expenses);
 
 - (void)createTrip:(TripDetails *)detail completion:(ENCompletionHandler)completion;
 
-- (void)addExpense:(Expense *)expense fortrip:(TripDetails *)trip completion:(ENCompletionHandler)completion;
+- (void)addExpenseToNote:(Expense *)expense forTrip:(NSString *)tripUUID completion:(ENCompletionHandler)completion;
 
 - (void)getMyTrips:(ENTripsCompletionHandler)completion;
 

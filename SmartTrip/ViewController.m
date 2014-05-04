@@ -58,9 +58,18 @@
     e.dateAndTime = [NSDate date];
     e.amount = @20.5;
     e.desc = @"AAA";*/
+    
     TripDetails *trip = [[TripDetails alloc] init];
-    trip.destination = @"NJ";
+    trip.destination = @"NJ1";
+    
     [[ExpenseHelper sharedEverNoteHelper] addTripToNote:trip completion:^(NSError *error) {
+        
+
+    }];
+    
+    [[ExpenseHelper sharedEverNoteHelper] addExpenseToNote:nil forTrip:@"" completion:^(NSError *error) {
+        
+    
         
     }];
     
