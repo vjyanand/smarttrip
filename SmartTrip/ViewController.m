@@ -11,7 +11,6 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "TripViewController.h"
 #import <ENSDK/ENSDK.h>
-#import "ExpenseHelper.h"
 
 @interface ViewController ()
 
@@ -36,10 +35,7 @@
         }
     }];
     
-    [[ExpenseHelper sharedEverNoteHelper] getMyTrips:^(NSError *error) {
-        
-    }];
-	// Do any additional setup after loading the view, typically from a nib.
+   // Do any additional setup after loading the view, typically from a nib.
 
     UIButton *buttonToTrip = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 50, self.view.frame.size.height/2, 100, 50)];
     [buttonToTrip setBackgroundColor:[UIColor blueColor]];

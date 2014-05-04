@@ -4,6 +4,7 @@
 #import "TripDetails.h"
 
 typedef void (^ENCompletionHandler)(NSError * error);
+typedef void (^ENTripsCompletionHandler)(NSError * error, NSArray *trips);
 
 extern NSString *const ConcurEndPoint;
 
@@ -15,6 +16,6 @@ extern NSString *const ConcurEndPoint;
 
 - (void)addNote:(Expense *)expense forTrip:(NSString *)tripUUID completion:(ENCompletionHandler)completion ;
 
-- (NSArray*)getMyTrips:(ENCompletionHandler)completion;
+- (void)getMyTrips:(ENTripsCompletionHandler)completion;
 
 @end

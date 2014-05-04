@@ -23,7 +23,7 @@ NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/t
     return self;
 }
 
-- (NSArray*)getMyTrips:(ENCompletionHandler)completion {
+- (void)getMyTrips:(ENTripsCompletionHandler)completion {
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:ConcurEndPoint]];
     [request addRequestHeader:@"Authorization" value:@"OAuth DAfaWYrNtoM77hBf+Zy4NaWksPw="];
     [request addRequestHeader:@"Accept" value:@"application/json"];
@@ -31,9 +31,9 @@ NSString * const ConcurEndPoint = @"https://www.concursolutions.com/api/travel/t
     NSError *error = [request error];
     if (!error) {
         NSData *responseData = [[NSMutableData alloc] initWithData:[request responseData]];
-        NSLog(@"array = %@",responseData);
+        completion(error, [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error]);
     }
-    return nil;
+    completion(error, nil);
 }
 
 - (void)createTrip:(TripDetails *)detail completion:(ENCompletionHandler)completion {
