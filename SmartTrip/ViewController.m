@@ -9,11 +9,8 @@
 #import "ViewController.h"
 #import "InitView.h"
 #import <FacebookSDK/FacebookSDK.h>
-<<<<<<< HEAD
 #import "TripViewController.h"
-=======
 #import <ENSDK/ENSDK.h>
->>>>>>> FETCH_HEAD
 
 @interface ViewController ()
 
